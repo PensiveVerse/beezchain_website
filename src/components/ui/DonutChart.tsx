@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 
 export type Segment = {
   label: string;
@@ -30,6 +30,22 @@ export default function DonutChart({
 }) {
   const [active, setActive] = useState<number | null>(null);
 
+  // Draw-in trigger. We use a single useInView on the chart container (reliable)
+  // instead of per-circle whileInView, which is flaky on iOS Safari when nested
+  // inside a transformed ancestor and left segments undrawn. A mount fallback
+  // guarantees the ring always draws even if the observer never fires.
+  const chartRef = useRef<HTMLDivElement>(null);
+  const inView = useInView(chartRef, { once: true, margin: "-60px" });
+  const [drawn, setDrawn] = useState(false);
+  useEffect(() => {
+    if (inView) {
+      setDrawn(true);
+      return;
+    }
+    const t = setTimeout(() => setDrawn(true), 1200); // iOS safety net
+    return () => clearTimeout(t);
+  }, [inView]);
+
   // Interaction: mouse uses hover (enter/leave); touch & pen use tap-to-toggle.
   // Splitting by pointerType keeps the two from cancelling each other out on
   // hybrid devices (a tap would otherwise fire enter *and* click).
@@ -55,7 +71,7 @@ export default function DonutChart({
   return (
     <div className="grid w-full items-center gap-10 md:grid-cols-2">
       {/* Chart */}
-      <div className="relative mx-auto aspect-square w-full max-w-[22rem]">
+      <div ref={chartRef} className="relative mx-auto aspect-square w-full max-w-[22rem]">
         <svg viewBox="0 0 200 200" className="h-full w-full -rotate-0">
           {/* track */}
           <circle
@@ -81,22 +97,26 @@ export default function DonutChart({
                 strokeLinecap="butt"
                 strokeDasharray={`${a.len} ${C - a.len}`}
                 transform={`rotate(${a.startAngle} ${CX} ${CY})`}
-                initial={{ strokeDashoffset: a.len, opacity: 0 }}
-                whileInView={{ strokeDashoffset: 0, opacity: 1 }}
-                viewport={{ once: true }}
+                initial={false}
+                animate={{
+                  strokeDashoffset: drawn ? 0 : a.len,
+                  opacity: dim ? 0.4 : 1,
+                }}
                 transition={{
-                  duration: 1,
-                  delay: i * 0.12,
-                  ease: [0.22, 1, 0.36, 1],
+                  strokeDashoffset: {
+                    duration: 1,
+                    delay: drawn ? i * 0.12 : 0,
+                    ease: [0.22, 1, 0.36, 1],
+                  },
+                  opacity: { duration: 0.25 },
                 }}
                 onPointerEnter={(e) => hoverEnter(e, i)}
                 onPointerLeave={hoverLeave}
                 onPointerUp={(e) => tapToggle(e, i)}
                 style={{
-                  opacity: dim ? 0.35 : 1,
                   cursor: "pointer",
                   touchAction: "manipulation",
-                  transition: "stroke-width 0.25s ease, opacity 0.25s ease",
+                  transition: "stroke-width 0.25s ease",
                   filter: isActive
                     ? "drop-shadow(0 0 8px rgba(255,204,0,0.55))"
                     : "none",
