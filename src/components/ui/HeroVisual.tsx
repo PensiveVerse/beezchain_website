@@ -53,7 +53,7 @@ export default function HeroVisual() {
           alt="BeezChain BZC coin"
           width={320}
           height={320}
-          priority
+          sizes="256px"
           className="w-64 drop-shadow-[0_20px_40px_rgba(120,80,0,0.45)]"
         />
       </motion.div>

@@ -38,17 +38,21 @@ export default function Hero() {
               "radial-gradient(120% 130% at 20% 15%, #ffe70a 0%, #ffdb06 45%, #ffcf00 100%)",
           }}
         >
-          {/* Floating amber-blob animation (video) filling the yellow panel. */}
+          {/* Floating amber-blob animation (video) filling the yellow panel.
+              Compressed 720p WebM (with MP4 fallback) — tiny, decorative, and
+              the gold gradient below serves as the instant fallback. */}
           <video
             aria-hidden
             className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-80"
-            src="/hero-bubbles.mp4"
             autoPlay
             muted
             loop
             playsInline
-            preload="auto"
-          />
+            preload="metadata"
+          >
+            <source src="/hero-bubbles.webm" type="video/webm" />
+            <source src="/hero-bubbles.mp4" type="video/mp4" />
+          </video>
 
           {/* Floating honeycomb cells — a nod to the "Beez" brand. */}
           <Honeycomb />

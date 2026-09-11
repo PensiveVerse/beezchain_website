@@ -30,6 +30,19 @@ export default function DonutChart({
 }) {
   const [active, setActive] = useState<number | null>(null);
 
+  // Interaction: mouse uses hover (enter/leave); touch & pen use tap-to-toggle.
+  // Splitting by pointerType keeps the two from cancelling each other out on
+  // hybrid devices (a tap would otherwise fire enter *and* click).
+  const hoverEnter = (e: React.PointerEvent, i: number) => {
+    if (e.pointerType === "mouse") setActive(i);
+  };
+  const hoverLeave = (e: React.PointerEvent) => {
+    if (e.pointerType === "mouse") setActive(null);
+  };
+  const tapToggle = (e: React.PointerEvent, i: number) => {
+    if (e.pointerType !== "mouse") setActive((prev) => (prev === i ? null : i));
+  };
+
   // Precompute each arc's pixel length and starting rotation.
   let cumulative = 0;
   const arcs = segments.map((s) => {
@@ -76,11 +89,13 @@ export default function DonutChart({
                   delay: i * 0.12,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                onMouseEnter={() => setActive(i)}
-                onMouseLeave={() => setActive(null)}
+                onPointerEnter={(e) => hoverEnter(e, i)}
+                onPointerLeave={hoverLeave}
+                onPointerUp={(e) => tapToggle(e, i)}
                 style={{
                   opacity: dim ? 0.35 : 1,
                   cursor: "pointer",
+                  touchAction: "manipulation",
                   transition: "stroke-width 0.25s ease, opacity 0.25s ease",
                   filter: isActive
                     ? "drop-shadow(0 0 8px rgba(255,204,0,0.55))"
@@ -148,8 +163,10 @@ export default function DonutChart({
           return (
             <li
               key={s.label}
-              onMouseEnter={() => setActive(i)}
-              onMouseLeave={() => setActive(null)}
+              onPointerEnter={(e) => hoverEnter(e, i)}
+              onPointerLeave={hoverLeave}
+              onPointerUp={(e) => tapToggle(e, i)}
+              style={{ touchAction: "manipulation" }}
               className={`flex cursor-pointer items-center justify-between rounded-xl border px-4 py-3 transition-all duration-200 ${
                 isActive
                   ? "border-gold/50 bg-gold/10"

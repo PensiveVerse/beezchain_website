@@ -42,7 +42,8 @@ export default function About() {
             src="/images/aboutbg.webp"
             alt=""
             fill
-            priority
+            loading="lazy"
+            sizes="100vw"
             className="h-full w-full object-cover opacity-60 md:opacity-100"
           />
         </motion.div>

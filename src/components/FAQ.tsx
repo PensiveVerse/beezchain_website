@@ -7,7 +7,7 @@ import { FAQS } from "@/lib/data";
 import Reveal from "@/components/Reveal";
 
 export default function FAQ() {
-  const [open, setOpen] = useState<number | null>(1);
+  const [open, setOpen] = useState<number | null>(null);
 
   return (
     <section className="relative px-5 pb-24 pt-10 md:px-10 lg:px-20">
