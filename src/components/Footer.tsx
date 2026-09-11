@@ -79,7 +79,7 @@ export default function Footer() {
               economies. Whether it&rsquo;s payments, token utilities,
               compliance, and ease of use.
             </p>
-            <div className="flex gap-5">
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:justify-start">
               {SOCIALS.map((Icon, i) => (
                 <a
                   key={i}

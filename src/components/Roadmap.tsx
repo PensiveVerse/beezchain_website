@@ -18,7 +18,7 @@ export default function Roadmap() {
         <span className="eyebrow mb-5 mt-10">The journey</span>
         <h2
           id="roadmap"
-          className="mb-4 text-center text-5xl font-extrabold uppercase md:text-[6rem]"
+          className="mb-4 text-center text-4xl font-extrabold uppercase sm:text-5xl md:text-[6rem]"
         >
           <span className="text-gold-shimmer">Roadmap</span>
         </h2>

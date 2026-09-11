@@ -26,7 +26,7 @@ export default function Navbar() {
       className="fixed left-1/2 top-0 z-50 w-full max-w-[1600px] -translate-x-1/2"
     >
       <nav
-        className={`mx-3 flex items-center justify-between rounded-2xl px-4 py-3 transition-all duration-300 md:mx-6 md:px-6 ${
+        className={`mx-3 flex items-center justify-between gap-2 rounded-2xl px-3 py-3 transition-all duration-300 md:mx-6 md:px-6 ${
           scrolled
             ? "mt-3 glass shadow-[0_10px_40px_-12px_rgba(0,0,0,0.8)]"
             : "mt-5 bg-transparent"
@@ -42,7 +42,7 @@ export default function Navbar() {
                 width={1142}
                 height={382}
                 priority
-                className="h-auto w-32 rounded md:w-40"
+                className="h-auto w-28 rounded sm:w-32 md:w-40"
               />
             </span>
           </a>
@@ -77,15 +77,15 @@ export default function Navbar() {
         <div className="flex items-center gap-3 lg:hidden">
           <a
             href="#tokenomics"
-            className="border-gradient rounded-xl transition-transform duration-200 hover:scale-95"
+            className="border-gradient shrink-0 rounded-xl transition-transform duration-200 hover:scale-95"
           >
-            <span className="flex items-center justify-center rounded-xl bg-black px-4 py-2 text-sm font-medium text-white">
+            <span className="flex items-center justify-center whitespace-nowrap rounded-xl bg-black px-3 py-2 text-sm font-medium text-white">
               Buy Token
             </span>
           </a>
           <button
             aria-label="Open main menu"
-            className="flex h-10 w-10 items-center justify-center rounded-lg text-gold"
+            className="flex h-10 w-9 shrink-0 items-center justify-center rounded-lg text-gold"
             onClick={() => setOpen((v) => !v)}
           >
             {open ? <X size={26} /> : <Menu size={26} />}

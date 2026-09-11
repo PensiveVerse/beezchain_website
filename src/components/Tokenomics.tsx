@@ -33,7 +33,7 @@ export default function Tokenomics() {
     >
       <Reveal className="flex flex-col items-center">
         <span className="eyebrow mb-5">Token distribution</span>
-        <h2 className="mb-4 text-center text-5xl font-extrabold uppercase md:text-[6rem]">
+        <h2 className="mb-4 text-center text-4xl font-extrabold uppercase sm:text-5xl md:text-[6rem]">
           <span className="text-gold-shimmer">Tokenomics</span>
         </h2>
         <p className="mb-16 max-w-2xl text-center text-sm text-white/60 md:text-base">
