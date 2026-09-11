@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BeezChain — Official Website
 
-## Getting Started
+Marketing website for **BeezChain (BZC)**, a Solana-based blockchain platform. A
+single-page, dark-and-gold experience with modern motion design: an animated hero,
+an interactive tokenomics chart, a sticky-stacking roadmap, and a custom cursor.
 
-First, run the development server:
+## ✨ Features
+
+- **Animated hero** — kinetic headline reveal, floating BZC coin with orbit rings,
+  glass info cards, live badge, and animated stat counters. Sized to fit the
+  viewport (no scroll needed to see the full section).
+- **Interactive tokenomics** — an animated SVG donut chart built from the real
+  distribution data, with hover-to-highlight slices, a synced legend, and the BZC
+  coin at its centre.
+- **Sticky-stacking roadmap** — quarter cards that pin and stack as you scroll,
+  with phase tags and status badges.
+- **Smooth custom cursor** — a precise dot plus a spring-trailing ring that reacts
+  to interactive elements (auto-disabled on touch devices).
+- **Ambient polish** — aurora gradient background, film grain, glassmorphism,
+  scroll progress bar, partner marquee, animated FAQ accordion, and a back-to-top
+  button.
+- **Accessible motion** — heavy decorative animations respect
+  `prefers-reduced-motion`.
+
+## 🧱 Tech Stack
+
+| Area        | Choice                                  |
+| ----------- | --------------------------------------- |
+| Framework   | [Next.js 16](https://nextjs.org) (App Router, Turbopack) |
+| UI runtime  | React 19                                |
+| Styling     | Tailwind CSS v4                         |
+| Animation   | Framer Motion 13                        |
+| Icons       | lucide-react                            |
+| Language    | TypeScript                              |
+| Font        | Montserrat (`next/font`)                |
+
+## 🚀 Getting Started
+
+Requirements: **Node.js 18.18+** (or 20+) and npm.
 
 ```bash
+# install dependencies
+npm install
+
+# start the dev server (http://localhost:3000)
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# production build + run
+npm run build
+npm start
+
+# lint
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📁 Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+├─ app/
+│  ├─ layout.tsx        # root layout, fonts, metadata
+│  ├─ page.tsx          # composes all sections
+│  └─ globals.css       # design system: tokens, aurora, glass, animations
+├─ components/
+│  ├─ Navbar.tsx        # glass nav that condenses on scroll
+│  ├─ Hero.tsx          # animated hero
+│  ├─ About.tsx         # parallax intro + feature cards
+│  ├─ UseCases.tsx      # 3D tilt cards
+│  ├─ Tokenomics.tsx    # interactive donut + stats
+│  ├─ Roadmap.tsx       # sticky-stacking timeline
+│  ├─ Partners.tsx      # logo marquee
+│  ├─ ContractAddress.tsx
+│  ├─ FAQ.tsx
+│  ├─ Footer.tsx
+│  ├─ Reveal.tsx        # scroll-reveal wrapper
+│  └─ ui/               # shared primitives
+│     ├─ Background.tsx      # aurora + grain
+│     ├─ ScrollProgress.tsx
+│     ├─ Counter.tsx         # count-up-on-view numbers
+│     ├─ CustomCursor.tsx
+│     ├─ TiltCard.tsx
+│     ├─ Honeycomb.tsx
+│     ├─ HeroVisual.tsx      # floating coin + orbit rings
+│     ├─ DonutChart.tsx      # interactive tokenomics chart
+│     └─ BackToTop.tsx
+└─ lib/
+   └─ data.ts           # all site copy/content (nav, use cases, tokenomics, roadmap, FAQ…)
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Most editable content (headings, links, roadmap, FAQ, contract address, token
+stats) lives in `src/lib/data.ts`.
 
-## Learn More
+## 🎨 Brand
 
-To learn more about Next.js, take a look at the following resources:
+- Background: `#000000`
+- Gold: `#ffcc00` (light `#ffd60d`, dark `#dba81d`)
+- Font: Montserrat
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📦 Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deploys cleanly to any Node host or [Vercel](https://vercel.com). Build with
+`npm run build`; no environment variables are required.

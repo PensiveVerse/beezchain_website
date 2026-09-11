@@ -1,26 +1,427 @@
 @import "tailwindcss";
 
+@theme {
+  --color-bg: #000000;
+  --color-bg-soft: #0a0a0a;
+  --color-gold: #ffcc00;
+  --color-gold-light: #ffd60d;
+  --color-gold-dark: #dba81d;
+  --color-ink: #111111;
+  --color-muted: #9ca3af;
+
+  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #ffffff;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #000000;
+  color: #ffffff;
+  font-family: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(255, 204, 0, 0.85);
+  color: #000;
+}
+
+/* Hide the native cursor once the custom one mounts (fine pointers only). */
+@media (pointer: fine) {
+  html.cursor-custom,
+  html.cursor-custom * {
+    cursor: none !important;
+  }
+}
+
+/* =====================================================================
+   Reusable brand utilities
+   ===================================================================== */
+
+/* Gold gradient text (hero "BeezChain") */
+.text-gold-gradient {
+  background: linear-gradient(94deg, #ffffff 0%, #ffe680 45%, #ffcc00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Animated shimmering gold text — a highlight sweeps across the fill */
+.text-gold-shimmer {
+  background: linear-gradient(
+    100deg,
+    #dba81d 0%,
+    #ffcc00 30%,
+    #fff6cf 50%,
+    #ffcc00 70%,
+    #dba81d 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: text-shimmer 5s linear infinite;
+}
+@keyframes text-shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Section heading gold */
+.heading-gold {
+  color: #ffcc00;
+  letter-spacing: 0.02em;
+}
+
+/* Small uppercase eyebrow label above section headings */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 204, 0, 0.35);
+  background: rgba(255, 204, 0, 0.06);
+  color: #ffcc00;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  backdrop-filter: blur(6px);
+}
+
+/* Soft gold glow */
+.glow-gold {
+  box-shadow: 0 0 40px -8px rgba(255, 204, 0, 0.55);
+}
+.glow-gold-strong {
+  box-shadow: 0 0 90px -10px rgba(255, 204, 0, 0.6);
+}
+
+/* Angled corner-cut card (use-case cards) */
+.clip-corner {
+  clip-path: polygon(0 0, calc(100% - 60px) 0, 100% 60px, 100% 100%, 0 100%);
+}
+
+/* =====================================================================
+   Glassmorphism (2026 trend): translucent frosted panels
+   ===================================================================== */
+.glass {
+  background: rgba(20, 20, 20, 0.55);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.glass-gold {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 204, 0, 0.1),
+    rgba(20, 20, 20, 0.5)
+  );
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid rgba(255, 204, 0, 0.22);
+}
+
+/* =====================================================================
+   Aurora / mesh gradient background (fixed, behind everything)
+   Large blurred gold blobs drifting on a black field — the "Aurora UI"
+   evolution of glassmorphism. Kept subtle so content stays legible.
+   ===================================================================== */
+.aurora {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.aurora::before,
+.aurora::after {
+  content: "";
+  position: absolute;
+  width: 60vw;
+  height: 60vw;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.5;
+  will-change: transform;
+}
+.aurora::before {
+  top: -15%;
+  left: -10%;
+  background: radial-gradient(circle, rgba(255, 204, 0, 0.28), transparent 60%);
+  animation: aurora-a 22s ease-in-out infinite alternate;
+}
+.aurora::after {
+  bottom: -20%;
+  right: -10%;
+  background: radial-gradient(circle, rgba(219, 168, 29, 0.22), transparent 60%);
+  animation: aurora-b 26s ease-in-out infinite alternate;
+}
+@keyframes aurora-a {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(18vw, 14vh) scale(1.25);
+  }
+}
+@keyframes aurora-b {
+  0% {
+    transform: translate(0, 0) scale(1.1);
+  }
+  100% {
+    transform: translate(-16vw, -12vh) scale(1);
+  }
+}
+
+/* Fine film grain overlay for a premium, tactile finish */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Faint dotted grid, used behind dark sections for depth */
+.dot-grid {
+  background-image: radial-gradient(
+    rgba(255, 204, 0, 0.09) 1px,
+    transparent 1px
+  );
+  background-size: 26px 26px;
+}
+
+/* =====================================================================
+   Buttons
+   ===================================================================== */
+.btn-outline-gold {
+  border: 1px solid #ffcc00;
+  background: #000;
+  color: #ffcc00;
+  transition: all 0.25s ease;
+}
+.btn-outline-gold:hover {
+  background: #ffcc00;
+  color: #000;
+}
+
+/* Metallic gradient border wrapper (nav + hero "Buy Token"/"Whitepaper").
+   Pair with an inner black or gold element that has its own rounded corners. */
+.border-gradient {
+  background-image: linear-gradient(
+    160deg,
+    #ffffff 0%,
+    #cfcfcf 40%,
+    #8f8f8f 72%,
+    #d0d0d0 100%
+  );
+  padding: 2px;
+}
+
+.btn-dark {
+  background: #000;
+  color: #fff;
+  transition: all 0.25s ease;
+}
+.btn-dark:hover {
+  background: #1a1a1a;
+  box-shadow: 0 0 24px -6px rgba(255, 204, 0, 0.6);
+}
+
+/* Shine sweep — a diagonal highlight glides across on hover.
+   Put on a `position: relative; overflow: hidden` element. */
+.shine {
+  position: relative;
+  overflow: hidden;
+}
+.shine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(255, 255, 255, 0.55),
+    transparent
+  );
+  transform: skewX(-18deg);
+  transition: left 0.7s ease;
+  pointer-events: none;
+}
+.shine:hover::after {
+  left: 140%;
+}
+
+/* Reusable gold pill CTA with pulsing glow */
+.btn-gold {
+  background: linear-gradient(135deg, #ffd60d, #ffcc00 55%, #dba81d);
+  color: #000;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 30px -10px rgba(255, 204, 0, 0.7);
+}
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 44px -8px rgba(255, 204, 0, 0.85);
+}
+
+/* =====================================================================
+   Animations
+   ===================================================================== */
+
+/* Hero bubbles spin/breathe (kept from original goo-blob effect) */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+}
+
+/* Gentle float, used on cards/badges */
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.animate-float {
+  animation: float-y 6s ease-in-out infinite;
+}
+
+/* Slow spin for decorative rings */
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin-slow {
+  animation: spin-slow 26s linear infinite;
+}
+
+/* Pulsing ring for "live"/status dots */
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 204, 0, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 204, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 204, 0, 0);
+  }
+}
+.pulse-ring {
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+/* Marquee for partners */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+  width: max-content;
+}
+.marquee-mask:hover .animate-marquee {
+  animation-play-state: paused;
+}
+/* Fade the marquee at both edges */
+.marquee-fade {
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+}
+
+/* Honeycomb / blobby hero backdrop (kept for reference) */
+.hero-blobs {
+  background-image:
+    radial-gradient(circle at 16% 32%, rgba(0, 0, 0, 0.07) 0 55px, transparent 56px),
+    radial-gradient(circle at 72% 20%, rgba(0, 0, 0, 0.05) 0 95px, transparent 96px),
+    radial-gradient(circle at 86% 66%, rgba(0, 0, 0, 0.05) 0 70px, transparent 71px),
+    radial-gradient(circle at 42% 82%, rgba(0, 0, 0, 0.045) 0 50px, transparent 51px),
+    radial-gradient(circle at 60% 50%, rgba(0, 0, 0, 0.04) 0 40px, transparent 41px),
+    radial-gradient(ellipse at 58% 45%, rgba(255, 255, 255, 0.28), transparent 60%);
+}
+
+/* Scroll-driven top progress bar sizing helper */
+.scroll-progress {
+  transform-origin: 0%;
+}
+
+/* Reduced-motion: disable the heavier decorative animations */
+@media (prefers-reduced-motion: reduce) {
+  .aurora::before,
+  .aurora::after,
+  .animate-float,
+  .animate-spin-slow,
+  .text-gold-shimmer,
+  .animate-marquee {
+    animation: none !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#ffcc00, #dba81d);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffd60d;
 }
