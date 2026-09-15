@@ -1,0 +1,15 @@
+{
+  "name": "BeezChain",
+  "symbol": "BZC",
+  "description": "BeezChain (BZC) is a Solana-based ecosystem powering decentralized data storage, supply-chain transparency, tokenized incentives, and real-estate income sharing. SPL token, fixed supply of 10.08 billion with mint authority revoked.",
+  "image": "https://beezchain.com/token/bzc-logo.png",
+  "decimals": 9,
+  "external_url": "https://beezchain.com",
+  "tags": ["utility-token", "solana", "real-estate", "defi"],
+  "extensions": {
+    "website": "https://beezchain.com",
+    "twitter": "",
+    "telegram": "",
+    "discord": ""
+  }
+}

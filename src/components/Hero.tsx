@@ -5,6 +5,7 @@ import { ArrowRight, FileText } from "lucide-react";
 import Honeycomb from "@/components/ui/Honeycomb";
 import Counter from "@/components/ui/Counter";
 import HeroVisual from "@/components/ui/HeroVisual";
+import { openSwap } from "@/lib/swap";
 
 const container = {
   hidden: {},
@@ -112,15 +113,16 @@ export default function Hero() {
 
             <motion.div variants={item} className="mt-1 flex flex-wrap gap-4">
               {/* Buy Token: black fill, metallic gradient border, shine sweep */}
-              <a
-                href="#tokenomics"
+              <button
+                type="button"
+                onClick={openSwap}
                 className="border-gradient rounded-xl transition-transform duration-200 hover:scale-95"
               >
                 <span className="shine flex items-center justify-center gap-2 rounded-xl bg-black px-6 py-2.5 text-base font-medium text-white">
                   Buy Token
                   <ArrowRight size={18} />
                 </span>
-              </a>
+              </button>
               {/* Whitepaper: same metallic gradient border as Buy Token,
                   gold fill to keep it as the secondary action. */}
               <a

@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS } from "@/lib/data";
+import { openSwap } from "@/lib/swap";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -64,25 +65,27 @@ export default function Navbar() {
         </div>
 
         {/* Desktop CTA (gradient-bordered, gold glow) */}
-        <a
-          href="#tokenomics"
+        <button
+          type="button"
+          onClick={openSwap}
           className="border-gradient hidden rounded-xl transition-transform duration-200 hover:scale-95 lg:block"
         >
           <span className="shine flex items-center justify-center rounded-xl bg-black px-5 py-2 text-base font-medium text-white hover:shadow-[0_0_24px_-6px_rgba(255,204,0,0.7)]">
             Buy Token
           </span>
-        </a>
+        </button>
 
         {/* Mobile: CTA + hamburger */}
         <div className="flex items-center gap-3 lg:hidden">
-          <a
-            href="#tokenomics"
+          <button
+            type="button"
+            onClick={openSwap}
             className="border-gradient shrink-0 rounded-xl transition-transform duration-200 hover:scale-95"
           >
             <span className="flex items-center justify-center whitespace-nowrap rounded-xl bg-black px-3 py-2 text-sm font-medium text-white">
               Buy Token
             </span>
-          </a>
+          </button>
           <button
             aria-label="Open main menu"
             className="flex h-10 w-9 shrink-0 items-center justify-center rounded-lg text-gold"

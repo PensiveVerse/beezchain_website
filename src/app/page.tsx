@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import UseCases from "@/components/UseCases";
 import Tokenomics from "@/components/Tokenomics";
+import LivePrice from "@/components/LivePrice";
 import Roadmap from "@/components/Roadmap";
 import Partners from "@/components/Partners";
 import ContractAddress from "@/components/ContractAddress";
@@ -12,6 +13,7 @@ import Background from "@/components/ui/Background";
 import ScrollProgress from "@/components/ui/ScrollProgress";
 import BackToTop from "@/components/ui/BackToTop";
 import CustomCursor from "@/components/ui/CustomCursor";
+import SwapModal from "@/components/swap/SwapModal";
 
 export default function Home() {
   return (
@@ -29,6 +31,7 @@ export default function Home() {
         <About />
         <UseCases />
         <Tokenomics />
+        <LivePrice />
         <Roadmap />
         <Partners />
         <ContractAddress />
@@ -37,6 +40,7 @@ export default function Home() {
       </div>
       <BackToTop />
       <CustomCursor />
+      <SwapModal />
     </main>
   );
 }

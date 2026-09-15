@@ -3,6 +3,7 @@
 export const NAV_LINKS = [
   { label: "About", href: "#about" },
   { label: "Tokenomics", href: "#tokenomics" },
+  { label: "Price", href: "#price" },
   { label: "Roadmap", href: "#roadmap" },
   { label: "Contract Address", href: "#contract" },
 ];
@@ -117,15 +118,15 @@ export const FAQS = [
   },
   {
     q: "What is the maximum supply of BZC tokens?",
-    a: "The maximum supply of Beezchain (BZC) tokens is 1 billion.",
+    a: "The maximum supply of Beezchain (BZC) tokens is 10.08 billion, with the mint authority permanently revoked so no additional tokens can ever be created.",
   },
   {
     q: "Which network is Beezchain based on?",
-    a: "Beezchain (BZC) is deployed on the BEP-20, offering fast, scalable, and low-cost transactions.",
+    a: "Beezchain (BZC) is an SPL token deployed on the Solana network, offering fast, scalable, and low-cost transactions.",
   },
   {
     q: "How can I purchase BZC tokens?",
-    a: "You can purchase BZC tokens directly from the official presale page using USDT (BEP-20). Just connect your wallet (like MetaMask or Trust Wallet), enter the USDT amount, and receive BZC instantly.",
+    a: "You can purchase BZC tokens directly on the official website or through Raydium and Jupiter using USDC or SOL. Just connect your wallet (like Phantom or Solflare), enter the amount, and receive BZC instantly.",
   },
   {
     q: "Where can I check the live price of BZC?",

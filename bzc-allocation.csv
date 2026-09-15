@@ -1,0 +1,9 @@
+Wallet Name,Allocation,Percent,Tokens (BZC),Purpose,Solana Address,TGE Unlock,Cliff,Vesting After Cliff,Lock/Vesting Tool,Status
+bzc-investors,Investors,25%,2520000000,Early capital & strategic backers,[TBD],10%,3 months,Linear over 12 months,Token locker / vesting,Not created
+bzc-community,Community,25%,2520000000,Airdrops / growth / ecosystem,[TBD],5%,None,Campaigns over 24 months,Program-controlled,Not created
+bzc-staking,Staking & Rewards,20%,2016000000,Rewards for stakers,[TBD],0%,None,Emitted over 24-36 months,Staking contract,Not created
+bzc-gaming-forex,Gaming & Forex Incentive,10%,1008000000,Incentive programs & partnerships,[TBD],0%,1 month,Per program milestones,Program-controlled,Not created
+bzc-tech-reserve,Tech Reserve,10%,1008000000,Development & infrastructure,[TBD],0%,6 months,Linear over 24 months,Token locker,Not created
+bzc-team-advisors,Team & Advisors,10%,1008000000,Team allocation (locked),[TBD],0%,12 months,Linear over 24 months,Token locker (public),Not created
+bzc-liquidity,Liquidity carve-out,TBD,TBD,Raydium pool pairing (from Investors/Community),[TBD],N/A,N/A,Liquidity locker,Not created
+TOTAL,,100%,10080000000,,,,,,,
