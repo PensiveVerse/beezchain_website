@@ -34,9 +34,7 @@ export const metadata: Metadata = {
     "staking",
     "tokenomics",
   ],
-  icons: {
-    icon: "/images/coin.webp",
-  },
+
   openGraph: {
     type: "website",
     url: SITE_URL,
