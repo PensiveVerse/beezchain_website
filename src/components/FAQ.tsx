@@ -1,10 +1,15 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import { Plus, Minus } from "lucide-react";
 import { FAQS } from "@/lib/data";
 import Reveal from "@/components/Reveal";
+
+// WebGL can't be server-rendered — load the 3D mark on the client only.
+const Question3D = dynamic(() => import("@/components/ui/Question3D"), {
+  ssr: false,
+});
 
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
@@ -67,21 +72,9 @@ export default function FAQ() {
           })}
         </div>
 
-        {/* graphic */}
+        {/* graphic — real 3D question mark that revolves 360° (drag to spin) */}
         <Reveal className="hidden w-full md:block lg:w-[40%]">
-          <div className="relative flex justify-center">
-            <div
-              aria-hidden
-              className="absolute top-1/2 h-56 w-56 -translate-y-1/2 rounded-full bg-gold/15 blur-3xl"
-            />
-            <Image
-              src="/images/faq.webp"
-              alt="FAQ"
-              width={452}
-              height={614}
-              className="relative w-64 animate-float object-contain"
-            />
-          </div>
+          <Question3D />
         </Reveal>
       </div>
     </section>
