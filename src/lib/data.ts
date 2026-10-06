@@ -35,7 +35,7 @@ export const TOKEN_STATS = [
   { label: "Token", value: "BEEZCHAIN" },
   { label: "Symbol", value: "BZC" },
   { label: "Network", value: "SOL" },
-  { label: "Supply", value: "10.08 B" },
+  { label: "Supply", value: "10.8 B" },
   { label: "Decimal", value: "9" },
 ];
 
@@ -111,6 +111,61 @@ export const PARTNERS = [
 
 export const CONTRACT_ADDRESS = "8xzLg1tyhw1A9tsvVo9nFC9XbvBeHrtvWddtLiu2yp8E";
 
+// Public distribution wallets — anyone can verify these on Solscan.
+export const DISTRIBUTION_WALLETS = [
+  {
+    name: "Community",
+    pct: 25,
+    amount: "2,700,000,000",
+    address: "EXkxdeKv72BMPrC9Q872Xz4WXmV1xyfW1TESMPvw13Nb",
+    note: "Liquidity & airdrops",
+    locked: false,
+  },
+  {
+    name: "Investors",
+    pct: 25,
+    amount: "2,700,000,000",
+    address: "B2AhZrsUKKBbgLDf4jG9JPpBnqvebL8pD6M9Sn8uXHN7",
+    note: "",
+    locked: false,
+  },
+  {
+    name: "Staking & Rewards",
+    pct: 20,
+    amount: "2,160,000,000",
+    address: "6nUxYZGwKkbL5Ee9uPT6E4ewQjEWo6Fj7DKc6y2rdZfU",
+    note: "",
+    locked: false,
+  },
+  {
+    name: "Gaming & Forex",
+    pct: 10,
+    amount: "1,080,000,000",
+    address: "4P4J9phnwZ1E6KKC6CDS6H7qVj7AJH8iDqgmH7JGDYNq",
+    note: "",
+    locked: false,
+  },
+  {
+    name: "Tech Reserve",
+    pct: 10,
+    amount: "1,080,000,000",
+    address: "Fnxe6GhtwjzM27SjGrhVUprpTEtR7m7gheWHCCo1GjFb",
+    note: "",
+    locked: false,
+  },
+  {
+    name: "Team & Advisors",
+    pct: 10,
+    amount: "1,080,000,000",
+    address: "GGYuTd3Co19CovDsuoJe2Fq63keQUjk72xtsGfFZ2xo8",
+    note: "12-mo cliff + 24-mo vesting",
+    locked: true,
+  },
+];
+
+// Public proof the team tokens are locked (paste the lock.jup.ag link here).
+export const TEAM_LOCK_LINK = "";
+
 export const FAQS = [
   {
     q: "What is Beezchain (BZC)?",
@@ -118,7 +173,7 @@ export const FAQS = [
   },
   {
     q: "What is the maximum supply of BZC tokens?",
-    a: "The maximum supply of Beezchain (BZC) tokens is 10.08 billion, with the mint authority permanently revoked so no additional tokens can ever be created.",
+    a: "The maximum supply of Beezchain (BZC) tokens is 10.8 billion, with the mint authority permanently revoked so no additional tokens can ever be created.",
   },
   {
     q: "Which network is Beezchain based on?",

@@ -2,34 +2,40 @@
 
 Marketing + launch site for **BeezChain (BZC)**, a Solana-based blockchain platform.
 A single-page, dark-and-gold experience with modern motion design: an animated hero,
-an interactive tokenomics chart, a sticky-stacking roadmap, a custom cursor, and an
-on-chain **Buy/Swap widget** with a **live price** feed.
+an interactive tokenomics chart, an **on-chain transparency** section, a real **3D**
+FAQ mark, a sticky-stacking roadmap, and an on-chain **Buy/Swap widget** with a
+**live price** feed.
+
+## 🪙 Token status (on-chain)
+
+- **Live on Solana** — mint `8xzLg1tyhw1A9tsvVo9nFC9XbvBeHrtvWddtLiu2yp8E`
+- **Supply:** 10,800,000,000 BZC (fixed · 9 decimals · mint authority **revoked**)
+- **Distributed** across 6 public wallets (see the Transparency section + `PHASE2_WALLET_ALLOCATION.md`)
+- **Team tokens locked** — 12-month cliff + 24-month linear vesting (Jupiter Lock, non-cancellable)
+- **Liquidity (Raydium) pending** — the swap + live-price sections go live once liquidity
+  exists and the mint address is set in `src/lib/token.ts` → `mintAddress` (see *Going live*).
 
 ## ✨ Features
 
 - **Animated hero** — kinetic headline reveal, floating BZC coin with orbit rings,
-  glass info cards, live badge, and animated stat counters. Sized to fit the
-  viewport (no scroll needed to see the full section).
-- **Buy/Swap widget** — an animated modal (backdrop blur, scroll-lock,
-  Esc-to-close) that embeds the **Jupiter** swap terminal for USDC → BZC. Handles
-  wallet connection itself (Phantom/Solflare) with no wallet-adapter bloat. Opened
-  from any "Buy Token" CTA via a decoupled event trigger. Shows a clean
-  "coming soon" state until the token mint address is configured.
-- **Live price feed** — a market section that pulls real-time price, 24h change,
-  liquidity, volume, and market cap from the **DexScreener** API (auto-refreshing
-  every 30s), with a "coming soon" placeholder pre-launch.
-- **Interactive tokenomics** — an animated SVG donut chart built from the real
-  distribution data, with hover-to-highlight slices, a synced legend, and the BZC
-  coin at its centre.
-- **Sticky-stacking roadmap** — quarter cards that pin and stack as you scroll,
-  with phase tags and status badges.
-- **Smooth custom cursor** — a precise dot plus a spring-trailing ring that reacts
-  to interactive elements (auto-disabled on touch devices).
-- **Ambient polish** — aurora gradient background, film grain, glassmorphism,
-  scroll progress bar, partner marquee, animated FAQ accordion, and a back-to-top
-  button.
-- **Accessible motion** — heavy decorative animations respect
-  `prefers-reduced-motion`.
+  glass info cards, live badge, and animated stat counters.
+- **Buy/Swap widget** — an animated modal (backdrop blur, scroll-lock, Esc-to-close)
+  that embeds the **Jupiter** swap terminal for USDC → BZC. Handles wallet connection
+  itself (Phantom/Solflare) with no wallet-adapter bloat. Shows a clean "coming soon"
+  state until the mint address is configured.
+- **Live price feed** — a market section pulling real-time price, 24h change,
+  liquidity, volume, and market cap from the **DexScreener** API (auto-refresh 30s).
+- **On-chain transparency** — the official contract + all 6 distribution wallets with
+  copy buttons and Solscan links, plus trust badges (fixed supply, mint revoked,
+  team locked).
+- **Interactive tokenomics** — an animated SVG donut chart from the real distribution
+  data, with hover-to-highlight slices and a synced legend.
+- **Real 3D FAQ mark** — an extruded, glossy question mark (Three.js / react-three-fiber)
+  that revolves 360° and can be dragged to spin.
+- **Sticky-stacking roadmap** — quarter cards that pin and stack as you scroll.
+- **Smooth custom cursor**, aurora background, film grain, glassmorphism, scroll
+  progress bar, partner marquee, animated FAQ accordion, back-to-top.
+- **Accessible motion** — heavy decorative animations respect `prefers-reduced-motion`.
 
 ## 🧱 Tech Stack
 
@@ -38,7 +44,8 @@ on-chain **Buy/Swap widget** with a **live price** feed.
 | Framework   | [Next.js 16](https://nextjs.org) (App Router, Turbopack) |
 | UI runtime  | React 19                                |
 | Styling     | Tailwind CSS v4                         |
-| Animation   | Framer Motion 13                        |
+| Animation   | Framer Motion                           |
+| 3D          | Three.js · @react-three/fiber · @react-three/drei |
 | Icons       | lucide-react                            |
 | Language    | TypeScript                              |
 | Font        | Montserrat (`next/font`)                |
@@ -48,17 +55,10 @@ on-chain **Buy/Swap widget** with a **live price** feed.
 Requirements: **Node.js 18.18+** (or 20+) and npm.
 
 ```bash
-# install dependencies
 npm install
-
-# start the dev server (http://localhost:3000)
-npm run dev
-
-# production build + run
-npm run build
-npm start
-
-# lint
+npm run dev     # dev server (http://localhost:3000, or next free port)
+npm run build   # production build
+npm start       # run the build
 npm run lint
 ```
 
@@ -67,68 +67,57 @@ npm run lint
 ```
 src/
 ├─ app/
-│  ├─ layout.tsx        # root layout, fonts, metadata
-│  ├─ page.tsx          # composes all sections
-│  └─ globals.css       # design system: tokens, aurora, glass, animations
+│  ├─ layout.tsx            # root layout, fonts, SEO/OG metadata
+│  ├─ page.tsx              # composes all sections
+│  ├─ globals.css           # design system: tokens, aurora, glass, animations
+│  ├─ favicon.ico / icon.svg / apple-icon.png   # BZC logo favicons
+│  └─ opengraph-image.tsx / twitter-image.tsx    # generated social cards
 ├─ components/
-│  ├─ Navbar.tsx        # glass nav that condenses on scroll
-│  ├─ Hero.tsx          # animated hero
-│  ├─ About.tsx         # parallax intro + feature cards
-│  ├─ UseCases.tsx      # 3D tilt cards
-│  ├─ Tokenomics.tsx    # interactive donut + stats
-│  ├─ LivePrice.tsx     # DexScreener-powered live market section
-│  ├─ Roadmap.tsx       # sticky-stacking timeline
-│  ├─ Partners.tsx      # logo marquee
-│  ├─ ContractAddress.tsx
-│  ├─ FAQ.tsx
-│  ├─ Footer.tsx
-│  ├─ Reveal.tsx        # scroll-reveal wrapper
-│  ├─ swap/
-│  │  └─ SwapModal.tsx  # Jupiter-based Buy/Swap modal
-│  └─ ui/               # shared primitives
-│     ├─ Background.tsx      # aurora + grain
-│     ├─ ScrollProgress.tsx
-│     ├─ Counter.tsx         # count-up-on-view numbers
-│     ├─ CustomCursor.tsx
-│     ├─ TiltCard.tsx
-│     ├─ Honeycomb.tsx
-│     ├─ HeroVisual.tsx      # floating coin + orbit rings
-│     ├─ DonutChart.tsx      # interactive tokenomics chart
-│     └─ BackToTop.tsx
+│  ├─ Navbar.tsx            # glass nav that condenses on scroll
+│  ├─ Hero.tsx  About.tsx  UseCases.tsx
+│  ├─ Tokenomics.tsx        # interactive donut + stats
+│  ├─ Transparency.tsx      # on-chain wallets + trust badges
+│  ├─ LivePrice.tsx         # DexScreener-powered live market section
+│  ├─ Roadmap.tsx  Partners.tsx  ContractAddress.tsx  FAQ.tsx  Footer.tsx
+│  ├─ Reveal.tsx            # scroll-reveal wrapper
+│  ├─ swap/SwapModal.tsx    # Jupiter-based Buy/Swap modal
+│  └─ ui/                   # shared primitives (cursor, counter, donut,
+│                           #   HeroVisual, Question3D [3D FAQ mark], …)
 └─ lib/
-   ├─ data.ts           # all site copy/content (nav, use cases, tokenomics, roadmap, FAQ…)
-   ├─ token.ts          # BZC token config: mint address, decimals, supply, links
-   └─ swap.ts           # decoupled event trigger to open the swap modal
+   ├─ data.ts               # site copy + distribution wallets + lock link
+   ├─ token.ts              # BZC token config: mint address, decimals, supply, links
+   └─ swap.ts               # decoupled event trigger to open the swap modal
 
 public/
-└─ token/
-   └─ bzc-metadata.json # on-chain (Metaplex) token metadata: name, symbol, logo…
+├─ token/                   # bzc-logo.png / .svg + bzc-metadata.json (on-chain metadata)
+├─ fonts/                   # 3D typeface for the FAQ mark
+└─ images/                  # section art + coin
 ```
 
 Most editable content (headings, links, roadmap, FAQ, contract address, token
-stats) lives in `src/lib/data.ts`.
+stats, distribution wallets) lives in `src/lib/data.ts`.
 
 ## 🪙 Going live (swap + price)
 
-The Buy/Swap widget and Live Price section ship in a **"coming soon"** state until
-the token exists on-chain. To activate them:
+The token already exists on-chain (address above). The Buy/Swap widget and Live
+Price section stay in a **"coming soon"** state until **liquidity** is added. To flip
+them live after the Raydium pool exists:
 
-1. Create the BZC token on Solana (see `PHASE1_CREATE_TOKEN.md`).
-2. Paste the verified mint address into `src/lib/token.ts` → `mintAddress`.
-3. That flips `IS_TOKEN_LIVE` to `true` — the swap loads the real Jupiter terminal
-   and the price section starts pulling live DexScreener data. No other code changes.
+1. Set `src/lib/token.ts` → `mintAddress` to `8xzLg1tyhw1A9tsvVo9nFC9XbvBeHrtvWddtLiu2yp8E`.
+2. That flips `IS_TOKEN_LIVE` to `true` — the swap loads the live Jupiter terminal and
+   the price section starts pulling DexScreener data. No other code changes.
+3. Paste the public **Jupiter Lock** link into `data.ts` → `TEAM_LOCK_LINK` so the
+   Transparency section links straight to the team-lock proof.
 
-If Jupiter bumps its terminal version, update the one `JUPITER_SCRIPT` constant at
-the top of `src/components/swap/SwapModal.tsx`.
+> If Jupiter bumps its terminal version, update the `JUPITER_SCRIPT` constant at the
+> top of `src/components/swap/SwapModal.tsx`.
 
-## 📚 Launch docs
+## 📚 Project docs (repo root)
 
-Planning and launch runbooks live at the repo root:
-
-- `LAUNCH_PLAN.md` — full Solana-first launch strategy (all phases)
-- `PHASE1_CREATE_TOKEN.md` — step-by-step token creation on Solana
-- `PHASE2_WALLET_ALLOCATION.md` + `bzc-allocation.csv` — wallet split & vesting
+- `LAUNCH_PLAN.md` — overall Solana-first launch strategy
+- `PHASE2_WALLET_ALLOCATION.md` + `bzc-allocation.csv` — wallet split, vesting, on-chain addresses
 - `WHITEPAPER.md` — project whitepaper draft
+- `MARKETING/LAUNCH_CONTENT.md` — launch & airdrop content pack
 
 ## 🎨 Brand
 

@@ -2,7 +2,7 @@
 
 **Version:** Draft 0.1
 **Network:** Solana (SPL)
-**Token:** BeezChain · **Symbol:** BZC · **Decimals:** 9 · **Total Supply:** 10,080,000,000
+**Token:** BeezChain · **Symbol:** BZC · **Decimals:** 9 · **Total Supply:** 10,800,000,000
 
 > ⚠️ **Draft notice.** This is a working draft for review. Sections marked `[TBD]`
 > need real figures, dates, or legal review before publishing. Nothing here is an
@@ -25,7 +25,7 @@ over premature infrastructure.
 
 **Why BZC:**
 - Built on Solana — fast, cheap, and scalable transactions.
-- Fixed supply of 10.08 billion with **mint authority revoked** (no hidden inflation).
+- Fixed supply of 10.8 billion with **mint authority revoked** (no hidden inflation).
 - Backed by a concrete real-estate income roadmap, not just promises.
 - On-chain transparency: locked liquidity, vested team tokens, public wallets.
 
@@ -87,7 +87,7 @@ BeezChain's flagship value driver is **real-estate income sharing**:
 | Symbol | BZC |
 | Network | Solana (SPL) |
 | Decimals | 9 |
-| Total supply | 10,080,000,000 (fixed) |
+| Total supply | 10,800,000,000 (fixed) |
 | Mint authority | Revoked after mint (no new tokens ever) |
 | Freeze authority | Revoked (holders' tokens cannot be frozen) |
 | Contract address | `[TBD — insert verified mint address after Phase 1]` |
@@ -96,16 +96,16 @@ BeezChain's flagship value driver is **real-estate income sharing**:
 
 ## 5. Tokenomics
 
-**Total supply: 10.08 billion BZC**, distributed as follows:
+**Total supply: 10.8 billion BZC**, distributed as follows:
 
 | Allocation | % | Tokens | Purpose |
 |-----------|----|--------|---------|
-| Investors | 25% | 2,520,000,000 | Early capital & strategic backers |
-| Community | 25% | 2,520,000,000 | Airdrops, growth, ecosystem incentives |
-| Staking & Rewards | 20% | 2,016,000,000 | Rewards for holders who stake BZC |
-| Gaming & Forex Incentive | 10% | 1,008,000,000 | Incentive programs & partnerships |
-| Tech Reserve | 10% | 1,008,000,000 | Development & infrastructure |
-| Team & Advisors | 10% | 1,008,000,000 | Team — **vested/locked over time** |
+| Investors | 25% | 2,700,000,000 | Early capital & strategic backers |
+| Community | 25% | 2,700,000,000 | Airdrops, growth, ecosystem incentives |
+| Staking & Rewards | 20% | 2,160,000,000 | Rewards for holders who stake BZC |
+| Gaming & Forex Incentive | 10% | 1,080,000,000 | Incentive programs & partnerships |
+| Tech Reserve | 10% | 1,080,000,000 | Development & infrastructure |
+| Team & Advisors | 10% | 1,080,000,000 | Team — **vested/locked over time** |
 
 **Trust mechanisms:**
 - **Liquidity locked** after the Raydium pool is created (anti-rug).

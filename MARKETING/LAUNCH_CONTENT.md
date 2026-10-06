@@ -8,7 +8,7 @@ Fill in every `[placeholder]` before posting.
 - X / Twitter: `[@handle]`
 - Telegram: `[t.me/link]`
 - Discord: `[discord.gg/link]`
-- Network: Solana (SPL) · Symbol: BZC · Supply: 10.08B
+- Network: Solana (SPL) · Symbol: BZC · Supply: 10.8B
 - Contract address: `[paste after Phase 1]`
 
 > Note: avoid price predictions or "guaranteed returns" language — it hurts
@@ -50,7 +50,7 @@ everyday use. BZC launches as an SPL token, with room to expand multi-chain late
 ```
 3/ Tokenomics built on trust
 
-• Total supply: 10.08B BZC (fixed)
+• Total supply: 10.8B BZC (fixed)
 • Mint authority revoked — no hidden inflation
 • Team tokens vested & locked
 • Liquidity locked at launch

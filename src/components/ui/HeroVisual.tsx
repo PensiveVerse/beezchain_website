@@ -83,7 +83,7 @@ export default function HeroVisual() {
           <TrendingUp size={18} />
         </span>
         <div className="leading-tight">
-          <div className="text-sm font-bold text-white">10.08B</div>
+          <div className="text-sm font-bold text-white">10.8B</div>
           <div className="text-[11px] text-white/60">Total supply</div>
         </div>
       </motion.div>

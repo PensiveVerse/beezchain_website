@@ -4,6 +4,7 @@ import About from "@/components/About";
 import UseCases from "@/components/UseCases";
 import Tokenomics from "@/components/Tokenomics";
 import LivePrice from "@/components/LivePrice";
+import Transparency from "@/components/Transparency";
 import Roadmap from "@/components/Roadmap";
 import Partners from "@/components/Partners";
 import ContractAddress from "@/components/ContractAddress";
@@ -31,6 +32,7 @@ export default function Home() {
         <About />
         <UseCases />
         <Tokenomics />
+        <Transparency />
         <LivePrice />
         <Roadmap />
         <Partners />

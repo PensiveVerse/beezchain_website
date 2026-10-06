@@ -7,8 +7,8 @@ export const BZC = {
   name: "BeezChain",
   symbol: "BZC",
   decimals: 9,
-  // 10.08 billion, written out in base units is added at mint time.
-  totalSupply: 10_080_000_000,
+  // 10.8 billion, written out in base units is added at mint time.
+  totalSupply: 10_800_000_000,
   network: "solana-mainnet",
 
   // ⚠️ PLACEHOLDER — replace with the real SPL mint address after Phase 1.

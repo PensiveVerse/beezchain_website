@@ -37,7 +37,7 @@ export default function Tokenomics() {
           <span className="text-gold-shimmer">Tokenomics</span>
         </h2>
         <p className="mb-16 max-w-2xl text-center text-sm text-white/60 md:text-base">
-          A transparent breakdown of BZC&rsquo;s 10.08&nbsp;B total supply across
+          A transparent breakdown of BZC&rsquo;s 10.8&nbsp;B total supply across
           the ecosystem. Hover a slice to explore.
         </p>
       </Reveal>

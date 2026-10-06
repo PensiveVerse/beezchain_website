@@ -57,7 +57,7 @@ Your site right now says two different things. This confuses investors and looks
 unprofessional. Pick the **Solana** facts and fix the rest:
 
 - ❌ FAQ currently says: "BEP-20", "PancakeSwap", "max supply 1 billion".
-- ✅ Should say: "Solana (SPL)", "Raydium / Jupiter", "supply 10.08 Billion".
+- ✅ Should say: "Solana (SPL)", "Raydium / Jupiter", "supply 10.8 Billion".
 - File to edit: `src/lib/data.ts` (the `FAQS` array + `TOKEN_STATS`).
 
 > 💡 Ask Claude to do this edit for you — it's a 5-minute change.
@@ -66,7 +66,7 @@ unprofessional. Pick the **Solana** facts and fix the rest:
 - **Name:** BeezChain
 - **Symbol:** BZC
 - **Decimals:** 9
-- **Total supply:** 10,080,000,000 (10.08 B)
+- **Total supply:** 10,800,000,000 (10.8 B)
 - **Distribution (from your Tokenomics):**
   - Investors 25%
   - Community 25%
@@ -98,7 +98,7 @@ unprofessional. Pick the **Solana** facts and fix the rest:
 
 ### The steps (plain words)
 1. **Create the mint** (the token factory) with **9 decimals**.
-2. **Mint 10.08 B** BZC into your wallet.
+2. **Mint 10.8 B** BZC into your wallet.
 3. **Add metadata** (name, symbol, logo) using **Metaplex** so wallets show it nicely.
 4. **Revoke the mint authority** → now nobody, not even you, can print more coins.
    *This is critical.* Investors check this on Solscan before trusting you.
@@ -106,7 +106,7 @@ unprofessional. Pick the **Solana** facts and fix the rest:
 
 ### Verify
 - Open **Solscan** (https://solscan.io), paste your token address.
-- Confirm: name, symbol, supply = 10.08B, mint authority = disabled. ✅
+- Confirm: name, symbol, supply = 10.8B, mint authority = disabled. ✅
 
 > ⚠️ The address already in your code (`8xzLg1...yp8E`): check it on Solscan.
 > Only advertise it once it's confirmed real, correct, and locked.
@@ -300,7 +300,7 @@ and **marketing**.
 1. ✅ Chain decided: **Solana first**.
 2. Install **Phantom**, buy ~$30 of **SOL**.
 3. Ask Claude to **fix the FAQ/tokenomics contradiction** in `src/lib/data.ts`.
-4. Create the **BZC token** (9 decimals, 10.08B), then **revoke mint authority**.
+4. Create the **BZC token** (9 decimals, 10.8B), then **revoke mint authority**.
 5. Verify it on **Solscan**, then come back to build the **website swap widget**.
 
 ---

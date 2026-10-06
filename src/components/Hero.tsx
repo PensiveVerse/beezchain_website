@@ -23,7 +23,7 @@ const item = {
 };
 
 const HERO_STATS = [
-  { value: 10.08, suffix: " B", decimals: 2, label: "Total Supply" },
+  { value: 10.8, suffix: " B", decimals: 1, label: "Total Supply" },
   { value: 6, suffix: "", decimals: 0, label: "Strategic Partners" },
   { value: 9, suffix: "", decimals: 0, label: "Token Decimals" },
 ];
