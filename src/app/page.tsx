@@ -1,48 +1,13 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import UseCases from "@/components/UseCases";
-import Tokenomics from "@/components/Tokenomics";
-import LivePrice from "@/components/LivePrice";
-import Transparency from "@/components/Transparency";
-import Roadmap from "@/components/Roadmap";
-import Partners from "@/components/Partners";
-import ContractAddress from "@/components/ContractAddress";
-import FAQ from "@/components/FAQ";
-import Footer from "@/components/Footer";
-import Background from "@/components/ui/Background";
-import ScrollProgress from "@/components/ui/ScrollProgress";
-import BackToTop from "@/components/ui/BackToTop";
-import CustomCursor from "@/components/ui/CustomCursor";
-import SwapModal from "@/components/swap/SwapModal";
+// The live landing page is the self-contained v12 design bundle in
+// /public/site, served at "/" via the `beforeFiles` rewrite in next.config.ts.
+// That rewrite always intercepts "/" before this route is reached, so this
+// component only exists to keep the app router valid and acts as a fallback.
+//
+// Launch-code kept for the liquidity phase (not wired here yet):
+//   src/components/LivePrice.tsx, src/components/swap/SwapModal.tsx,
+//   src/lib/swap.ts, src/lib/token.ts
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-    <main className="relative min-h-screen bg-black">
-      {/* Ambient aurora + grain behind everything, and a scroll progress bar. */}
-      <Background />
-      <ScrollProgress />
-
-      {/* Whole site is a centred column capped at 1600px, matching the source.
-          NOTE: no overflow-x-hidden here — it would create a scroll container
-          and break the Roadmap's position:sticky stacking. */}
-      <div className="relative z-[2] mx-auto max-w-[1600px]">
-        <Navbar />
-        <Hero />
-        <About />
-        <UseCases />
-        <Tokenomics />
-        <Transparency />
-        <LivePrice />
-        <Roadmap />
-        <Partners />
-        <ContractAddress />
-        <FAQ />
-        <Footer />
-      </div>
-      <BackToTop />
-      <CustomCursor />
-      <SwapModal />
-    </main>
-  );
+  redirect("/site/index.html");
 }

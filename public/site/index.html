@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BeezChain (BZC) — Solana-based blockchain ecosystem</title>
+<meta name="description" content="BeezChain (BZC) is a Solana-based ecosystem bringing real-world value on-chain — real-estate income, staking, rewards, and transparent tokenomics.">
+<meta name="keywords" content="BeezChain, BZC, Solana, SPL token, crypto, DeFi, real estate, staking, tokenomics">
+<meta name="application-name" content="BeezChain">
+<meta name="theme-color" content="#0a0907">
+<link rel="icon" href="/site/uploads/bzc-logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/token/bzc-logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BeezChain">
+<meta property="og:title" content="BeezChain (BZC) — Solana-based blockchain ecosystem">
+<meta property="og:description" content="BeezChain (BZC) is a Solana-based ecosystem bringing real-world value on-chain — real-estate income, staking, rewards, and transparent tokenomics.">
+<meta property="og:image" content="/images/logo.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BeezChain (BZC) — Solana-based blockchain ecosystem">
+<meta name="twitter:description" content="BeezChain (BZC) is a Solana-based ecosystem bringing real-world value on-chain — real-estate income, staking, rewards, and transparent tokenomics.">
+<meta name="twitter:image" content="/images/logo.webp">
+<script src="/site/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="/site/_ds/modernist-a51df6b5-9974-4021-82d3-346d7784904c/styles.css">
+<script src="/site/_ds/modernist-a51df6b5-9974-4021-82d3-346d7784904c/_ds_bundle.js"></script>
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#0a0907;color:#f7f2e8}
+a{color:var(--color-accent-400)}
+a:hover{color:var(--color-accent-300)}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+</style>
+</helmet>
+<div ref="{{ rootRef }}" style="isolation:isolate;--color-text:#0a0907;--color-bg:#f7f2e8;--color-accent:#f5b82e;--color-accent-300:#ffe39a;--color-accent-400:#ffcf5c;--color-accent-600:#d99a12;--color-accent-700:#a8700a;--color-neutral-300:#d9d2c3;--color-neutral-400:#b5ad9d;--color-neutral-500:#8c8577;--color-neutral-600:#6b6559;--color-neutral-700:#4d483f;--color-neutral-800:#221f19;--color-neutral-900:#13110d;background:var(--color-text);color:var(--color-bg);font-family:var(--font-body);overflow-x:clip;position:relative">
+
+<nav data-nav="1" style="position:fixed;top:{{ navTop }};left:{{ navInset }};right:{{ navInset }};z-index:60;transition:top .6s cubic-bezier(.2,.7,.1,1),left .6s cubic-bezier(.2,.7,.1,1),right .6s cubic-bezier(.2,.7,.1,1);will-change:transform">
+  <div data-navshell="1" style="position:relative;display:flex;align-items:center;gap:28px;padding:{{ navPad }} clamp(30px,3.2vw,48px);background:{{ navRule }};clip-path:polygon(22px 0, calc(100% - 22px) 0, 100% 50%, calc(100% - 22px) 100%, 22px 100%, 0 50%);transition:padding .6s cubic-bezier(.2,.7,.1,1),background .5s">
+    <div aria-hidden="true" style="position:absolute;inset:1px;clip-path:polygon(22px 0, calc(100% - 22px) 0, 100% 50%, calc(100% - 22px) 100%, 22px 100%, 0 50%);background:{{ navBg }};backdrop-filter:{{ navBlur }};-webkit-backdrop-filter:{{ navBlur }};transition:background .5s;pointer-events:none"></div>
+    <div data-navspot="1" aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;overflow:hidden;opacity:{{ navSpot }};transition:opacity .5s"><div data-navspotdot="1" style="position:absolute;left:0;top:50%;width:520px;height:200px;margin:-100px 0 0 -260px;background:radial-gradient(closest-side, color-mix(in srgb, var(--color-accent) 18%, transparent), transparent);transform:translateX(50vw);will-change:transform"></div></div>
+    <a href="#top" style="position:relative;display:flex;align-items:center;gap:14px;color:var(--color-bg);text-decoration:none;margin-right:auto">
+      <span style="position:relative;display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;flex:none;perspective:420px">
+        <svg aria-hidden="true" width="46" height="46" viewBox="0 0 46 46" style="position:absolute;inset:0;overflow:visible">
+          <path d="M23 2 L41.2 12.5 L41.2 33.5 L23 44 L4.8 33.5 L4.8 12.5 Z" fill="none" stroke="color-mix(in srgb, var(--color-bg) 16%, transparent)" stroke-width="1.5"></path>
+          <path data-hexprog="1" d="M23 2 L41.2 12.5 L41.2 33.5 L23 44 L4.8 33.5 L4.8 12.5 Z" pathLength="100" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-dasharray="100" stroke-dashoffset="100" style="filter:drop-shadow(0 0 4px var(--color-accent))"></path>
+        </svg>
+        <img data-coin="1" src="/site/uploads/bzc-logo.svg" alt="" style="position:relative;width:28px;height:28px;transform-style:preserve-3d"></img>
+      </span>
+      <span style="display:flex;flex-direction:column;gap:4px">
+        <span style="font-weight:800;font-size:19px;letter-spacing:-0.03em;line-height:1">BeezChain</span>
+        <span style="display:flex;align-items:center;gap:6px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-accent-400);line-height:1"><span data-pulse="1" style="width:5px;height:6px;background:var(--color-accent);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)"></span>Solana · live</span>
+      </span>
+    </a>
+    <sc-if value="{{ navWide }}" hint-placeholder-val="{{ true }}">
+      <div data-navrail="1" style="position:relative;display:flex;gap:clamp(14px,1.8vw,30px);font-size:14px;white-space:nowrap;padding:8px 0">
+        <sc-for list="{{ navLinks }}" as="l" hint-placeholder-count="6">
+          <a data-navlink="1" href="{{ l.href }}" style="position:relative;display:flex;align-items:flex-start;gap:5px;padding:4px 0;color:{{ l.c }};text-decoration:none;transition:color .3s">
+            <span style="display:block;overflow:hidden;height:1.3em;line-height:1.3em"><span data-roll="1" style="display:flex;flex-direction:column;transition:transform .5s cubic-bezier(.2,.7,.1,1)"><span>{{ l.label }}</span><span style="color:var(--color-accent)">{{ l.label }}</span></span></span>
+            <span style="font-size:9px;letter-spacing:.04em;line-height:1;color:{{ l.nc }};transition:color .3s">{{ l.n }}</span>
+          </a>
+        </sc-for>
+        <div data-navind="1" aria-hidden="true" style="position:absolute;left:0;bottom:-4px;width:12px;height:13px;margin-left:-6px;background:var(--color-accent);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);filter:drop-shadow(0 0 6px var(--color-accent));opacity:0;transform:translateX(0);transition:transform .6s cubic-bezier(.3,1.4,.4,1),opacity .3s;pointer-events:none;will-change:transform"></div>
+        <div data-navtrail="1" aria-hidden="true" style="position:absolute;left:0;bottom:2px;width:100px;height:1px;background:linear-gradient(90deg, transparent, var(--color-accent), transparent);transform-origin:0 50%;opacity:0;transition:transform .6s cubic-bezier(.2,.7,.1,1),opacity .3s;pointer-events:none"></div>
+      </div>
+      <div style="position:relative;display:flex;gap:10px;white-space:nowrap;align-items:center">
+        <a href="https://beezchain.gitbook.io/beezchain-docs/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;color:var(--color-neutral-300);text-decoration:none;font-size:14px;padding:10px 8px" style-hover="color:var(--color-accent)">Whitepaper <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a>
+        <a data-magnetic="1" data-shine="1" href="#market" style="position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:18px;padding:12px 22px;background:var(--color-accent);color:var(--color-text);text-decoration:none;font-size:14px;font-weight:700;clip-path:polygon(10px 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 10px 100%, 0 50%);transition:background .2s" style-hover="background:var(--color-accent-400)">Buy BZC <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a>
+      </div>
+    </sc-if>
+    <sc-if value="{{ navCompact }}" hint-placeholder-val="{{ false }}">
+      <button onClick="{{ toggleMenu }}" aria-label="Menu" style="position:relative;width:48px;height:44px;display:flex;align-items:center;justify-content:center;border:0;cursor:pointer;background:var(--color-accent);color:var(--color-text);clip-path:polygon(10px 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 10px 100%, 0 50%)">
+        <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></sc-if>
+        <sc-if value="{{ menuClosed }}" hint-placeholder-val="{{ true }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25"><path d="M4 12h16"></path><path d="M4 6h16"></path><path d="M4 18h16"></path></svg></sc-if>
+      </button>
+    </sc-if>
+    <div data-navprog="1" aria-hidden="true" style="position:absolute;left:22px;right:22px;bottom:0;height:2px;background:linear-gradient(90deg, var(--color-accent-700), var(--color-accent), var(--color-accent-300));transform-origin:left;transform:scaleX(0);pointer-events:none"></div>
+  </div>
+</nav>
+<a href="#top" aria-label="Back to top" data-totop="1" style="position:fixed;right:clamp(16px,2.5vw,32px);bottom:clamp(16px,2.5vw,32px);z-index:70;width:52px;height:52px;display:flex;align-items:center;justify-content:center;background:var(--color-accent);color:var(--color-text);text-decoration:none;opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .4s,transform .5s cubic-bezier(.2,.7,.1,1),background .3s,color .3s" style-hover="filter:brightness(1.15)">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25"><path d="m5 12 7-7 7 7"></path><path d="M12 19V5"></path></svg>
+</a>
+
+<sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+  <div style="position:fixed;right:14px;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:10px;align-items:flex-end">
+    <sc-for list="{{ acts }}" as="a" hint-placeholder-count="9">
+      <a href="{{ a.href }}" aria-label="{{ a.t }}" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--color-bg);padding:2px 0;--lo:0" style-hover="--lo:1">
+        <span style="font-size:11px;letter-spacing:.04em;opacity:var(--lo);transform:translateX({{ a.lx }}px);transition:opacity .4s,transform .5s;white-space:nowrap;background:color-mix(in srgb, var(--color-text) 70%, transparent);padding:3px 6px">{{ a.n }} {{ a.t }}</span>
+        <span style="width:{{ a.s }}px;height:{{ a.sh }}px;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);background:{{ a.bg }};transition:width .4s,height .4s,background .4s;flex:none"></span>
+      </a>
+    </sc-for>
+  </div>
+</sc-if>
+
+<sc-if value="{{ menuVisible }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;inset:0;z-index:55;background:var(--color-text);padding:96px 20px 32px;display:flex;flex-direction:column;gap:0">
+    <sc-for list="{{ navLinks }}" as="l" hint-placeholder-count="6">
+      <a href="{{ l.href }}" onClick="{{ closeMenu }}" style="color:var(--color-bg);text-decoration:none;font-size:32px;font-weight:800;letter-spacing:-0.03em;padding:14px 0;border-bottom:2px solid color-mix(in srgb, var(--color-bg) 18%, transparent)">{{ l.label }}</a>
+    </sc-for>
+    <div style="display:flex;gap:8px;margin-top:28px">
+      <a class="btn btn-primary" href="#market" onClick="{{ closeMenu }}" style="color:var(--color-text);padding:14px 18px">Buy BZC</a>
+      <a class="btn btn-secondary" href="https://beezchain.gitbook.io/beezchain-docs/" target="_blank" rel="noopener" style="color:var(--color-bg);border-color:color-mix(in srgb, var(--color-bg) 30%, transparent);padding:14px 18px">Whitepaper</a>
+    </div>
+  </div>
+</sc-if>
+
+<section id="top" data-act="1" data-sticky="hero" data-screen-label="01 Hero" style="position:relative;height:{{ heroH }}">
+  <div style="position:sticky;top:0;height:100vh;overflow:hidden">
+    <div style="position:absolute;inset:0;background-image:url('/site/assets/honeycomb.svg');background-size:56px 100px;-webkit-mask-image:radial-gradient(ellipse 60% 70% at 66% 50%, #000 0%, transparent 75%);mask-image:radial-gradient(ellipse 60% 70% at 66% 50%, #000 0%, transparent 75%)"></div>
+    <canvas data-canvas="hero" style="position:absolute;inset:0;width:100%;height:100%;display:block;transition:opacity .8s"></canvas>
+    <canvas data-gl="hero" style="position:absolute;inset:0;width:100%;height:100%;display:block;opacity:0;transition:opacity 1.4s"></canvas>
+    <div data-bands="1" style="position:absolute;inset:0;display:flex;flex-direction:column;opacity:0;pointer-events:none;background:linear-gradient(180deg, color-mix(in srgb, var(--color-text) 92%, transparent) 0%, color-mix(in srgb, var(--color-text) 55%, transparent) 30%, transparent 55%, color-mix(in srgb, var(--color-text) 80%, transparent) 100%)">
+      <div data-bands-head="1" style="padding:clamp(84px,12vh,120px) clamp(20px,4vw,56px) 28px;display:flex;flex-wrap:wrap;gap:16px 48px;align-items:flex-end;justify-content:space-between">
+        <div>
+          <div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-400);margin-bottom:14px">01 — The hive, resolved</div>
+          <h2 style="font-size:clamp(30px,4.2vw,68px);line-height:.95;letter-spacing:-0.04em;margin:0;text-wrap:balance">Five stages. <span style="color:var(--color-accent)">One continuous system.</span></h2>
+        </div>
+        <p style="max-width:360px;font-size:15px;line-height:1.5;color:var(--color-neutral-300);margin:0">Every cell of the network now works as one pipeline — from raw data to execution on Solana.</p>
+      </div>
+      <div style="flex:1;min-height:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:2px solid color-mix(in srgb, var(--color-accent) 45%, transparent)">
+        <sc-for list="{{ bands }}" as="b" hint-placeholder-count="5">
+          <div style="padding:18px 14px 76px;border-left:1px solid color-mix(in srgb, var(--color-accent) 28%, transparent);min-width:0;display:flex;flex-direction:column;justify-content:space-between">
+            <div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px"><span style="width:10px;height:11px;background:var(--color-accent);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)"></span><span style="font-size:12px;color:var(--color-accent-400)">{{ b.n }}</span></div>
+              <div style="font-size:clamp(14px,1.6vw,24px);font-weight:800;letter-spacing:-0.02em;line-height:1.1">{{ b.t }}</div>
+            </div>
+            <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+              <div style="font-size:14px;line-height:1.45;color:var(--color-neutral-300);max-width:230px;background:color-mix(in srgb, var(--color-text) 55%, transparent);padding:8px 10px 8px 0">{{ b.d }}</div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="position:absolute;inset:0;display:grid;grid-template-columns:repeat(4,1fr);pointer-events:none;padding-inline:clamp(20px,4vw,56px)">
+      <div style="border-left:1px solid color-mix(in srgb, var(--color-bg) 7%, transparent)"></div>
+      <div style="border-left:1px solid color-mix(in srgb, var(--color-bg) 7%, transparent)"></div>
+      <div style="border-left:1px solid color-mix(in srgb, var(--color-bg) 7%, transparent)"></div>
+      <div style="border-left:1px solid color-mix(in srgb, var(--color-bg) 7%, transparent);border-right:1px solid color-mix(in srgb, var(--color-bg) 7%, transparent)"></div>
+    </div>
+
+    <div data-hero-copy="1" style="position:absolute;left:clamp(20px,4vw,56px);right:clamp(20px,4vw,56px);bottom:clamp(110px,15vh,170px);max-width:960px;will-change:transform,opacity">
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px">
+        <span style="display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:6px 10px;border:1px solid color-mix(in srgb, var(--color-bg) 26%, transparent)"><span data-pulse="1" style="width:8px;height:9px;background:var(--color-accent);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)"></span>Built on Solana</span>
+        <span style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:6px 10px;border:1px solid color-mix(in srgb, var(--color-bg) 26%, transparent)">SPL token · BZC</span>
+        <span style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:6px 10px;border:1px solid color-mix(in srgb, var(--color-bg) 26%, transparent)">10.8B fixed supply</span>
+      </div>
+      <h1 data-h1="1" style="font-size:clamp(50px,8.4vw,150px);line-height:.9;letter-spacing:-0.045em;margin:0 0 28px;font-weight:800;text-wrap:balance">
+        <sc-if value="{{ h1a }}" hint-placeholder-val="{{ true }}">Intelligence,<br>built like <span data-shimmer="1" style="background:linear-gradient(100deg,var(--color-accent) 20%,var(--color-accent-300) 40%,var(--color-accent) 60%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent">a hive.</span></sc-if>
+        <sc-if value="{{ h1b }}" hint-placeholder-val="{{ false }}">The intelligent layer for the <span style="color:var(--color-accent)">decentralized economy.</span></sc-if>
+        <sc-if value="{{ h1c }}" hint-placeholder-val="{{ false }}">Decentralized <span style="color:var(--color-accent)">intelligence.</span></sc-if>
+      </h1>
+      <div style="display:flex;flex-wrap:wrap;gap:32px;align-items:flex-end">
+        <p style="max-width:520px;font-size:clamp(16px,1.35vw,19px);line-height:1.5;color:var(--color-neutral-300);margin:0;text-wrap:pretty">BeezChain combines a decentralized ledger, AI-driven automation and the BZC digital asset into one technology ecosystem — built on Solana.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <a class="btn btn-primary" data-magnetic="1" href="#technology" style="color:var(--color-text);padding:14px 18px;font-size:15px;gap:40px">Enter the network <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></a>
+          <a class="btn btn-secondary" data-magnetic="1" href="https://beezchain.gitbook.io/beezchain-docs/" target="_blank" rel="noopener" style="color:var(--color-bg);border-color:color-mix(in srgb, var(--color-bg) 30%, transparent);padding:14px 18px;font-size:15px">Read whitepaper</a>
+        </div>
+      </div>
+    </div>
+
+    <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+      <div data-hud="1" style="position:absolute;right:calc(clamp(20px,4vw,56px) + 44px);bottom:clamp(70px,11vh,104px);display:flex;flex-direction:column;gap:8px;font-size:11px;letter-spacing:.06em;color:var(--color-neutral-400);pointer-events:none;font-variant-numeric:tabular-nums;padding:12px 14px;border:1px solid color-mix(in srgb, var(--color-accent) 30%, transparent);background:color-mix(in srgb, var(--color-text) 55%, transparent);">
+        <div style="display:flex;gap:10px;align-items:center"><span data-pulse="1" style="width:8px;height:9px;background:var(--color-accent);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)"></span><span style="color:var(--color-bg);font-weight:600;letter-spacing:.08em;text-transform:uppercase">4D Hopf fibration · live</span></div>
+        <div data-hud-v="1">XW 000° · YZ 000° · 24 fibres</div>
+      </div>
+    </sc-if>
+    <div data-hero-caps="1" style="position:absolute;top:clamp(96px,14vh,140px);right:calc(clamp(20px,4vw,56px) + 44px);width:min(280px,36vw);height:120px;pointer-events:none">
+      <sc-for list="{{ heroCaps }}" as="c" hint-placeholder-count="1">
+        <div style="position:absolute;left:0;right:0;top:0;opacity:{{ c.op }};transform:translateY({{ c.y }}px);transition:opacity .6s,transform .8s cubic-bezier(.2,.7,.1,1);padding:12px 14px;background:color-mix(in srgb, var(--color-text) 62%, transparent);border:1px solid color-mix(in srgb, var(--color-accent) 26%, transparent)">
+          <div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-400);margin-bottom:10px">{{ c.n }} — {{ c.t }}</div>
+          <div style="font-size:15px;line-height:1.45;color:var(--color-neutral-300)">{{ c.d }}</div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="position:absolute;left:0;right:0;bottom:0;padding:0 clamp(20px,4vw,56px) 22px">
+      <div style="position:relative;height:2px;background:color-mix(in srgb, var(--color-bg) 18%, transparent);margin-bottom:12px">
+        <div data-bar="hero" style="position:absolute;inset:0;background:var(--color-accent);transform-origin:left;transform:scaleX(0)"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;font-size:12px;letter-spacing:.04em">
+        <sc-for list="{{ heroCaps }}" as="c" hint-placeholder-count="4">
+          <div style="color:{{ c.lc }};transition:color .4s">{{ c.n }} {{ c.t }}</div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div data-screen-label="Marquee" style="position:relative;z-index:3;overflow:hidden;transform:rotate(-1.6deg) scale(1.04);margin:24px 0 8px;background:var(--color-accent);color:var(--color-text);padding:18px 0">
+  <div data-marquee="1" style="display:flex;width:max-content;gap:40px;padding-right:40px;font-size:clamp(26px,3.4vw,50px);font-weight:800;letter-spacing:-0.03em;white-space:nowrap;line-height:1"><span>Decentralized intelligence</span><span style="color:var(--color-accent-700)">⬡</span><span>AI automation</span><span style="color:var(--color-accent-700)">⬡</span><span>Built on Solana</span><span style="color:var(--color-accent-700)">⬡</span><span>BZC digital asset</span><span style="color:var(--color-accent-700)">⬡</span><span>10.8B fixed supply</span><span style="color:var(--color-accent-700)">⬡</span><span>Decentralized intelligence</span><span style="color:var(--color-accent-700)">⬡</span><span>AI automation</span><span style="color:var(--color-accent-700)">⬡</span><span>Built on Solana</span><span style="color:var(--color-accent-700)">⬡</span><span>BZC digital asset</span><span style="color:var(--color-accent-700)">⬡</span><span>10.8B fixed supply</span><span style="color:var(--color-accent-700)">⬡</span></div>
+</div>
+<section id="technology" data-act="2" data-screen-label="02 Intelligence" style="position:relative;border-top:2px solid color-mix(in srgb, var(--color-bg) 26%, transparent)">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:40px 56px;padding:clamp(80px,12vh,140px) clamp(20px,4vw,56px) 56px">
+    <div data-reveal="1">
+      <div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-400);margin-bottom:20px"><sc-if value="{{ showActs }}" hint-placeholder-val="{{ true }}">Act 02 — </sc-if>The intelligence</div>
+      <h2 style="font-size:clamp(38px,5.2vw,84px);line-height:.95;letter-spacing:-0.04em;margin:0;text-wrap:balance">Ledger technology with a mind of its own.</h2>
+    </div>
+    <p data-reveal="1" style="align-self:end;max-width:520px;font-size:18px;line-height:1.55;color:var(--color-neutral-300);margin:0;text-wrap:pretty">A next-gen solution combining decentralized ledger technology with AI-powered features — built to manage digital assets, secure data and support intelligent automation through a GPT-style model.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));border-top:2px solid color-mix(in srgb, var(--color-bg) 26%, transparent);margin:0 clamp(20px,4vw,56px)">
+    <sc-for list="{{ pillars }}" as="p" hint-placeholder-count="3">
+      <div data-reveal="1" style="padding:28px 28px 36px 0;border-bottom:2px solid color-mix(in srgb, var(--color-bg) 12%, transparent)">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:40px"><svg width="28" height="32" viewBox="0 0 100 100"><polygon points="50,3 91,27 91,73 50,97 9,73 9,27" stroke-width="4" style="fill:color-mix(in srgb, var(--color-accent) 16%, transparent);stroke:var(--color-accent)"></polygon></svg><span style="font-size:12px;color:var(--color-neutral-500)">{{ p.n }}</span></div>
+        <h3 style="font-size:24px;letter-spacing:-0.02em;margin:0 0 10px">{{ p.t }}</h3>
+        <p style="font-size:15px;color:var(--color-neutral-400);margin:0;max-width:320px">{{ p.d }}</p>
+      </div>
+    </sc-for>
+  </div>
+
+  <div data-sticky="pipe" style="position:relative;height:{{ pipeH }};margin-top:48px">
+    <div style="position:sticky;top:0;height:100vh;display:flex;flex-direction:column;padding:88px clamp(20px,4vw,56px) 28px;box-sizing:border-box">
+      <div style="display:flex;flex-wrap:wrap;gap:12px 32px;align-items:baseline;margin-bottom:24px">
+        <h3 style="font-size:clamp(22px,2.2vw,32px);letter-spacing:-0.025em;margin:0">From raw data to on-chain execution.</h3>
+        <span style="font-size:12px;color:var(--color-neutral-500)">Illustrative visualization · scroll to advance</span>
+      </div>
+      <div data-view="pipe" style="position:relative;flex:1;min-height:0;border-top:2px solid color-mix(in srgb, var(--color-bg) 18%, transparent);border-bottom:2px solid color-mix(in srgb, var(--color-bg) 18%, transparent)">
+        <div data-bar="pipe" style="position:absolute;left:0;right:0;top:-2px;height:2px;background:var(--color-accent);transform-origin:left;transform:scaleX(0);z-index:2"></div>
+        <canvas data-canvas="pipe" style="position:absolute;inset:0;width:100%;height:100%;display:block"></canvas>
+        <div style="position:absolute;inset:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr))">
+          <sc-for list="{{ pipe }}" as="s" hint-placeholder-count="5">
+            <div style="border-left:1px solid color-mix(in srgb, var(--color-bg) 10%, transparent);padding:16px 14px;display:flex;flex-direction:column;justify-content:space-between;opacity:{{ s.op }};transition:opacity .6s;min-width:0">
+              <div>
+                <div style="font-size:12px;color:{{ s.nc }};margin-bottom:6px;transition:color .4s">{{ s.n }}</div>
+                <div style="font-size:clamp(13px,1.3vw,19px);font-weight:800;letter-spacing:-0.02em;line-height:1.1">{{ s.t }}</div>
+              </div>
+              <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+                <div style="font-size:14px;line-height:1.45;color:var(--color-neutral-300);max-width:240px">{{ s.d }}</div>
+              </sc-if>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
+        <div style="padding-top:16px;min-height:72px"><div style="font-size:12px;color:var(--color-accent-400);margin-bottom:4px">{{ pipeActive.n }} {{ pipeActive.t }}</div><div style="font-size:15px;color:var(--color-neutral-300)">{{ pipeActive.d }}</div></div>
+      </sc-if>
+    </div>
+  </div>
+</section>
+
+<div data-honey="drip" aria-hidden="true" style="height:32px"></div>
+<section id="infrastructure" data-act="3" data-screen-label="03 Infrastructure" style="border-top:2px solid color-mix(in srgb, var(--color-bg) 26%, transparent)">
+  <div data-sticky="stack" style="position:relative;height:{{ stackH }}">
+    <div style="position:sticky;top:0;height:100vh;display:grid;grid-template-columns:{{ stackCols }};gap:24px 56px;padding:96px clamp(20px,4vw,56px) 32px;box-sizing:border-box;align-items:center">
+      <div style="position:relative;height:100%;min-height:240px;display:flex;flex-direction:column">
+        <div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-400)"><sc-if value="{{ showActs }}" hint-placeholder-val="{{ true }}">Act 03 — </sc-if>The infrastructure</div>
+        <div data-view="stack" style="flex:1;display:flex;align-items:center;justify-content:center;perspective:1400px;min-height:0">
+          <div data-plates="1" style="position:relative;width:280px;height:280px;transform:scale({{ plateScale }}) rotateX(58deg) rotateZ(-30deg);transform-style:preserve-3d">
+            <sc-for list="{{ layers }}" as="l" hint-placeholder-count="6">
+              <div style="position:absolute;inset:0;transform:translateZ({{ l.z }}px);transition:transform .9s cubic-bezier(.2,.7,.1,1);display:flex;align-items:center;justify-content:center">
+                <svg viewBox="0 0 100 100" style="position:absolute;inset:0;width:100%;height:100%;overflow:visible"><polygon points="50,2 93,26 93,74 50,98 7,74 7,26" stroke-width="1.2" style="fill:{{ l.bg }};stroke:{{ l.bc }};transition:fill .5s,stroke .5s"></polygon></svg>
+                <span style="position:relative;font-size:13px;font-weight:800;color:{{ l.tc }};transition:color .5s">{{ l.n }} {{ l.short }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 style="font-size:clamp(34px,4.4vw,68px);line-height:.95;letter-spacing:-0.04em;margin:0 0 32px;text-wrap:balance">Six layers. One continuous system.</h2>
+        <div style="border-top:2px solid color-mix(in srgb, var(--color-bg) 26%, transparent)">
+          <sc-for list="{{ layers }}" as="l" hint-placeholder-count="6">
+            <button onClick="{{ l.go }}" style="display:block;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid color-mix(in srgb, var(--color-bg) 14%, transparent);padding:14px 0;color:var(--color-bg);cursor:pointer;font:inherit">
+              <div style="display:flex;gap:18px;align-items:baseline">
+                <span style="font-size:12px;color:{{ l.nc }};width:28px;flex:none">{{ l.n }}</span>
+                <span style="font-size:clamp(17px,1.6vw,22px);font-weight:800;letter-spacing:-0.02em;opacity:{{ l.to }};transition:opacity .4s">{{ l.t }}</span>
+              </div>
+              <div style="display:grid;grid-template-rows:{{ l.rows }};transition:grid-template-rows .6s cubic-bezier(.2,.7,.1,1)">
+                <div style="overflow:hidden;min-height:0"><p style="margin:8px 0 4px 46px;font-size:15px;line-height:1.5;color:var(--color-neutral-300);max-width:440px">{{ l.d }}</p></div>
+              </div>
+            </button>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="use-cases" data-act="4" data-screen-label="04 Applications" style="border-top:2px solid color-mix(in srgb, var(--color-bg) 26%, transparent);padding:clamp(80px,12vh,140px) clamp(20px,4vw,56px)">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:32px 56px;margin-bottom:56px">
+    <div data-reveal="1">
+      <div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-400);margin-bottom:20px"><sc-if value="{{ showActs }}" hint-placeholder-val="{{ true }}">Act 04 — </sc-if>The applications</div>
+      <h2 style="font-size:clamp(38px,5.2vw,84px);line-height:.95;letter-spacing:-0.04em;margin:0;text-wrap:balance">One infrastructure. Every application.</h2>
+    </div>
+    <p data-reveal="1" style="align-self:end;max-width:460px;font-size:18px;line-height:1.55;color:var(--color-neutral-300);margin:0">Real-world applications powered by BeezChain’s decentralized, AI-ready infrastructure. Select one to trace it back to the core.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:40px 56px;align-items:center">
+    <div data-view="hub" style="position:relative;aspect-ratio:1;max-height:640px;width:100%;border:2px solid color-mix(in srgb, var(--color-bg) 18%, transparent)">
+      <canvas data-canvas="hub" style="position:absolute;inset:0;width:100%;height:100%;display:block"></canvas>
+    </div>
+    <div onMouseEnter="{{ holdHub }}" style="border-top:2px solid color-mix(in srgb, var(--color-bg) 26%, transparent)">
+      <sc-for list="{{ uses }}" as="u" hint-placeholder-count="6">
+        <button onClick="{{ u.pick }}" onMouseEnter="{{ u.pick }}" style="display:block;width:100%;text-align:left;background:{{ u.bg }};border:0;border-bottom:1px solid color-mix(in srgb, var(--color-bg) 14%, transparent);padding:16px 12px;color:var(--color-bg);cursor:pointer;font:inherit;transition:background .4s">
+          <div style="display:flex;gap:18px;align-items:baseline">
+            <span style="font-size:12px;color:{{ u.nc }};width:24px;flex:none">{{ u.n }}</span>
+            <span style="font-size:clamp(17px,1.6vw,22px);font-weight:800;letter-spacing:-0.02em">{{ u.t }}</span>
+          </div>
+          <div style="display:grid;grid-template-rows:{{ u.rows }};transition:grid-template-rows .6s cubic-bezier(.2,.7,.1,1)">
+            <div style="overflow:hidden;min-height:0">
+              <p style="margin:10px 0 4px 42px;font-size:15px;line-height:1.5;color:var(--color-neutral-300);max-width:460px">{{ u.d }}</p>
+            </div>
+          </div>
+        </button>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<div data-honey="drip" aria-hidden="true" style="height:32px"></div>
+<section id="tokenomics" data-act="5" data-screen-label="05 Tokenomics" style="border-top:2px solid color-mix(in srgb, var(--color-bg) 26%, transparent);padding:clamp(80px,12vh,140px) clamp(20px,4vw,56px) 0">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:32px 56px;margin-bottom:56px">
+    <div data-reveal="1">
+      <div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-400);margin-bottom:20px"><sc-if value="{{ showActs }}" hint-placeholder-val="{{ true }}">Act 05 — </sc-if>The asset</div>
+      <h2 style="font-size:clamp(38px,5.2vw,84px);line-height:.95;letter-spacing:-0.04em;margin:0;text-wrap:balance">10.8 billion BZC. Nothing more, ever.</h2>
+    </div>
+    <p data-reveal="1" style="align-self:end;max-width:460px;font-size:18px;line-height:1.55;color:var(--color-neutral-300);margin:0">A transparent breakdown of the total supply. Mint authority is permanently revoked, so no additional tokens can be created.</p>
+  </div>
+  <div data-tok="1" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:40px 56px;align-items:center">
+    <div data-view="token" style="position:relative;aspect-ratio:1;max-height:600px;width:100%">
+      <canvas data-canvas="token" style="position:absolute;inset:0;width:100%;height:100%;display:block"></canvas>
+      <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none;gap:6px">
+        <img data-tokimg="1" src="/site/uploads/bzc-logo.svg" alt="BZC" style="width:30%;height:auto;filter:drop-shadow(0 0 48px color-mix(in srgb, var(--color-accent) 45%, transparent))"></img>
+        <div style="position:absolute;left:0;bottom:0;display:flex;flex-direction:column;gap:6px"><div style="font-size:clamp(30px,3.2vw,48px);font-weight:800;letter-spacing:-0.04em;line-height:1;color:var(--color-accent)">{{ tokCenter.v }}</div><div style="font-size:12px;color:var(--color-neutral-400);letter-spacing:.04em">{{ tokCenter.l }}</div></div>
+      </div>
+    </div>
+    <div onMouseLeave="{{ clearAlloc }}">
+      <div style="display:grid;grid-template-columns:1fr auto auto;gap:16px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-neutral-500);padding-bottom:10px;border-bottom:2px solid color-mix(in srgb, var(--color-bg) 26%, transparent)"><span>Allocation</span><span>BZC</span><span style="width:56px;text-align:right">Share</span></div>
+      <sc-for list="{{ allocs }}" as="a" hint-placeholder-count="6">
+        <div onMouseEnter="{{ a.enter }}" style="display:grid;grid-template-columns:1fr auto auto;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid color-mix(in srgb, var(--color-bg) 14%, transparent);cursor:default;position:relative">
+          <div style="display:flex;align-items:center;gap:14px">
+            <span style="width:14px;height:16px;flex:none;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);background:{{ a.sw }};transition:background .3s"></span>
+            <span style="font-size:clamp(16px,1.5vw,20px);font-weight:600;color:{{ a.tc }};transition:color .3s">{{ a.t }}</span>
+          </div>
+          <span style="font-size:14px;color:var(--color-neutral-400)">{{ a.amt }}</span>
+          <span style="font-size:clamp(20px,2vw,28px);font-weight:800;letter-spacing:-0.03em;width:56px;text-align:right;color:{{ a.pc }};transition:color .3s">{{ a.v }}%</span>
+          <div style="position:absolute;left:0;bottom:-1px;height:2px;width:{{ a.v }}%;background:{{ a.sw }};transition:background .3s"></div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));border-top:2px solid color-mix(in srgb, var(--color-bg) 26%, transparent);margin-top:72px">
+    <sc-for list="{{ facts }}" as="f" hint-placeholder-count="5">
+      <div style="padding:22px 20px 28px 0;border-bottom:1px solid color-mix(in srgb, var(--color-bg) 14%, transparent)">
+        <div style="font-size:12px;color:var(--color-neutral-500);margin-bottom:8px">{{ f.l }}</div>
+        <div style="font-size:clamp(20px,2vw,28px);font-weight:800;letter-spacing:-0.03em">{{ f.v }}</div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="market" data-screen-label="05b Market" style="padding:clamp(80px,12vh,140px) clamp(20px,4vw,56px)">
+  <div style="display:flex;flex-wrap:wrap;gap:16px 40px;align-items:end;margin-bottom:32px">
+    <h2 data-reveal="1" style="font-size:clamp(34px,4.4vw,68px);line-height:.95;letter-spacing:-0.04em;margin:0">Market terminal</h2>
+    <p style="font-size:15px;color:var(--color-neutral-400);margin:0;max-width:420px">Real-time data appears here once BZC liquidity is live on Raydium. No figures are shown until then.</p>
+  </div>
+  <div data-reveal="1" data-spot="1" style="border:2px solid color-mix(in srgb, var(--color-accent) 35%, transparent);background:radial-gradient(520px circle at var(--mx,30%) var(--my,20%), color-mix(in srgb, var(--color-accent) 12%, transparent), transparent 60%), var(--color-neutral-900)">
+    <div style="display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;padding:14px 20px;border-bottom:2px solid color-mix(in srgb, var(--color-bg) 18%, transparent);font-size:13px">
+      <span style="font-weight:800">BZC</span>
+      <span style="color:var(--color-neutral-400)">BeezChain · Solana</span>
+      <span style="display:inline-flex;align-items:center;gap:8px;margin-left:auto;padding:4px 10px;border:1px solid var(--color-accent);color:var(--color-accent-300)"><span data-pulse="1" style="width:8px;height:9px;background:var(--color-accent);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)"></span>Awaiting liquidity</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))">
+      <div style="grid-column:span {{ termSpan }};padding:28px 20px;border-bottom:1px solid color-mix(in srgb, var(--color-bg) 14%, transparent);border-right:1px solid color-mix(in srgb, var(--color-bg) 14%, transparent);display:flex;gap:20px;align-items:center">
+        <img src="/site/uploads/bzc-logo.svg" alt="" style="width:88px;height:88px;flex:none"></img>
+        <div>
+          <div style="font-size:12px;color:var(--color-neutral-500);margin-bottom:6px">BZC price</div>
+          <div style="font-size:clamp(34px,3.6vw,52px);font-weight:800;letter-spacing:-0.04em;line-height:1">—</div>
+          <div style="font-size:13px;color:var(--color-neutral-400);margin-top:8px">Live price coming soon</div>
+        </div>
+      </div>
+      <sc-for list="{{ term }}" as="m" hint-placeholder-count="5">
+        <div data-tilt="1" style="padding:28px 20px;border-bottom:1px solid color-mix(in srgb, var(--color-bg) 14%, transparent);border-right:1px solid color-mix(in srgb, var(--color-bg) 14%, transparent)" style-hover="background:color-mix(in srgb, var(--color-bg) 4%, transparent)">
+          <div style="font-size:12px;color:var(--color-neutral-500);margin-bottom:10px">{{ m.l }}</div>
+          <div style="font-size:clamp(24px,2.4vw,34px);font-weight:800;letter-spacing:-0.03em;line-height:1">{{ m.v }}</div>
+          <div style="font-size:12px;color:{{ m.sc }};margin-top:10px">{{ m.s }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;padding:18px 20px">
+      <p style="margin:0;font-size:14px;color:var(--color-neutral-400);max-width:560px;flex:1 1 320px">Liquidity, 24h volume and market cap refresh automatically once trading begins. Always verify the contract address before you buy.</p>
+      <a class="btn btn-primary" data-magnetic="1" href="https://jup.ag/swap/SOL-8xzLg1tyhw1A9tsvVo9nFC9XbvBeHrtvWddtLiu2yp8E" target="_blank" rel="noopener" style="color:var(--color-text);padding:14px 18px;font-size:15px;gap:40px">Buy BZC <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a>
+    </div>
+  </div>
+</section>
+
+<section id="roadmap" data-act="6" data-screen-label="06 Roadmap" style="border-top:2px solid color-mix(in srgb, var(--color-bg) 26%, transparent)">
+  <div data-sticky="road" style="position:relative;height:{{ rmH }}">
+    <div data-view="road" style="position:{{ rmPos }};top:0;height:{{ rmInnerH }};overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:96px 0 48px;box-sizing:border-box">
+      <div style="padding:0 clamp(20px,4vw,56px);margin-bottom:48px;display:flex;flex-wrap:wrap;gap:24px 56px;align-items:end">
+        <div>
+          <div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-400);margin-bottom:20px"><sc-if value="{{ showActs }}" hint-placeholder-val="{{ true }}">Act 06 — </sc-if>The evolution</div>
+          <h2 style="font-size:clamp(38px,5.2vw,84px);line-height:.95;letter-spacing:-0.04em;margin:0">Network evolution</h2>
+        </div>
+        <p style="max-width:380px;font-size:16px;color:var(--color-neutral-400);margin:0">From foundation to global scale — how BeezChain grows quarter by quarter.</p>
+      </div>
+      <div data-track="1" style="display:flex;flex-direction:{{ rmDir }};gap:20px;padding:0 clamp(20px,4vw,56px);will-change:transform;width:max-content;max-width:{{ rmMaxW }}">
+        <sc-for list="{{ road }}" as="r" hint-placeholder-count="4">
+          <div style="width:{{ rmCardW }};flex:none;padding:28px;box-sizing:border-box;opacity:{{ r.op }};transition:opacity .6s;background:color-mix(in srgb, var(--color-text) 90%, transparent);border:1px solid color-mix(in srgb, var(--color-accent) 22%, transparent)">
+            <div style="position:relative;height:2px;background:color-mix(in srgb, var(--color-bg) 18%, transparent);margin-bottom:28px">
+              <div style="position:absolute;inset:0;background:var(--color-accent);transform-origin:left;transform:scaleX({{ r.fill }});transition:transform .8s cubic-bezier(.2,.7,.1,1)"></div>
+              <div style="position:absolute;left:0;top:-8px;width:16px;height:18px;background:{{ r.mc }};clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)"></div>
+            </div>
+            <div style="display:flex;gap:10px;align-items:center;margin-bottom:18px">
+              <span style="font-size:12px;color:var(--color-neutral-400)">Phase {{ r.n }}</span>
+              <span style="font-size:11px;letter-spacing:.04em;padding:3px 8px;background:{{ r.tb }};color:{{ r.tcol }};border:1px solid {{ r.tbd }}">{{ r.status }}</span>
+            </div>
+            <div style="font-size:clamp(44px,4.6vw,72px);font-weight:800;letter-spacing:-0.045em;line-height:.9;margin-bottom:14px">{{ r.q }}</div>
+            <h3 style="font-size:20px;letter-spacing:-0.02em;margin:0 0 18px;max-width:340px">{{ r.t }}</h3>
+            <div style="display:flex;flex-direction:column;gap:10px;border-top:1px solid color-mix(in srgb, var(--color-bg) 14%, transparent);padding-top:16px">
+              <sc-for list="{{ r.items }}" as="it" hint-placeholder-count="3">
+                <div style="display:flex;gap:12px;font-size:15px;line-height:1.4;color:var(--color-neutral-300)"><span style="width:8px;height:9px;background:{{ r.mc }};clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none;margin-top:6px"></span>{{ it }}</div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ecosystem" data-act="7" data-screen-label="07 Ecosystem" style="position:relative;border-top:2px solid color-mix(in srgb, var(--color-bg) 26%, transparent);padding:clamp(80px,12vh,140px) clamp(20px,4vw,56px)">
+  <canvas data-canvas="eco" style="position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none"></canvas>
+  <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:32px 56px;margin-bottom:64px">
+    <div data-reveal="1">
+      <div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-400);margin-bottom:20px"><sc-if value="{{ showActs }}" hint-placeholder-val="{{ true }}">Act 07 — </sc-if>The ecosystem</div>
+      <h2 style="font-size:clamp(38px,5.2vw,84px);line-height:.95;letter-spacing:-0.04em;margin:0">Connected across Web3.</h2>
+    </div>
+    <p data-reveal="1" style="align-self:end;max-width:440px;font-size:16px;line-height:1.55;color:var(--color-neutral-400);margin:0">Wallets, exchanges and data platforms referenced across the BeezChain ecosystem.</p>
+  </div>
+  <div data-view="eco" style="position:relative;display:grid;grid-template-columns:{{ ecoCols }};gap:28px 48px;align-items:center;justify-items:stretch">
+    <div style="display:grid;grid-template-columns:{{ ecoSide }};gap:20px">
+        <div data-eco-node="1" data-tilt="1" style="border:2px solid color-mix(in srgb, var(--color-bg) 18%, transparent);background:var(--color-text);padding:10px;transition:border-color .3s" style-hover="border-color:var(--color-accent)">
+          <img class="grayscale" src="/site/uploads/partner0.webp" alt="PancakeSwap" style="width:100%;height:auto;display:block"></img>
+        </div>
+        <div data-eco-node="1" data-tilt="1" style="border:2px solid color-mix(in srgb, var(--color-bg) 18%, transparent);background:var(--color-text);padding:10px;transition:border-color .3s" style-hover="border-color:var(--color-accent)">
+          <img class="grayscale" src="/site/uploads/partner1.webp" alt="Trust Wallet" style="width:100%;height:auto;display:block"></img>
+        </div>
+        <div data-eco-node="1" data-tilt="1" style="border:2px solid color-mix(in srgb, var(--color-bg) 18%, transparent);background:var(--color-text);padding:10px;transition:border-color .3s" style-hover="border-color:var(--color-accent)">
+          <img class="grayscale" src="/site/uploads/partner2.webp" alt="BscScan" style="width:100%;height:auto;display:block"></img>
+        </div>
+    </div>
+    <div data-eco-core="1" style="border:2px solid var(--color-accent);box-shadow:0 0 80px color-mix(in srgb, var(--color-accent) 22%, transparent);background:var(--color-text);padding:28px;display:flex;flex-direction:column;gap:12px;align-items:flex-start;min-width:200px">
+      <img src="/site/uploads/bzc-logo.svg" alt="" style="width:72px;height:72px"></img>
+      <div style="font-size:24px;font-weight:800;letter-spacing:-0.03em">BeezChain</div>
+      <div style="font-size:12px;color:var(--color-neutral-400)">BZC · SPL token · Solana</div>
+    </div>
+    <div style="display:grid;grid-template-columns:{{ ecoSide }};gap:20px">
+        <div data-eco-node="1" data-tilt="1" style="border:2px solid color-mix(in srgb, var(--color-bg) 18%, transparent);background:var(--color-text);padding:10px;transition:border-color .3s" style-hover="border-color:var(--color-accent)">
+          <img class="grayscale" src="/site/uploads/partner3.webp" alt="CoinMarketCap" style="width:100%;height:auto;display:block"></img>
+        </div>
+        <div data-eco-node="1" data-tilt="1" style="border:2px solid color-mix(in srgb, var(--color-bg) 18%, transparent);background:var(--color-text);padding:10px;transition:border-color .3s" style-hover="border-color:var(--color-accent)">
+          <img class="grayscale" src="/site/uploads/partner4.webp" alt="Coinstore" style="width:100%;height:auto;display:block"></img>
+        </div>
+        <div data-eco-node="1" data-tilt="1" style="border:2px solid color-mix(in srgb, var(--color-bg) 18%, transparent);background:var(--color-text);padding:10px;transition:border-color .3s" style-hover="border-color:var(--color-accent)">
+          <img class="grayscale" src="/site/uploads/partner5.webp" alt="MetaMask" style="width:100%;height:auto;display:block"></img>
+        </div>
+    </div>
+  </div>
+  <p style="position:relative;font-size:12px;color:var(--color-neutral-500);margin:40px 0 0;max-width:560px">Logos are trademarks of their respective owners. Listing here does not imply endorsement.</p>
+</section>
+
+<div data-honey="drip" aria-hidden="true" style="height:32px"></div>
+<section id="contract" data-act="8" data-screen-label="08 Verification" style="border-top:2px solid color-mix(in srgb, var(--color-bg) 26%, transparent);padding:clamp(80px,12vh,140px) clamp(20px,4vw,56px)">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:32px 56px;margin-bottom:48px">
+    <div data-reveal="1">
+      <div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-400);margin-bottom:20px"><sc-if value="{{ showActs }}" hint-placeholder-val="{{ true }}">Act 08 — </sc-if>The verification</div>
+      <h2 style="font-size:clamp(38px,5.2vw,84px);line-height:.95;letter-spacing:-0.04em;margin:0">Verified on-chain.</h2>
+    </div>
+    <p data-reveal="1" style="align-self:end;max-width:440px;font-size:16px;line-height:1.55;color:var(--color-neutral-400);margin:0">This is the only official BZC contract. Compare every character before you transact.</p>
+  </div>
+  <div data-reveal="1" data-spot="1" style="border:2px solid color-mix(in srgb, var(--color-accent) 35%, transparent);background:radial-gradient(520px circle at var(--mx,30%) var(--my,20%), color-mix(in srgb, var(--color-accent) 12%, transparent), transparent 60%), var(--color-neutral-900)">
+    <div style="display:flex;gap:12px;align-items:center;padding:14px 20px;border-bottom:2px solid color-mix(in srgb, var(--color-bg) 18%, transparent);font-size:13px">
+      <span style="width:8px;height:8px;background:var(--color-accent)"></span>
+      <span style="font-weight:600">Verification console</span>
+      <span data-stamp="1" style="margin-left:auto;display:inline-flex;align-items:center;gap:8px;padding:4px 10px;border:1px solid var(--color-accent);color:var(--color-accent-300);font-size:12px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"></path></svg>Official BZC contract</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));border-bottom:1px solid color-mix(in srgb, var(--color-bg) 14%, transparent)">
+      <sc-for list="{{ console }}" as="k" hint-placeholder-count="5">
+        <div style="padding:18px 20px;border-right:1px solid color-mix(in srgb, var(--color-bg) 14%, transparent)">
+          <div style="font-size:12px;color:var(--color-neutral-500);margin-bottom:6px">{{ k.l }}</div>
+          <div style="font-size:18px;font-weight:800;letter-spacing:-0.02em">{{ k.v }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="padding:28px 20px">
+      <div style="font-size:12px;color:var(--color-neutral-500);margin-bottom:12px">Contract address</div>
+      <div data-ca="1" style="position:relative;font-size:clamp(17px,2.5vw,36px);font-weight:600;letter-spacing:.01em;line-height:1.25;word-break:break-all;font-variant-numeric:tabular-nums;user-select:all;margin-bottom:28px">8xzLg1tyhw1A9tsvVo9nFC9XbvBeHrtvWddtLiu2yp8E</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <button class="btn btn-primary" data-magnetic="1" onClick="{{ copy }}" style="color:var(--color-text);padding:14px 18px;font-size:15px;gap:12px;min-width:210px;justify-content:flex-start;background:{{ copyBg }}">
+          <sc-if value="{{ copied }}" hint-placeholder-val="{{ false }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"></path></svg>Copied to clipboard</sc-if>
+          <sc-if value="{{ notCopied }}" hint-placeholder-val="{{ true }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8"></rect><path d="M4 16V4h12"></path></svg>Copy address</sc-if>
+        </button>
+        <a class="btn btn-secondary" href="https://solscan.io/token/8xzLg1tyhw1A9tsvVo9nFC9XbvBeHrtvWddtLiu2yp8E" target="_blank" rel="noopener" style="color:var(--color-bg);border-color:color-mix(in srgb, var(--color-bg) 30%, transparent);padding:14px 18px;font-size:15px;gap:12px">View on Solscan <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a>
+        <a class="btn btn-secondary" href="https://explorer.solana.com/address/8xzLg1tyhw1A9tsvVo9nFC9XbvBeHrtvWddtLiu2yp8E" target="_blank" rel="noopener" style="color:var(--color-bg);border-color:color-mix(in srgb, var(--color-bg) 30%, transparent);padding:14px 18px;font-size:15px;gap:12px">Solana Explorer <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a>
+      </div>
+    </div>
+  </div>
+  <div data-reveal="1" style="margin-top:28px">
+    <div style="display:flex;flex-wrap:wrap;gap:12px 24px;align-items:baseline;margin-bottom:20px">
+      <h3 style="font-size:clamp(22px,2.4vw,32px);letter-spacing:-0.03em;margin:0">Distribution wallets</h3>
+      <p style="font-size:14px;line-height:1.5;color:var(--color-neutral-400);margin:0;max-width:560px">Every allocation lives in a public wallet — verify each balance on Solscan. Team tokens are locked under a 12-month cliff and 24-month vesting.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));border:2px solid color-mix(in srgb, var(--color-accent) 30%, transparent);background:var(--color-neutral-900)">
+      <sc-for list="{{ wallets }}" as="w" hint-placeholder-count="6">
+        <div style="padding:20px;border-bottom:1px solid color-mix(in srgb, var(--color-bg) 12%, transparent);border-right:1px solid color-mix(in srgb, var(--color-bg) 12%, transparent);display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="width:12px;height:14px;flex:none;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);background:var(--color-accent)"></span>
+            <span style="font-weight:700;font-size:17px;letter-spacing:-0.02em">{{ w.name }}</span>
+            <span style="margin-left:auto;font-size:11px;letter-spacing:.04em;padding:3px 10px;background:{{ w.lockBg }};color:{{ w.lockCol }};border:1px solid {{ w.lockBd }}">{{ w.lockTxt }}</span>
+          </div>
+          <div style="display:flex;gap:24px;align-items:baseline">
+            <span style="font-size:clamp(22px,2vw,30px);font-weight:800;letter-spacing:-0.03em;color:var(--color-accent)">{{ w.pct }}</span>
+            <span style="font-size:14px;color:var(--color-neutral-400);font-variant-numeric:tabular-nums">{{ w.amt }} BZC</span>
+          </div>
+          <a href="{{ w.url }}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--color-neutral-300);text-decoration:none;word-break:break-all;font-variant-numeric:tabular-nums" style-hover="color:var(--color-accent)">
+            <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace">{{ w.addr }}</span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex:none"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+          </a>
+          <div style="font-size:12px;color:var(--color-neutral-500)">{{ w.note }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="faq" data-screen-label="FAQ" style="border-top:2px solid color-mix(in srgb, var(--color-bg) 26%, transparent);padding:clamp(80px,12vh,140px) clamp(20px,4vw,56px)">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:40px 56px;align-items:start">
+    <div style="position:sticky;top:120px">
+      <div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-400);margin-bottom:20px">Questions</div>
+      <h2 style="font-size:clamp(38px,5.2vw,84px);line-height:.95;letter-spacing:-0.04em;margin:0 0 32px">Everything, answered.</h2>
+      <div style="font-size:clamp(96px,14vw,220px);font-weight:800;letter-spacing:-0.06em;line-height:.8;color:{{ faqNumColor }};transition:color .5s">{{ faqNum }}</div>
+    </div>
+    <div style="border-top:2px solid color-mix(in srgb, var(--color-bg) 26%, transparent)">
+      <sc-for list="{{ faqs }}" as="q" hint-placeholder-count="5">
+        <div style="border-bottom:1px solid color-mix(in srgb, var(--color-bg) 14%, transparent);background:{{ q.bg }};transition:background .5s;position:relative">
+          <div style="position:absolute;left:0;top:-1px;height:2px;background:var(--color-accent);width:{{ q.bar }};transition:width .7s cubic-bezier(.2,.7,.1,1)"></div>
+          <button onClick="{{ q.toggle }}" style="display:flex;width:100%;gap:20px;align-items:baseline;text-align:left;background:none;border:0;padding:22px 12px;color:var(--color-bg);cursor:pointer;font:inherit">
+            <span style="font-size:12px;color:var(--color-neutral-500);width:28px;flex:none">Q{{ q.n }}</span>
+            <span style="flex:1;font-size:clamp(17px,1.6vw,22px);font-weight:800;letter-spacing:-0.02em">{{ q.q }}</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex:none;transform:rotate({{ q.rot }}deg);transition:transform .4s"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+          </button>
+          <div style="display:grid;grid-template-rows:{{ q.rows }};transition:grid-template-rows .6s cubic-bezier(.2,.7,.1,1)">
+            <div style="overflow:hidden;min-height:0"><p style="margin:0 12px 24px 60px;font-size:16px;line-height:1.6;color:var(--color-neutral-300);max-width:560px">{{ q.a }}</p></div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="future" data-act="9" data-view="cta" data-screen-label="09 Future" style="position:relative;background:transparent;color:var(--color-bg);overflow:hidden;min-height:96vh;display:flex;flex-direction:column;justify-content:flex-end;border-top:2px solid color-mix(in srgb, var(--color-bg) 22%, transparent);padding:clamp(80px,12vh,140px) clamp(20px,4vw,56px) clamp(56px,9vh,96px)">
+  <canvas data-canvas="cta" style="position:absolute;inset:0;width:100%;height:100%;display:block"></canvas>
+  <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg, color-mix(in srgb, var(--color-text) 88%, transparent) 0%, color-mix(in srgb, var(--color-text) 55%, transparent) 38%, transparent 70%), linear-gradient(0deg, color-mix(in srgb, var(--color-text) 80%, transparent) 0%, transparent 45%)"></div>
+  <div style="position:relative;max-width:1100px">
+    <div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-400);margin-bottom:24px"><sc-if value="{{ showActs }}" hint-placeholder-val="{{ true }}">Act 09 — </sc-if>The future</div>
+    <h2 style="font-size:clamp(52px,8.4vw,150px);line-height:.9;letter-spacing:-0.05em;margin:0 0 28px;text-wrap:balance">Build the intelligent <span style="color:var(--color-accent)">economy.</span></h2>
+    <p style="max-width:520px;font-size:clamp(16px,1.35vw,19px);line-height:1.5;color:var(--color-neutral-300);margin:0 0 36px;text-wrap:pretty">Every cell a verified record. Every path automated. Join the network as it grows from foundation to global scale.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px">
+      <a class="btn btn-primary" data-magnetic="1" href="#market" style="color:var(--color-text);padding:16px 20px;font-size:15px;gap:40px">Buy BZC <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a>
+      <a class="btn btn-secondary" data-magnetic="1" href="#technology" style="color:var(--color-bg);border-color:color-mix(in srgb, var(--color-bg) 30%, transparent);padding:16px 20px;font-size:15px">Explore BeezChain</a>
+      <a class="btn btn-secondary" data-magnetic="1" href="https://beezchain.gitbook.io/beezchain-docs/" target="_blank" rel="noopener" style="color:var(--color-bg);border-color:color-mix(in srgb, var(--color-bg) 30%, transparent);padding:16px 20px;font-size:15px">Read whitepaper</a>
+    </div>
+  </div>
+</section>
+
+<footer data-view="foot" data-screen-label="10 Footer" style="position:relative;background:var(--color-accent);color:var(--color-text);overflow:hidden">
+  
+  <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg, var(--color-accent) 0%, color-mix(in srgb, var(--color-accent) 82%, transparent) 38%, color-mix(in srgb, var(--color-accent) 30%, transparent) 70%, color-mix(in srgb, var(--color-accent) 70%, transparent) 100%)"></div>
+  <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:24px 40px;padding:40px clamp(20px,4vw,56px) 16px">
+    <div style="grid-column:span 2;max-width:420px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><img src="/site/uploads/bzc-logo.svg" alt="" style="width:36px;height:36px"></img><span style="font-weight:800;font-size:22px;letter-spacing:-0.02em">BeezChain</span></div>
+      <p style="font-size:15px;line-height:1.5;color:var(--color-text);margin:0;font-weight:500">We believe in the power of digital assets to transform economies — through payments, token utilities, compliance and ease of use.</p>
+    </div>
+    <sc-for list="{{ footCols }}" as="col" hint-placeholder-count="3">
+      <div>
+        <div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-text);font-weight:700;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--color-text)">{{ col.t }}</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <sc-for list="{{ col.links }}" as="l" hint-placeholder-count="2">
+            <a href="{{ l.href }}" style="color:var(--color-text);text-decoration:none;font-size:15px;font-weight:500" style-hover="text-decoration:underline;text-underline-offset:4px">{{ l.label }}</a>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  <div aria-hidden="true" style="position:relative;padding:clamp(8px,1.5vw,20px) clamp(16px,3vw,48px) clamp(6px,1vw,12px)">
+    <div data-wm="1" style="text-align:center;font-size:clamp(56px,15vw,300px);font-weight:800;letter-spacing:-0.06em;line-height:1;white-space:nowrap;padding:.02em .16em .2em .04em">
+      <span data-wmbox="1" style="position:relative;display:inline-block">
+        <span aria-hidden="true" style="position:absolute;left:0;top:0;color:var(--color-text);text-shadow:0.012em 0.018em 0 rgb(185,129,18), 0.024em 0.036em 0 rgb(175,121,16), 0.036em 0.054em 0 rgb(164,112,14), 0.048em 0.072em 0 rgb(154,104,11), 0.060em 0.090em 0 rgb(143,95,9), 0.072em 0.108em 0 rgb(133,87,7), 0.084em 0.126em 0 rgb(122,78,5), 0.12em 0.2em 0.16em rgba(10,9,7,.3);pointer-events:none">BeezChain</span>
+        <span data-wmfill="1" style="position:relative;display:inline-block;color:transparent;-webkit-background-clip:text;background-clip:text;background-image:linear-gradient(105deg, transparent 38%, rgba(255,240,200,.55) 47%, transparent 56%), url(data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20width=%2756%27%20height=%27100%27%20viewBox=%270%200%2056%20100%27%3E%3Cpath%20d=%27M28%2066L0%2050V16L28%200l28%2016v34L28%2066zm0%200v34M28%200v-34%27%20fill=%27none%27%20stroke=%27%23f5b82e%27%20stroke-opacity=%27.55%27%20stroke-width=%272.2%27/%3E%3C/svg%3E), radial-gradient(0.9em circle at var(--mx,50%) var(--my,55%), var(--color-accent-300) 0%, var(--color-accent) 35%, transparent 75%), linear-gradient(180deg, #1a1510 0%, var(--color-text) 60%);background-size:260% 100%, .2em .357em, 100% 100%, 100% 100%;background-position:120% 0, 0 0, 0 0, 0 0;background-repeat:no-repeat, repeat, no-repeat, no-repeat">BeezChain</span>
+      </span>
+    </div>
+  </div>
+  <div style="position:relative;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;margin:0 clamp(20px,4vw,56px);padding:14px calc(clamp(16px,2.5vw,32px) + 64px) 16px 0;border-top:2px solid var(--color-text);font-size:12px;font-weight:600;color:var(--color-text)">
+    <span>© 2026 BeezChain. All rights reserved.</span>
+    <span>Built on Solana · SPL token · Mint authority revoked</span>
+  </div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;heroHeadline&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Intelligence, built like a hive.&quot;,&quot;The intelligent layer for the decentralized economy.&quot;,&quot;Decentralized intelligence.&quot;],&quot;default&quot;:&quot;Intelligence, built like a hive.&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Story&quot;},&quot;showActs&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Story&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Full&quot;,&quot;Reduced&quot;],&quot;default&quot;:&quot;Full&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  state = { scrolled:false, menuOpen:false, narrow:false, heroStage:0, pipeStage:0, stackStage:0, rmStage:0, activeUse:0, activeAlloc:-1, tokAuto:-1, openFaq:0, copied:false };
+  rootRef = React.createRef();
+  U = {
+    clamp:(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),
+    ss:(a,b,v)=>{const x=Math.max(0,Math.min(1,(v-a)/(b-a)));return x*x*(3-2*x);},
+    lerp:(a,b,t)=>a+(b-a)*t
+  };
+  PIPE = [
+    {t:'Data', d:'Decentralized records arrive from users, contracts and connected systems.'},
+    {t:'AI processing', d:'A GPT-style model interprets the incoming stream.'},
+    {t:'Intelligence', d:'Signals are structured into decisions the network can act on.'},
+    {t:'Automation', d:'Smart contracts turn those decisions into actions.'},
+    {t:'Execution', d:'Transactions settle on Solana — fast, verifiable, low-cost.'}
+  ];
+  LAYERS = [
+    {short:'Data', t:'Data', d:'Tamper-proof records for industries like healthcare, logistics and finance.'},
+    {short:'AI layer', t:'AI intelligence layer', d:'Intelligent automation driven by a GPT-style model built into the chain.'},
+    {short:'Network', t:'Decentralized network', d:'A distributed ledger on Solana — fast, scalable and low-cost.'},
+    {short:'Contracts', t:'Smart contracts', d:'Automate processes like insurance claims, royalty payments and IoT actions.'},
+    {short:'Assets', t:'Digital assets', d:'BZC — an SPL token with a fixed 10.8B supply and mint authority revoked.'},
+    {short:'Applications', t:'Real-world applications', d:'Supply chains, incentives, real-estate income sharing and token-based payments.'}
+  ];
+  USES = [
+    {t:'Decentralized Data Storage', k:'DATA', d:'Secure, tamper-proof data storage across industries like healthcare, logistics and finance using blockchain technology.'},
+    {t:'Supply Chain Transparency', k:'SUPPLY CHAIN', d:'Track and verify products from origin to destination with immutable records, improving trust and reducing fraud in global supply chains.'},
+    {t:'Tokenized Incentive Systems', k:'INCENTIVES', d:'Reward users, contributors or customers with the native token for actions such as eco-friendly behavior or platform participation.'},
+    {t:'Smart Contract Automation', k:'CONTRACTS', d:'Automate insurance claims, royalty payments and IoT actions via smart contracts, reducing human error and operational costs.'},
+    {t:'AI Automation', k:'AI AUTOMATION', d:'Intelligent automation driven by a GPT-style model built into the chain.'},
+    {t:'Digital Asset Management', k:'DIGITAL ASSETS', d:'A distributed, tamper-proof ledger for managing digital assets at scale.'}
+  ];
+  ALLOC = [
+    {t:'Investors', v:25, amt:'2.7B'}, {t:'Community', v:25, amt:'2.7B'}, {t:'Staking & Rewards', v:20, amt:'2.16B'},
+    {t:'Gaming & Forex Incentive', v:10, amt:'1.08B'}, {t:'Tech Reserve', v:10, amt:'1.08B'}, {t:'Team & Advisors', v:10, amt:'1.08B'}
+  ];
+  ROAD = [
+    {q:'Q3 2025', status:'Completed', t:'Foundation & Strategic Launch', items:['Token development & smart contract deployment','Official website & whitepaper release','Community building & airdrop campaigns']},
+    {q:'Q4 2025', status:'Completed', t:'Public Launch & Revenue Generation', items:['Public sale & listing on PancakeSwap','Income from Sanali Business Bay leasing','Staking platform rollout']},
+    {q:'Q1 2026', status:'In progress', t:'Real Estate Expansion & Income Sharing', items:['Start construction: Ameri Hotel Apartments (Meydan)','First token-holder income distribution','Partner onboarding for third-party tokenization']},
+    {q:'Q2 2026', status:'Upcoming', t:'Scaling & Payment Integration', items:['Listing on Tier-1 CEX','Rollout of AmeriPay, a token-based real estate payment solution','Expansion to Tier-2 Indian & GCC cities']}
+  ];
+  PARTNERS = [['PancakeSwap','/site/uploads/partner0.webp'],['Trust Wallet','/site/uploads/partner1.webp'],['BscScan','/site/uploads/partner2.webp'],['CoinMarketCap','/site/uploads/partner3.webp'],['Coinstore','/site/uploads/partner4.webp'],['MetaMask','/site/uploads/partner5.webp']];
+  FAQ = [
+    {q:'What is BeezChain (BZC)?', a:'BeezChain (BZC) is a blockchain-powered ecosystem built on the Solana network, designed to offer decentralized solutions across industries including logistics, IoT and supply chain management.'},
+    {q:'What is the maximum supply of BZC?', a:'The maximum supply is 10.8 billion BZC, with the mint authority permanently revoked so no additional tokens can ever be created.'},
+    {q:'Which network is BeezChain based on?', a:'BZC is an SPL token deployed on the Solana network, offering fast, scalable and low-cost transactions.'},
+    {q:'How can I purchase BZC?', a:'You can purchase BZC on the official website or through Raydium and Jupiter using USDC or SOL. Connect a wallet such as Phantom or Solflare, enter the amount, and receive BZC.'},
+    {q:'Where can I check the live price of BZC?', a:'On the official website or on supported exchanges and blockchain explorers after listing.'}
+  ];
+  CAPS = [
+    {t:'The global hive', d:'One decentralized network spanning the planet — every cell a secured record.'},
+    {t:'Activation', d:'Rings trace a four-dimensional Hopf fibration while illustrative transaction paths arc between cells.'},
+    {t:'Into the hive', d:'Descend through the surface into the honeycomb itself — every cell verifiable.'},
+    {t:'Infrastructure', d:'The network resolves into five stages — from raw data to execution.'}
+  ];
+  WALLETS = [
+    {name:'Community', pct:'25%', amt:'2,700,000,000', addr:'EXkxdeKv72BMPrC9Q872Xz4WXmV1xyfW1TESMPvw13Nb', note:'Liquidity & airdrops', locked:false},
+    {name:'Investors', pct:'25%', amt:'2,700,000,000', addr:'B2AhZrsUKKBbgLDf4jG9JPpBnqvebL8pD6M9Sn8uXHN7', note:'', locked:false},
+    {name:'Staking & Rewards', pct:'20%', amt:'2,160,000,000', addr:'6nUxYZGwKkbL5Ee9uPT6E4ewQjEWo6Fj7DKc6y2rdZfU', note:'', locked:false},
+    {name:'Gaming & Forex', pct:'10%', amt:'1,080,000,000', addr:'4P4J9phnwZ1E6KKC6CDS6H7qVj7AJH8iDqgmH7JGDYNq', note:'', locked:false},
+    {name:'Tech Reserve', pct:'10%', amt:'1,080,000,000', addr:'Fnxe6GhtwjzM27SjGrhVUprpTEtR7m7gheWHCCo1GjFb', note:'', locked:false},
+    {name:'Team & Advisors', pct:'10%', amt:'1,080,000,000', addr:'GGYuTd3Co19CovDsuoJe2Fq63keQUjk72xtsGfFZ2xo8', note:'12-mo cliff + 24-mo vesting', locked:true}
+  ];
+
+  componentDidMount() {
+    this.vis = {}; this.canv = {}; this.sp = {}; this.mx = 0; this.my = 0; this.tmx = 0; this.tmy = 0; this.hubT = 0;
+    this.setReduced();
+    const css = getComputedStyle(this.rootRef.current || document.documentElement);
+    const rgb = (v, d) => { v = (v || '').trim(); if (v[0] !== '#') return d; const n = parseInt(v.slice(1), 16); return [(n>>16)&255,(n>>8)&255,n&255]; };
+    this.C = { fg: rgb(css.getPropertyValue('--color-bg'), [243,242,242]), ink: rgb(css.getPropertyValue('--color-text'), [32,30,29]), ac: rgb(css.getPropertyValue('--color-accent'), [236,48,19]) };
+    this.pp = Array.from({length:110}, () => ({o:Math.random(), s:0.000045+Math.random()*0.00004, y:0.14+Math.random()*0.72, r:Math.floor(Math.random()*4)}));
+    this.onResize = () => this.resize(); this.onScroll = () => { if (this._sq) return; this._sq = true; requestAnimationFrame(() => { this._sq = false; this.scroll(); }); };
+    this.onMove = (e) => { this.lastMove = performance.now(); this.tmx = e.clientX / innerWidth - 0.5; this.tmy = e.clientY / innerHeight - 0.5; };
+    addEventListener('resize', this.onResize); addEventListener('scroll', this.onScroll, {passive:true}); addEventListener('pointermove', this.onMove, {passive:true});
+    this.io = new IntersectionObserver((es) => es.forEach(e => { this.vis[e.target.dataset.canvas] = e.isIntersecting; }), {rootMargin:'100px'});
+    this.resize(); this.scroll(); this.setupIntro(); this.setupReveal(); this.setupMagnetic(); this.setupPulse(); this.setupFx(); this.initGL(); this.initViews(); this.setupSwarm(); this.setupDecode(); this.setupNav(); this.setupDeco(); this.setupKinetic();
+    this.hubTimer = setInterval(() => { if (this.vis.hub && Date.now() > (this.hubHoldUntil || 0)) this.setState(s => ({activeUse:(s.activeUse+1)%6})); }, 4200);
+    const tick = (t) => { this.raf = requestAnimationFrame(tick); if (!this.reduced) this.frame(t); };
+    this.raf = requestAnimationFrame(tick);
+    if (document.fonts) document.fonts.ready.then(() => this.frame(performance.now()));
+  }
+  componentWillUnmount() {
+    cancelAnimationFrame(this.raf); this.h2io && this.h2io.disconnect(); this.wmIO && this.wmIO.disconnect(); this.wmRO && removeEventListener('resize', this.wmRO); this.wmInit = false; this.grain && this.grain.remove(); this.kio && this.kio.disconnect(); if (this.sw) { this.sw.cv.remove(); removeEventListener('resize', this.sw.fit); } if (this.views) { this.views.R.dispose(); this.views.R.domElement.remove(); } if (this.gl) { this.gl.R.dispose(); this.gl.io.disconnect(); } this.introEl && this.introEl.remove(); this.cur && this.cur.remove(); this.onOver && removeEventListener('pointerover', this.onOver); clearInterval(this.hubTimer); this.io && this.io.disconnect(); this.rio && this.rio.disconnect();
+    removeEventListener('resize', this.onResize); removeEventListener('scroll', this.onScroll); removeEventListener('pointermove', this.onMove);
+  }
+  componentDidUpdate(pp, ps) {
+    pp = pp || {}; ps = ps || {};
+    if (ps.actIdx !== this.state.actIdx || ps.navCompact !== this.state.navCompact || ps.scrolled !== this.state.scrolled) setTimeout(() => this.placeNav && this.placeNav(), ps.scrolled !== this.state.scrolled ? 650 : 0);
+    if (pp.motion !== this.props.motion) this.setReduced();
+    if (ps.narrow !== this.state.narrow) setTimeout(() => this.resize(), 50);
+    if (ps.activeUse !== this.state.activeUse) this.hubT = performance.now();
+    if (this.reduced) this.frame(4000);
+  }
+  setReduced() { this.reduced = this.props.motion === 'Reduced' || matchMedia('(prefers-reduced-motion: reduce)').matches; }
+  q(s) { return this.rootRef.current ? this.rootRef.current.querySelector(s) : null; }
+  qa(s) { return this.rootRef.current ? Array.from(this.rootRef.current.querySelectorAll(s)) : []; }
+
+  setupReveal() {
+    if (this.reduced || !this.rootRef.current) return;
+    const els = this.qa('[data-reveal]').filter(el => el.getBoundingClientRect().top > innerHeight);
+    els.forEach(el => el.style.opacity = '0');
+    this.rio = new IntersectionObserver((es) => es.forEach(e => {
+      if (!e.isIntersecting) return; const el = e.target; this.rio.unobserve(el);
+      
+      const a = el.animate([{opacity:0, transform:'translateY(28px)'}, {opacity:1, transform:'none'}], {duration:1000, easing:'cubic-bezier(.2,.7,.1,1)', fill:'forwards'});
+      a.onfinish = () => { el.style.opacity = '1'; a.cancel(); };
+    }), {threshold:0.15});
+    els.forEach(el => this.rio.observe(el));
+  }
+  setupMagnetic() {
+    if (this.reduced || matchMedia('(hover: none)').matches) return;
+    this.qa('[data-magnetic]').forEach(el => {
+      el.style.transition = 'transform .35s cubic-bezier(.2,.7,.1,1), background .2s';
+      el.addEventListener('pointermove', e => { const r = el.getBoundingClientRect(); el.style.transform = `translate(${(e.clientX-r.left-r.width/2)*0.18}px, ${(e.clientY-r.top-r.height/2)*0.3}px)`; });
+      el.addEventListener('pointerleave', () => { el.style.transform = ''; });
+    });
+  }
+  setupPulse() {
+    if (this.reduced) return;
+    this.qa('[data-pulse]').forEach(el => el.animate([{opacity:1},{opacity:0.25},{opacity:1}], {duration:1800, iterations:Infinity}));
+  }
+
+  resize() {
+    const narrow = innerWidth < 860;
+    const navCompact = innerWidth < 1240;
+    if (narrow !== this.state.narrow || navCompact !== this.state.navCompact) this.setState({narrow, navCompact});
+    const N = narrow ? 90 : 170;
+    if (!this.net || this.net.n !== N) this.net = this.buildNet(N);
+    const HN = narrow ? 120 : 230; if (!this.hive || this.hive.n !== HN) this.hive = this.buildHive(HN);
+    const dpr = Math.min(devicePixelRatio || 1, narrow ? 1.5 : 2);
+    this.qa('canvas[data-canvas]').forEach(el => {
+      const name = el.dataset.canvas; const r = el.getBoundingClientRect();
+      el.width = Math.max(1, Math.round(r.width * dpr)); el.height = Math.max(1, Math.round(r.height * dpr));
+      const ctx = el.getContext('2d'); ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      if (!this.canv[name]) this.io.observe(el);
+      this.canv[name] = {el, ctx, w:r.width, h:r.height};
+    });
+    if (this.views) this.views.R.setSize(innerWidth, innerHeight, true);
+    if (this.gl) this.gl.fit();
+    this.scroll(); this.frame(performance.now());
+  }
+
+  buildNet(n) {
+    const pts = [], ga = Math.PI * (3 - Math.sqrt(5));
+    for (let i = 0; i < n; i++) { const y = 1 - (i/(n-1))*2, r = Math.sqrt(1-y*y), th = ga*i, j = 0.9 + Math.random()*0.2; pts.push([Math.cos(th)*r*j, y*j, Math.sin(th)*r*j]); }
+    const inner = Math.floor(n*0.2);
+    for (let i = 0; i < inner; i++) { const u = Math.random()*2-1, th = Math.random()*6.283, rr = 0.3+Math.random()*0.35, s = Math.sqrt(1-u*u); pts.push([Math.cos(th)*s*rr, u*rr, Math.sin(th)*s*rr]); }
+    const M = pts.length, edges = [], seen = new Set();
+    for (let i = 0; i < M; i++) {
+      const a = pts[i], d = [];
+      for (let j = 0; j < M; j++) if (j !== i) { const b = pts[j]; d.push([j, (a[0]-b[0])**2+(a[1]-b[1])**2+(a[2]-b[2])**2]); }
+      d.sort((x, y) => x[1]-y[1]);
+      for (let k = 0; k < 3; k++) { const j = d[k][0], key = i < j ? i+'-'+j : j+'-'+i; if (!seen.has(key)) { seen.add(key); edges.push([i, j, Math.random()]); } }
+    }
+    const cols = Math.ceil(Math.sqrt(M*2.2)), rows = Math.ceil(M/cols);
+    const order = pts.map((p, i) => i).sort((a, b) => pts[a][1]-pts[b][1]);
+    const grid = new Array(M);
+    for (let r = 0; r < rows; r++) {
+      const row = order.slice(r*cols, (r+1)*cols).sort((a, b) => pts[a][0]-pts[b][0]);
+      row.forEach((idx, c) => { grid[idx] = [(c/(cols-1)-0.5)*3.1 , ((r+0.5)/rows-0.5)*1.5, 0]; });
+    }
+    return {n, pts, edges, grid, pr:new Float32Array(M*4), pulses:Array.from({length:90}, () => ({e:Math.floor(Math.random()*edges.length), o:Math.random(), s:0.00018+Math.random()*0.0004}))};
+  }
+
+  prog(el) { if (!el) return 0; const b = el.getBoundingClientRect(); return this.U.clamp(-b.top / Math.max(1, b.height - innerHeight)); }
+
+  scroll() {
+    const {clamp, ss} = this.U; const st = {};
+    const sc = scrollY > 40; if (sc !== this.state.scrolled) st.scrolled = sc;
+    const hp = this.prog(this.q('[data-sticky="hero"]')); this.sp.hero = hp;
+    const copy = this.q('[data-hero-copy]');
+    if (copy) { const f = ss(0.06, 0.24, hp); copy.style.opacity = String(1-f); copy.style.transform = `translateY(${-f*90}px)`; copy.style.pointerEvents = f > 0.5 ? 'none' : ''; }
+    const hb = this.q('[data-bar="hero"]'); if (hb) hb.style.transform = `scaleX(${hp})`;
+    const hs = hp < 0.18 ? 0 : hp < 0.5 ? 1 : hp < 0.8 ? 2 : 3; if (hs !== this.state.heroStage) st.heroStage = hs;
+    const pp = this.prog(this.q('[data-sticky="pipe"]')); this.sp.pipe = pp;
+    const pb = this.q('[data-bar="pipe"]'); if (pb) pb.style.transform = `scaleX(${pp})`;
+    const ps = Math.min(4, Math.floor(pp*5.2)); if (ps !== this.state.pipeStage) st.pipeStage = ps;
+    const kp = this.prog(this.q('[data-sticky="stack"]'));
+    this.sp.stack = kp; const ks = Math.min(5, Math.floor(kp*6)); if (ks !== this.state.stackStage) st.stackStage = ks;
+    const road = this.q('[data-sticky="road"]'), track = this.q('[data-track]');
+    if (road) this.sp.road = this.state.narrow ? clamp((innerHeight - road.getBoundingClientRect().top)/(innerHeight + road.offsetHeight)) : this.prog(road);
+    if (road && track) {
+      if (!this.state.narrow) { const rp = this.prog(road); const max = Math.max(0, track.scrollWidth - innerWidth); track.style.transform = `translateX(${-rp*max}px)`; const rs = Math.min(3, Math.floor(rp*4.2)); if (rs !== this.state.rmStage) st.rmStage = rs; }
+      else { track.style.transform = ''; if (this.state.rmStage !== 3) st.rmStage = 3; }
+    }
+    const tk = this.q('[data-tok]');
+    if (tk) { const b = tk.getBoundingClientRect(); const p = clamp((innerHeight - b.top) / (innerHeight + b.height*0.6)); this.sp.token = p; const ta = p > 0.4 && p < 0.9 ? Math.min(5, Math.floor((p-0.4)/0.5*6)) : -1; if (ta !== this.state.tokAuto) st.tokAuto = ta; }
+    let ai = 0; (this._acts || (this._acts = this.qa('[data-act]'))).forEach((el, i) => { if (el.getBoundingClientRect().top < innerHeight*0.5) ai = i; }); if (ai !== (this.state.actIdx || 0)) st.actIdx = ai;
+    const wm = this.q('[data-wordmark]'); if (wm) { const b = wm.getBoundingClientRect(); const k = clamp((innerHeight - b.top)/(innerHeight + b.height)); wm.style.backgroundPosition = (100 - k*100) + '% 0'; }
+    const tt = this.q('[data-totop]'); const ftr = this.q('footer[data-view="foot"]');
+    if (tt && ftr) { const tb = tt.getBoundingClientRect(), fb = ftr.getBoundingClientRect(); const over = fb.top < tb.bottom - tb.height/2; if (tt.dataset.over !== String(over)) { tt.dataset.over = String(over); tt.style.background = over ? 'var(--color-text)' : 'var(--color-accent)'; tt.style.color = over ? 'var(--color-accent)' : 'var(--color-text)'; tt.style.boxShadow = over ? '0 10px 30px rgba(0,0,0,.35)' : '0 10px 30px rgba(0,0,0,.4)'; } }
+    if (tt) { const on = scrollY > innerHeight*0.8; if (tt.dataset.on !== String(on)) { tt.dataset.on = String(on); tt.style.opacity = on ? '1' : '0'; tt.style.transform = on ? 'none' : 'translateY(16px)'; tt.style.pointerEvents = on ? 'auto' : 'none'; } }
+    const hpr = this.q('[data-hexprog]'); if (hpr) hpr.style.strokeDashoffset = (100 - clamp(scrollY/Math.max(1, document.documentElement.scrollHeight - innerHeight))*100).toFixed(2);
+    const np = this.q('[data-navprog]'); if (np) np.style.transform = 'scaleX(' + clamp(scrollY/Math.max(1, document.documentElement.scrollHeight - innerHeight)).toFixed(4) + ')';
+    if (this.nums) this.nums.forEach(([n, sec]) => { const b = sec.getBoundingClientRect(); if (b.bottom < -200 || b.top > innerHeight + 200) return; n.style.transform = 'translateY(' + (-b.top*0.22).toFixed(1) + 'px)'; });
+    if (Object.keys(st).length) this.setState(st);
+    if (this.reduced) this.frame(4000);
+  }
+
+  rgba(c, a) { return `rgba(${c[0]},${c[1]},${c[2]},${a})`; }
+
+  frame(t) {
+    if (!this.C) return;
+    this.mx += (this.tmx - this.mx) * 0.04; this.my += (this.tmy - this.my) * 0.04;
+    const c = this.canv, v = this.vis, C = this.C;
+    this.moveCursor();
+    { const nv = this.q('[data-nav]'); if (nv) { const on = this.state.scrolled && !this.state.menuOpen && !this.reduced; const rx = on ? (-this.my*5) : 0, ry = on ? (this.mx*3.5) : 0; if (Math.abs(rx - (this._nrx || 0)) > 0.02 || Math.abs(ry - (this._nry || 0)) > 0.02) { this._nrx = rx; this._nry = ry; nv.style.transform = rx || ry ? 'perspective(1100px) rotateX(' + rx.toFixed(2) + 'deg) rotateY(' + ry.toFixed(2) + 'deg)' : ''; } } }
+    if (!this.gl && c.hero && v.hero) this.drawHive(c.hero, t, this.sp.hero || 0, {cx:this.state.narrow ? 0.5 : 0.66, cy:this.state.narrow ? 0.36 : 0.5, fg:C.fg, ac:C.ac, morph:true});
+        if (this.gl && this.glVis !== false) this.renderGL(t);
+    if (this.views) this.renderViews(t);
+    this.drawSwarm(t);
+    if (this.h2s && !this.reduced && !this.h2io) { this.h2vis = new Set(); this.h2io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) this.h2vis.add(e.target); else { this.h2vis.delete(e.target); e.target.style.transform = ''; } })); this.h2s.forEach(el => this.h2io.observe(el)); }
+    if (this.h2vis && !this.reduced) { const dy = scrollY - (this._fy == null ? scrollY : this._fy); this._fy = scrollY; this.vel = (this.vel || 0)*0.86 + dy*0.14; const sk = Math.max(-4, Math.min(4, this.vel*0.05)); if (Math.abs(sk - (this._sk || 0)) > 0.02) { this._sk = sk; const H = innerHeight; this.h2vis.forEach(el => { el.style.transform = Math.abs(sk) < 0.03 ? '' : 'skewY(' + sk.toFixed(2) + 'deg)'; }); } }
+    if (!this.views && c.pipe && v.pipe) this.drawPipe(c.pipe, t, this.sp.pipe || 0);
+    if (!this.views && c.hub && v.hub) this.drawHub(c.hub, t);
+    if (!this.views && c.token && v.token) this.drawToken(c.token, t, this.sp.token || 0);
+    if (!this.ecoOrbit && c.eco && v.eco) this.drawEco(c.eco, t);
+    if (!this.views && c.cta && v.cta) this.drawHive(c.cta, t, 0.3, {cx:this.state.narrow ? 0.5 : 0.74, cy:0.45, fg:C.fg, ac:C.ac, act:0.72, scale:1.05});
+    this.wmTick(t/1000);
+  }
+
+  drawNet(cv, t, p, o) {
+    const {clamp, ss, lerp} = this.U; const {ctx, w, h} = cv; ctx.clearRect(0, 0, w, h);
+    const N = this.net; if (!N) return; const P = N.pts, G = N.grid, M = P.length, pr = N.pr;
+    const act = o.act != null ? o.act : ss(0.04, 0.5, p), m = o.morph ? ss(0.62, 0.9, p) : 0;
+    const dist = 3.2 - 1.9*ss(0, 0.56, p) + 1.35*m;
+    const cx = w*lerp(o.cx, 0.5, o.morph ? ss(0.05, 0.55, p) : 0), cy = h*lerp(o.cy, 0.5, o.morph ? ss(0.05, 0.55, p) : 0);
+    const f = Math.min(w*0.95, h) * 0.56 * (o.scale || 1);
+    const a = t*0.00006 + this.mx*0.7, b = 0.3 + this.my*0.4;
+    const ca = Math.cos(a), sa = Math.sin(a), cb = Math.cos(b), sb = Math.sin(b);
+    for (let i = 0; i < M; i++) {
+      const q = P[i]; let x = q[0]*ca + q[2]*sa, z = -q[0]*sa + q[2]*ca; let y = q[1]*cb - z*sb; z = q[1]*sb + z*cb;
+      const g = G[i]; x = lerp(x, g[0], m); y = lerp(y, g[1], m); z = lerp(z, 0, m);
+      const d = z + dist; const k = i*4;
+      if (d < 0.14) { pr[k+3] = -1; continue; }
+      const s = f/d; pr[k] = cx + x*s; pr[k+1] = cy + y*s; pr[k+2] = 1/d; pr[k+3] = clamp((1.3 - z)/2.3);
+    }
+    const E = N.edges;
+    ctx.lineWidth = 1; ctx.beginPath(); ctx.strokeStyle = this.rgba(o.fg, 0.1*(1 - m*0.5));
+    for (const e of E) { if (e[2] < act) continue; const i = e[0]*4, j = e[1]*4; if (pr[i+3] < 0 || pr[j+3] < 0) continue; ctx.moveTo(pr[i], pr[i+1]); ctx.lineTo(pr[j], pr[j+1]); }
+    ctx.stroke();
+    ctx.lineWidth = 1.2; ctx.beginPath(); ctx.strokeStyle = this.rgba(o.ac, 0.6*(1 - m*0.75));
+    for (const e of E) { if (e[2] >= act) continue; const i = e[0]*4, j = e[1]*4; if (pr[i+3] < 0 || pr[j+3] < 0) continue; ctx.moveTo(pr[i], pr[i+1]); ctx.lineTo(pr[j], pr[j+1]); }
+    ctx.stroke();
+    const pc = Math.floor(N.pulses.length * act * (1 - m));
+    for (let k = 0; k < pc; k++) {
+      const pl = N.pulses[k], e = E[pl.e]; if (e[2] >= act) continue; const i = e[0]*4, j = e[1]*4; if (pr[i+3] < 0 || pr[j+3] < 0) continue;
+      const u = (t*pl.s + pl.o) % 1; const x = lerp(pr[i], pr[j], u), y = lerp(pr[i+1], pr[j+1], u);
+      ctx.fillStyle = k % 3 ? this.rgba(o.fg, 0.95) : this.rgba(o.ac, 1); ctx.fillRect(x-1.5, y-1.5, 3, 3);
+    }
+    for (let i = 0; i < M; i++) {
+      const k = i*4; if (pr[k+3] < 0) continue; const sz = clamp(1.3 + 2.4*pr[k+2], 1.3, 9);
+      ctx.fillStyle = this.rgba(o.fg, (0.18 + 0.72*pr[k+3]) * (0.7 + 0.3*m)); ctx.fillRect(pr[k]-sz/2, pr[k+1]-sz/2, sz, sz);
+    }
+    if (m < 1) {
+      const rr = 0.2*(1 + act*0.3), rot = -t*0.00025, hy = 0.13; const V = [];
+      for (let s2 = -1; s2 <= 1; s2 += 2) for (let k = 0; k < 6; k++) {
+        const an = rot + k*Math.PI/3; let x = Math.cos(an)*rr, z0 = Math.sin(an)*rr, y0 = s2*hy;
+        let x1 = x*ca + z0*sa, z1 = -x*sa + z0*ca; let y1 = y0*cb - z1*sb; z1 = y0*sb + z1*cb; const d = z1 + dist; const s = f/Math.max(0.2, d);
+        V.push([cx + x1*s, cy + y1*s]);
+      }
+      const al = (0.35 + 0.65*act) * (1 - m);
+      ctx.strokeStyle = this.rgba(o.ac, al); ctx.lineWidth = 2;
+      ctx.beginPath(); for (let k = 0; k < 6; k++) { ctx.lineTo(V[k][0], V[k][1]); } ctx.closePath(); ctx.stroke();
+      ctx.beginPath(); for (let k = 6; k < 12; k++) { ctx.lineTo(V[k][0], V[k][1]); } ctx.closePath();
+      ctx.fillStyle = this.rgba(o.ac, 0.14*act*(1-m)); ctx.fill(); ctx.stroke();
+      ctx.beginPath(); for (let k = 0; k < 6; k++) { ctx.moveTo(V[k][0], V[k][1]); ctx.lineTo(V[k+6][0], V[k+6][1]); } ctx.lineWidth = 1; ctx.stroke();
+    }
+    if (m > 0.02) {
+      const s = f/dist, x0 = cx - 1.62*s, y0 = cy - 0.84*s, cw = 3.24*s/5, ch = 1.68*s; const L = ['Data','AI processing','Intelligence','Automation','Execution'];
+      ctx.lineWidth = 2; ctx.strokeStyle = this.rgba(o.fg, 0.45*m); ctx.font = '600 12px Archivo, sans-serif'; ctx.textAlign = 'left';
+      for (let k = 0; k < 5; k++) {
+        const x = x0 + k*cw; ctx.strokeRect(x, y0, cw, ch);
+        ctx.fillStyle = this.rgba(k === 0 ? o.ac : o.fg, 0.9*m); ctx.fillRect(x, y0, cw, 2);
+        ctx.fillStyle = this.rgba(o.fg, 0.9*m); ctx.fillText('0' + (k+1) + '  ' + L[k], x + 10, y0 + 22);
+      }
+    }
+  }
+
+  hexPath(ctx, x, y, r, ro = 0) { ctx.beginPath(); for (let k = 0; k < 6; k++) { const an = ro + Math.PI/6 + k*Math.PI/3; ctx.lineTo(x + Math.cos(an)*r, y + Math.sin(an)*r); } ctx.closePath(); }
+
+  setupFx() {
+    if (this.reduced) return;
+    const mq = this.q('[data-marquee]'); if (mq) mq.animate([{transform:'translateX(0)'}, {transform:'translateX(-50%)'}], {duration:40000, iterations:Infinity});
+    this.qa('[data-shimmer]').forEach(el => el.animate([{backgroundPosition:'200% 0'}, {backgroundPosition:'0% 0'}], {duration:4200, iterations:Infinity, easing:'ease-in-out'}));
+    if (matchMedia('(hover: none)').matches) return;
+    this.qa('[data-spot]').forEach(el => el.addEventListener('pointermove', e => { const r = el.getBoundingClientRect(); el.style.setProperty('--mx', (e.clientX - r.left) + 'px'); el.style.setProperty('--my', (e.clientY - r.top) + 'px'); }));
+    this.qa('[data-tilt]').forEach(el => {
+      el.style.transition = 'transform .4s cubic-bezier(.2,.7,.1,1), border-color .3s';
+      el.addEventListener('pointermove', e => { if (el.dataset.orbit) return; const r = el.getBoundingClientRect(); const x = (e.clientX - r.left)/r.width - 0.5, y = (e.clientY - r.top)/r.height - 0.5; el.style.transform = 'perspective(700px) rotateX(' + (-y*12) + 'deg) rotateY(' + (x*14) + 'deg) translateZ(10px)'; });
+      el.addEventListener('pointerleave', () => { el.style.transform = ''; });
+    });
+    const cur = document.createElement('div'); cur.setAttribute('aria-hidden', 'true');
+    cur.style.cssText = 'position:fixed;left:0;top:0;width:40px;height:40px;margin:-20px 0 0 -20px;pointer-events:none;z-index:90;transition:width .3s,height .3s,margin .3s,opacity .3s;opacity:0';
+    cur.innerHTML = '<svg viewBox="0 0 100 100" width="100%" height="100%"><polygon points="50,3 91,27 91,73 50,97 9,73 9,27" fill="none" stroke="' + this.rgba(this.C.ac, 0.9) + '" stroke-width="3"></polygon></svg>';
+    document.body.appendChild(cur); this.cur = cur; this.cux = innerWidth/2; this.cuy = innerHeight/2;
+    this.onOver = (e) => { const hot = !!(e.target.closest && e.target.closest('a,button')); if (hot !== this.curHot) { this.curHot = hot; const s = hot ? 64 : 40; cur.style.width = cur.style.height = s + 'px'; cur.style.margin = (-s/2) + 'px 0 0 ' + (-s/2) + 'px'; } cur.style.opacity = '1'; };
+    addEventListener('pointerover', this.onOver);
+  }
+  moveCursor() { if (!this.cur) return; const tx = (this.tmx + 0.5)*innerWidth, ty = (this.tmy + 0.5)*innerHeight; this.cux += (tx - this.cux)*0.2; this.cuy += (ty - this.cuy)*0.2; this.cur.style.transform = 'translate(' + this.cux + 'px,' + this.cuy + 'px) rotate(' + (this.cux*0.15) + 'deg)'; }
+
+  setupIntro() {
+    if (this.reduced || scrollY > 50) return;
+    const C = this.C, el = document.createElement('div'); el.setAttribute('aria-hidden', 'true');
+    el.style.cssText = 'position:fixed;inset:0;z-index:100;background:rgb(' + C.ink.join(',') + ');display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(20px,4vw,56px);font-family:Archivo,system-ui,sans-serif';
+    el.innerHTML = '<div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;border-top:2px solid rgba(' + C.ac.join(',') + ',.4);padding-top:16px"><div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:rgba(' + C.fg.join(',') + ',.6)">Initializing the hive</div><div data-n="1" style="font-size:clamp(64px,12vw,200px);font-weight:800;letter-spacing:-0.05em;line-height:.8;color:rgb(' + C.ac.join(',') + ');font-variant-numeric:tabular-nums">000</div></div>';
+    document.body.appendChild(el); this.introEl = el; const num = el.querySelector('[data-n]'), t0 = performance.now(), D = 1300;
+    const step = (now) => { const k = Math.min(1, (now - t0)/D), e = 1 - Math.pow(1 - k, 3); num.textContent = String(Math.round(e*100)).padStart(3, '0'); if (k < 1) requestAnimationFrame(step); else { const a = el.animate([{transform:'translateY(0)'}, {transform:'translateY(-100%)'}], {duration:900, easing:'cubic-bezier(.7,0,.2,1)', fill:'forwards'}); a.onfinish = () => { el.remove(); this.introEl = null; }; } };
+    requestAnimationFrame(step);
+    setTimeout(() => { if (this.introEl) { this.introEl.remove(); this.introEl = null; } }, 4000);
+    const h1 = this.q('[data-h1]'); if (h1) h1.animate([{clipPath:'inset(0 0 100% 0)', transform:'translateY(60px)'}, {clipPath:'inset(0 0 0% 0)', transform:'none'}], {duration:1300, delay:1450, easing:'cubic-bezier(.2,.7,.1,1)', fill:'backwards'});
+  }
+
+  setupDecode() {
+    const el = this.q('[data-ca]'), stamp = this.q('[data-stamp]'); if (!el || this.reduced) return;
+    const tn = [...el.childNodes].find(n => n.nodeType === 3 && n.nodeValue.trim()); if (!tn) return;
+    const target = tn.nodeValue.trim(), C = this.C; if (stamp) stamp.style.opacity = '0';
+    const io = new IntersectionObserver((es) => {
+      if (!es[0].isIntersecting) return; io.disconnect();
+      const beam = document.createElement('div'); beam.setAttribute('aria-hidden', 'true');
+      beam.style.cssText = 'position:absolute;top:-8px;bottom:-8px;width:3px;left:0;pointer-events:none;background:rgb(' + C.ac.join(',') + ');box-shadow:0 0 22px 6px rgba(' + C.ac.join(',') + ',.55)';
+      el.appendChild(beam);
+      const A = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz', t0 = performance.now(), D = 1700;
+      const step = (now) => {
+        const k = Math.min(1, (now - t0)/D), n = Math.floor(k*target.length); let s = target.slice(0, n);
+        for (let i = n; i < target.length; i++) s += A[Math.floor(Math.random()*A.length)];
+        tn.nodeValue = s; beam.style.left = (k*100) + '%';
+        if (k < 1) { requestAnimationFrame(step); return; }
+        tn.nodeValue = target;
+        const f = beam.animate([{opacity:1}, {opacity:0}], {duration:500, fill:'forwards'}); f.onfinish = () => beam.remove();
+        if (stamp) { const a = stamp.animate([{opacity:0, transform:'scale(1.5)'}, {opacity:1, transform:'none'}], {duration:700, easing:'cubic-bezier(.2,.7,.1,1)'}); a.onfinish = () => { stamp.style.opacity = '1'; }; }
+      };
+      requestAnimationFrame(step);
+    }, {threshold:0.6});
+    io.observe(el);
+  }
+
+  setupNav() {
+    const nav = this.q('[data-nav]'); if (!nav) return;
+    const coin = this.q('[data-coin]');
+    if (coin && !this.reduced) coin.animate([{transform:'rotateY(0deg)'}, {transform:'rotateY(0deg)', offset:0.72}, {transform:'rotateY(360deg)'}], {duration:5200, iterations:Infinity, easing:'cubic-bezier(.6,0,.2,1)'});
+    const shine = this.q('[data-shine]');
+    if (shine && !this.reduced) { const sw = document.createElement('span'); sw.setAttribute('aria-hidden', 'true'); sw.style.cssText = 'position:absolute;top:0;bottom:0;left:0;width:45%;background:linear-gradient(100deg, transparent, rgba(255,255,255,.55), transparent);transform:translateX(-140%) skewX(-20deg);pointer-events:none;will-change:transform'; shine.appendChild(sw);
+      sw.animate([{transform:'translateX(-140%) skewX(-20deg)'}, {transform:'translateX(-140%) skewX(-20deg)', offset:0.6}, {transform:'translateX(320%) skewX(-20deg)'}], {duration:3600, iterations:Infinity, easing:'ease-in-out'}); }
+    const dot = this.q('[data-navspotdot]'); let nq = null;
+    nav.addEventListener('pointermove', (e) => { const first = nq == null; nq = e.clientX; if (!first) return; requestAnimationFrame(() => { if (dot && nq != null) dot.style.transform = 'translateX(' + (nq - nav.getBoundingClientRect().left) + 'px)'; nq = null; }); }, {passive:true});
+    this.navHover = null;
+    const bind = () => this.qa('[data-navlink]').forEach(a => { if (a.dataset.bound) return; a.dataset.bound = '1';
+      a.addEventListener('pointerenter', () => { this.navHover = a; const r = a.querySelector('[data-roll]'); if (r) r.style.transform = 'translateY(-50%)'; this.placeNav(); });
+      a.addEventListener('pointerleave', () => { if (this.navHover === a) this.navHover = null; const r = a.querySelector('[data-roll]'); if (r) r.style.transform = ''; this.placeNav(); }); });
+    this.bindNav = bind; bind(); setTimeout(() => this.placeNav(), 300);
+  }
+
+  placeNav() {
+    const ind = this.q('[data-navind]'), trail = this.q('[data-navtrail]'), rail = this.q('[data-navrail]'); if (!ind || !rail) return;
+    this.bindNav && this.bindNav();
+    const links = this.qa('[data-navlink]'), map = [1, 3, 4, 5, 6], ai = this.state.actIdx || 0;
+    const tgt = this.navHover || links[map.indexOf(ai)];
+    if (!tgt) { ind.style.opacity = '0'; if (trail) trail.style.opacity = '0'; return; }
+    const rb = rail.getBoundingClientRect(), tb = tgt.getBoundingClientRect(), x = tb.left - rb.left + tb.width/2;
+    ind.style.opacity = '1'; ind.style.transform = 'translateX(' + x.toFixed(1) + 'px) rotate(' + ((this._indRot = (this._indRot || 0) + 60)) + 'deg)';
+    if (trail) { trail.style.opacity = '1'; trail.style.transform = 'translateX(' + (tb.left - rb.left).toFixed(1) + 'px) scaleX(' + (tb.width/100).toFixed(3) + ')'; }
+  }
+
+
+  wmFallback(t) { this.wmTick(t/1000); }
+
+  wmTick() {
+    if (this.wmInit) return;
+    const wm = this.q('[data-wm]'), fill = this.q('[data-wmfill]'); if (!wm || !fill) return;
+    const box = wm.parentElement, foot = wm.closest('footer'); this.wmInit = true;
+    const fit = () => { const cs = getComputedStyle(box), avail = box.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight) - 4; wm.style.transform = ''; const sw = wm.scrollWidth, k = sw > avail ? avail/sw : 1; wm.style.transformOrigin = '50% 50%'; wm.style.transform = k < 1 ? 'scale(' + k.toFixed(4) + ')' : ''; };
+    fit(); this.wmRO = fit; addEventListener('resize', fit); if (document.fonts) document.fonts.ready.then(fit);
+    if (this.reduced) return;
+    const sheen = () => { if (this.wmRun) return; this.wmRun = fill.animate([{backgroundPosition:'120% 0, 0 0, 0 0, 0 0'}, {backgroundPosition:'-20% 0, 0 0, 0 0, 0 0'}], {duration:1600, easing:'cubic-bezier(.5,0,.3,1)'}); this.wmRun.onfinish = () => { this.wmRun = null; }; };
+    this.wmIO = new IntersectionObserver((es) => { if (es[0].isIntersecting) sheen(); }, {threshold:0.4}); this.wmIO.observe(box);
+    let q = null, last = 0;
+    const apply = () => { const e = q; q = null; if (!e) return; const b = fill.getBoundingClientRect(), k = fill.offsetWidth ? b.width/fill.offsetWidth : 1; fill.style.setProperty('--mx', ((e.clientX - b.left)/k).toFixed(0) + 'px'); fill.style.setProperty('--my', ((e.clientY - b.top)/k).toFixed(0) + 'px'); };
+    if (foot) {
+      foot.addEventListener('pointermove', (e) => { const first = q == null; q = e; const now = performance.now(); if (!first || now - last < 40) return; last = now; requestAnimationFrame(apply); }, {passive:true});
+      foot.addEventListener('pointerleave', () => { fill.style.removeProperty('--mx'); fill.style.removeProperty('--my'); });
+      box.addEventListener('pointerenter', sheen);
+    }
+  }
+
+  setupDeco() {
+    const C = this.C, root = this.rootRef.current; if (!root) return;
+    this.nums = [];
+    this.qa('[data-act]').forEach((sec, i) => {
+      const n = i + 1; if (n === 1) return;
+      if (getComputedStyle(sec).position === 'static') sec.style.position = 'relative';
+      const gold = false;
+      const el = document.createElement('div'); el.setAttribute('aria-hidden', 'true'); el.textContent = '0' + n;
+      el.style.cssText = 'position:absolute;right:clamp(8px,3vw,48px);top:clamp(24px,5vh,64px);font-family:Archivo,system-ui,sans-serif;font-size:clamp(150px,24vw,400px);font-weight:800;letter-spacing:-0.07em;line-height:.8;color:transparent;-webkit-text-stroke:1.5px ' + (gold ? 'rgba(' + C.ink.join(',') + ',.35)' : 'rgba(' + C.ac.join(',') + ',.38)') + ';pointer-events:none;user-select:none;z-index:' + (gold ? '0' : '-1') + ';will-change:transform';
+      sec.prepend(el); this.nums.push([el, sec]);
+    });
+    const nc = document.createElement('canvas'); nc.width = nc.height = 160; const nx = nc.getContext('2d'), id = nx.createImageData(160, 160);
+    for (let i = 0; i < id.data.length; i += 4) { const v = Math.random()*255; id.data[i] = id.data[i + 1] = id.data[i + 2] = v; id.data[i + 3] = 255; }
+    nx.putImageData(id, 0, 0);
+    const gr = document.createElement('div'); gr.setAttribute('aria-hidden', 'true');
+    gr.style.cssText = 'position:fixed;inset:0;pointer-events:none;z-index:83;opacity:.045;background-image:url(' + nc.toDataURL() + ');background-size:160px 160px';
+    document.body.appendChild(gr); this.grain = gr;
+  }
+
+  setupKinetic() {
+    const hero = this.q('[data-sticky="hero"]');
+    this.h2s = this.qa('h2').filter(el => !(hero && hero.contains(el)));
+    if (this.reduced) return;
+    const splitWords = (el) => {
+      const words = [];
+      const walk = (node) => { [...node.childNodes].forEach(n => {
+        if (n.nodeType === 3) {
+          const parts = n.nodeValue.split(/(\s+)/); const frag = document.createDocumentFragment();
+          parts.forEach(pt => { if (!pt) return; if (/^\s+$/.test(pt)) { frag.appendChild(document.createTextNode(pt)); return; }
+            const w = document.createElement('span'); w.style.cssText = 'display:inline-block;overflow:hidden;vertical-align:top;padding:0 .02em .1em;margin:0 -.02em -.1em;perspective:700px';
+            const inn = document.createElement('span'); inn.style.cssText = 'display:inline-block;transform-origin:50% 100%;will-change:transform'; inn.textContent = pt; w.appendChild(inn); frag.appendChild(w); words.push(inn); });
+          n.replaceWith(frag);
+        } else if (n.nodeType === 1 && n.tagName !== 'BR') walk(n);
+      }); };
+      walk(el); return words;
+    };
+    const A = '0123456789ABCDEF#$%&*+=<>/\\';
+    const scramble = (el) => {
+      const nodes = []; const walk = (node) => node.childNodes.forEach(n => { if (n.nodeType === 3 && n.nodeValue.trim()) nodes.push([n, n.nodeValue]); else if (n.nodeType === 1) walk(n); }); walk(el);
+      const t0 = performance.now(), D = 700;
+      const step = (now) => { const k = Math.min(1, (now - t0)/D);
+        nodes.forEach(([n, v]) => { const m = Math.floor(k*v.length); let s = v.slice(0, m); for (let i = m; i < v.length; i++) s += v[i] === ' ' ? ' ' : A[Math.floor(Math.random()*A.length)]; n.nodeValue = s; });
+        if (k < 1) requestAnimationFrame(step); else nodes.forEach(([n, v]) => { n.nodeValue = v; }); };
+      requestAnimationFrame(step);
+    };
+    const inView = (el) => { const b = el.getBoundingClientRect(); return b.top < innerHeight && b.bottom > 0; };
+    const heads = this.h2s.filter(el => !inView(el)).map(el => { const w = splitWords(el); w.forEach(x => { x.style.transform = 'translateY(110%) rotateX(-75deg)'; x.style.opacity = '0'; }); return [el, w]; });
+    const kick = this.qa('div').filter(el => { const s = el.getAttribute('style') || ''; return s.includes('text-transform:uppercase') && s.includes('color:var(--color-accent-400)') && !(hero && hero.contains(el)) && !inView(el); });
+    const io = new IntersectionObserver((es) => es.forEach(e => {
+      if (!e.isIntersecting) return; io.unobserve(e.target);
+      const hw = heads.find(x => x[0] === e.target);
+      if (hw) { hw[1].forEach((x, i) => { const a = x.animate([{transform:'translateY(110%) rotateX(-75deg)', opacity:0}, {transform:'none', opacity:1}], {duration:1150, delay:i*60, easing:'cubic-bezier(.2,.7,.1,1)', fill:'forwards'}); a.onfinish = () => { x.style.transform = ''; x.style.opacity = ''; a.cancel(); }; }); }
+      else scramble(e.target);
+    }), {threshold:0.3});
+    heads.forEach(([el]) => io.observe(el)); kick.forEach(el => io.observe(el));
+    this.kio = io;
+  }
+
+  setupSwarm() {
+    if (this.reduced || matchMedia('(hover: none)').matches) return;
+    const cv = document.createElement('canvas'); cv.setAttribute('aria-hidden', 'true');
+    cv.style.cssText = 'position:fixed;left:0;top:0;width:100vw;height:100vh;pointer-events:none;z-index:84';
+    document.body.appendChild(cv); const ctx = cv.getContext('2d');
+    const fit = () => { const d = Math.min(devicePixelRatio || 1, 1); cv.width = innerWidth*d; cv.height = innerHeight*d; ctx.setTransform(d, 0, 0, d, 0, 0); };
+    fit(); addEventListener('resize', fit);
+    const B = []; for (let i = 0; i < 18; i++) B.push({x:innerWidth*Math.random(), y:innerHeight*Math.random(), vx:0, vy:0, ph:Math.random()*6.283, o:Math.random()*6.283, dir:Math.random() < 0.5 ? -1 : 1, r:34 + Math.random()*80, sz:0.8 + Math.random()*0.5, tr:[]});
+    this.sw = {cv, ctx, B, fit};
+  }
+  drawSwarm(t) {
+    const S = this.sw; if (!S) return; const {ctx, B} = S, W = innerWidth, H = innerHeight, C = this.C; ctx.clearRect(0, 0, W, H);
+    const mx = (this.tmx + 0.5)*W, my = (this.tmy + 0.5)*H, idle = performance.now() - (this.lastMove || 0) > 2200;
+    const gold = 'rgb(' + C.ac.join(',') + ')', ink = 'rgb(' + C.ink.join(',') + ')';
+    for (const b of B) {
+      const ang = t*0.0011*b.dir + b.o, rad = b.r*(idle ? 1.7 : 1);
+      const tx = mx + Math.cos(ang)*rad, ty = my + Math.sin(ang*1.3)*rad*0.6;
+      b.vx += (tx - b.x)*0.0024 + Math.sin(t*0.003 + b.ph)*0.09; b.vy += (ty - b.y)*0.0024 + Math.cos(t*0.0027 + b.ph)*0.09;
+      b.vx *= 0.935; b.vy *= 0.935; b.x += b.vx; b.y += b.vy;
+      b.tr.push(b.x, b.y); if (b.tr.length > 20) b.tr.splice(0, 2);
+      ctx.beginPath(); for (let k = 0; k < b.tr.length; k += 2) { if (k) ctx.lineTo(b.tr[k], b.tr[k+1]); else ctx.moveTo(b.tr[k], b.tr[k+1]); }
+      ctx.strokeStyle = 'rgba(' + C.ac.join(',') + ',0.16)'; ctx.lineWidth = 1; ctx.stroke();
+      const a = Math.atan2(b.vy, b.vx), flap = 0.35 + 0.65*Math.abs(Math.sin(t*0.08 + b.ph));
+      ctx.save(); ctx.translate(b.x, b.y); ctx.rotate(a); ctx.scale(b.sz, b.sz);
+      ctx.fillStyle = 'rgba(255,248,228,0.6)'; ctx.beginPath(); ctx.ellipse(-0.6, -2.6, 2.8, 1.5*flap, -0.45, 0, 6.283); ctx.ellipse(-0.6, 2.6, 2.8, 1.5*flap, 0.45, 0, 6.283); ctx.fill();
+      ctx.fillStyle = gold; ctx.beginPath(); ctx.ellipse(0, 0, 3.6, 2.1, 0, 0, 6.283); ctx.fill();
+      ctx.fillStyle = ink; ctx.fillRect(-1.1, -2.0, 1.0, 4.0); ctx.fillRect(1.1, -1.8, 0.8, 3.6);
+      ctx.restore();
+    }
+  }
+
+  make4D(THREE, o) {
+    const V4 = []; for (let i = 0; i < 4; i++) for (let j = i + 1; j < 4; j++) for (const a of [-1, 1]) for (const b of [-1, 1]) { const v = [0, 0, 0, 0]; v[i] = a; v[j] = b; V4.push(v); }
+    const E4 = []; for (let i = 0; i < 24; i++) for (let j = i + 1; j < 24; j++) { let d = 0; for (let q = 0; q < 4; q++) d += (V4[i][q] - V4[j][q])**2; if (Math.abs(d - 2) < 0.01) E4.push([i, j]); }
+    const group = new THREE.Group(), cyl = new THREE.CylinderGeometry(1, 1, 1, 6, 1, true);
+    const bl = o.additive ? {transparent:true, blending:THREE.AdditiveBlending, depthWrite:false} : {};
+    const edges = new THREE.InstancedMesh(cyl, new THREE.MeshBasicMaterial({color:o.color, toneMapped:false, ...bl}), E4.length); group.add(edges);
+    const glow = o.glow ? new THREE.InstancedMesh(cyl, new THREE.MeshBasicMaterial({color:o.color, transparent:true, opacity:0.1, blending:THREE.AdditiveBlending, depthWrite:false, toneMapped:false}), E4.length) : null; if (glow) group.add(glow);
+    const nodes = new THREE.InstancedMesh(new THREE.IcosahedronGeometry(1, 1), new THREE.MeshBasicMaterial({color:o.node || o.color, toneMapped:false, ...bl}), 24); group.add(nodes);
+    [edges, nodes, glow].forEach(m => { if (m) m.frustumCulled = false; });
+    const P3 = V4.map(() => new THREE.Vector3()), d = new THREE.Object3D(), up = new THREE.Vector3(0, 1, 0), dir = new THREE.Vector3(), th = o.th || 0.02;
+    const update = (s, spd = 1) => {
+      const a1 = s*0.32*spd, a2 = s*0.21*spd, a3 = s*0.13*spd, a4 = s*0.08, Dw = 3.2;
+      const c1 = Math.cos(a1), s1 = Math.sin(a1), c2 = Math.cos(a2), s2 = Math.sin(a2), c3 = Math.cos(a3), s3 = Math.sin(a3), c4 = Math.cos(a4), s4 = Math.sin(a4);
+      V4.forEach((v, j) => {
+        let x = v[0], y = v[1], z = v[2], w = v[3], q;
+        q = x*c1 - w*s1; w = x*s1 + w*c1; x = q; q = y*c2 - w*s2; w = y*s2 + w*c2; y = q; q = z*c3 - w*s3; w = z*s3 + w*c3; z = q; q = x*c4 - z*s4; z = x*s4 + z*c4; x = q;
+        const kk = Dw/(Dw - w); P3[j].set(x*kk, y*kk, z*kk);
+        d.position.copy(P3[j]); d.quaternion.identity(); d.scale.setScalar(0.055*kk); d.updateMatrix(); nodes.setMatrixAt(j, d.matrix);
+      });
+      E4.forEach((e, j) => {
+        const a = P3[e[0]], b = P3[e[1]]; dir.subVectors(b, a); const len = dir.length(); dir.multiplyScalar(1/len);
+        d.position.addVectors(a, b).multiplyScalar(0.5); d.quaternion.setFromUnitVectors(up, dir);
+        d.scale.set(th, len, th); d.updateMatrix(); edges.setMatrixAt(j, d.matrix);
+        if (glow) { d.scale.set(th*4, len, th*4); d.updateMatrix(); glow.setMatrixAt(j, d.matrix); }
+      });
+      nodes.instanceMatrix.needsUpdate = edges.instanceMatrix.needsUpdate = true; if (glow) glow.instanceMatrix.needsUpdate = true;
+    };
+    return {group, update};
+  }
+
+  async initViews() {
+    if (this.reduced) return;
+    let THREE; try { THREE = await import('https://esm.sh/three@0.160.0'); } catch (e) { return; }
+    const root = this.rootRef.current; if (!root) return;
+    const cv = document.createElement('canvas'); cv.setAttribute('aria-hidden', 'true');
+    cv.style.cssText = 'position:fixed;left:0;top:0;z-index:-1;pointer-events:none;display:block';
+    root.prepend(cv);
+    let R; try { R = new THREE.WebGLRenderer({canvas:cv, antialias:true, alpha:true, powerPreference:'high-performance'}); } catch (e) { cv.remove(); return; }
+    const narrow = this.state.narrow, {ss, lerp} = this.U, C = this.C;
+    R.setPixelRatio(Math.min(devicePixelRatio || 1, narrow ? 1 : 1.25)); R.setSize(innerWidth, innerHeight, true);
+    R.autoClear = false; R.toneMapping = THREE.ACESFilmicToneMapping; R.toneMappingExposure = 1.05; R.outputColorSpace = THREE.SRGBColorSpace;
+    const GOLD = new THREE.Color().setRGB(C.ac[0]/255, C.ac[1]/255, C.ac[2]/255, THREE.SRGBColorSpace);
+    const INK = new THREE.Color().setRGB(C.ink[0]/255, C.ink[1]/255, C.ink[2]/255, THREE.SRGBColorSpace);
+    const pm = new THREE.PMREMGenerator(R), es = new THREE.Scene();
+    es.add(new THREE.Mesh(new THREE.BoxGeometry(30, 30, 30), new THREE.MeshBasicMaterial({color:0x080705, side:THREE.BackSide})));
+    const panel = (w, hh, pos, rot, col, k) => { const m = new THREE.Mesh(new THREE.PlaneGeometry(w, hh), new THREE.MeshBasicMaterial({color:new THREE.Color(col).multiplyScalar(k), side:THREE.DoubleSide})); m.position.set(...pos); m.rotation.set(...rot); es.add(m); };
+    panel(10, 10, [0, 10, 0], [Math.PI/2, 0, 0], 0xfff3dc, 2.2); panel(2.5, 14, [-10, 2, 2], [0, Math.PI/2, 0], 0xf5b82e, 3);
+    panel(2.5, 14, [10, 1, -3], [0, -Math.PI/2, 0], 0xffd27a, 2); panel(16, 2, [0, -1, -12], [0, 0, 0], 0x8a5a12, 1.5); panel(6, 3, [0, 3, 12], [0, Math.PI, 0], 0xffffff, 1);
+    const env = pm.fromScene(es, 0.04).texture; pm.dispose();
+    const goldMat = new THREE.MeshPhysicalMaterial({color:GOLD, metalness:1, roughness:0.26, flatShading:true});
+    const darkMat = new THREE.MeshPhysicalMaterial({color:0x17130c, metalness:0.75, roughness:0.32, clearcoat:0.8, flatShading:true});
+    const honeyMat = new THREE.MeshStandardMaterial({color:GOLD, emissive:GOLD, emissiveIntensity:0.9, metalness:0.2, roughness:0.4, flatShading:true});
+    const add = {transparent:true, blending:THREE.AdditiveBlending, depthWrite:false, toneMapped:false};
+    const gc = document.createElement('canvas'); gc.width = gc.height = 128; const gx = gc.getContext('2d'), gg = gx.createRadialGradient(64, 64, 0, 64, 64, 64);
+    gg.addColorStop(0, 'rgba(255,214,110,1)'); gg.addColorStop(0.3, 'rgba(245,184,46,.4)'); gg.addColorStop(1, 'rgba(245,184,46,0)'); gx.fillStyle = gg; gx.fillRect(0, 0, 128, 128);
+    const glowTex = new THREE.CanvasTexture(gc);
+    const glow = (sz, op = 0.6) => { const sp = new THREE.Sprite(new THREE.SpriteMaterial({map:glowTex, ...add, opacity:op})); sp.scale.set(sz, sz, 1); return sp; };
+    const FS = 'varying float vA; varying float vHot; void main(){ vec2 q = abs(gl_PointCoord - 0.5)*2.0; float d = max(q.x, q.x*0.5 + q.y*0.866)/0.866; if (d > 1.0) discard; vec3 c = mix(vec3(1.0,0.95,0.85), vec3(1.0,0.74,0.2), vHot); gl_FragColor = vec4(c, vA*(1.0 - d*0.5)); }';
+    const VS_CPU = 'uniform float uPR; attribute float aS; varying float vA; varying float vHot; void main(){ vec4 mv = modelViewMatrix*vec4(position,1.0); gl_Position = projectionMatrix*mv; gl_PointSize = (1.5 + aS*3.0)*uPR*(14.0/-mv.z); vA = 0.4 + 0.6*aS; vHot = 1.0; }';
+    const cpuPoints = (n) => { const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.BufferAttribute(new Float32Array(n*3), 3)); const a = new Float32Array(n); for (let i = 0; i < n; i++) a[i] = Math.random(); g.setAttribute('aS', new THREE.BufferAttribute(a, 1)); const m = new THREE.ShaderMaterial({...add, uniforms:{uPR:{value:R.getPixelRatio()}}, vertexShader:VS_CPU, fragmentShader:FS}); const p = new THREE.Points(g, m); p.frustumCulled = false; return p; };
+    const hexGeo = new THREE.CylinderGeometry(1, 1, 1, 6); hexGeo.translate(0, 0.5, 0);
+    const mk = (fov) => { const s = new THREE.Scene(); s.environment = env; return {scene:s, cam:new THREE.PerspectiveCamera(fov, 1, 0.1, 100)}; };
+    const list = [], reg = (name, v) => { const el = this.q('[data-view="' + name + '"]'); if (el) { v.el = el; v.name = name; list.push(v); } };
+
+    { // PIPE
+      const {scene, cam} = mk(30); cam.position.set(0, 0.8, 16); cam.lookAt(0, 0, 0);
+      const core = this.make4D(THREE, {color:GOLD, additive:true, glow:true, th:0.016}); scene.add(core.group); core.group.add(glow(4.5, 0.5));
+      const laneGeo = new THREE.CylinderGeometry(0.012, 0.012, 1, 6); laneGeo.rotateZ(Math.PI/2);
+      const lanes = [], gates = [], blocks = [];
+      for (let i = 0; i < 4; i++) { const l = new THREE.Mesh(laneGeo, new THREE.MeshBasicMaterial({color:GOLD, ...add, opacity:0.45})); scene.add(l); lanes.push(l); const g = new THREE.Mesh(new THREE.TorusGeometry(0.32, 0.04, 8, 6), goldMat); scene.add(g); gates.push(g); }
+      const bGeo = new THREE.CylinderGeometry(0.42, 0.42, 0.42, 6); bGeo.rotateX(Math.PI/2);
+      for (let i = 0; i < 4; i++) { const b = new THREE.Mesh(bGeo, i % 2 ? darkMat : goldMat); scene.add(b); blocks.push(b); }
+      const chain = new THREE.Mesh(laneGeo, new THREE.MeshBasicMaterial({color:GOLD, ...add, opacity:0.6})); scene.add(chain);
+      const N = narrow ? 600 : 1400, pg = new THREE.BufferGeometry(); pg.setAttribute('position', new THREE.BufferAttribute(new Float32Array(N*3), 3));
+      const sd = new Float32Array(N*4); for (let i = 0; i < N*4; i++) sd[i] = Math.random(); pg.setAttribute('aSeed', new THREE.BufferAttribute(sd, 4));
+      const pmat = new THREE.ShaderMaterial({...add, uniforms:{uTime:{value:0}, uW:{value:10}, uH:{value:5}, uReveal:{value:0}, uPR:{value:1}}, fragmentShader:FS, vertexShader:`
+        uniform float uTime, uW, uH, uReveal, uPR; attribute vec4 aSeed; varying float vA; varying float vHot;
+        void main(){
+          float u = fract(uTime*(0.035 + aSeed.y*0.03) + aSeed.x); float col = u*5.0; float x = (u - 0.5)*uW;
+          float lane = floor(aSeed.z*3.999); float ly = (lane/3.0 - 0.5)*uH*0.42;
+          vec3 p = vec3(x, (aSeed.z - 0.5)*uH*0.8 + sin(uTime*1.3 + aSeed.x*40.0)*0.12, (aSeed.w - 0.5)*3.0);
+          p = mix(p, vec3(x, 0.0, 0.0), smoothstep(0.9, 1.5, col));
+          p = mix(p, vec3(x, ly, (aSeed.w - 0.5)*0.25), smoothstep(1.55, 2.1, col));
+          p = mix(p, vec3(x, 0.0, 0.0), smoothstep(3.95, 4.2, col));
+          float sw = exp(-pow((col - 1.5)*3.5, 2.0)); float an = uTime*4.0 + aSeed.x*30.0; p.y += sin(an)*0.6*sw; p.z += cos(an)*0.6*sw;
+          float vis = step(col, uReveal)*(1.0 - smoothstep(4.2, 4.35, col)); vHot = smoothstep(1.3, 1.7, col);
+          vec4 mv = modelViewMatrix*vec4(p, 1.0); gl_Position = projectionMatrix*mv;
+          gl_PointSize = vis*(1.6 + aSeed.w*2.8)*uPR*(18.0/-mv.z); vA = vis*(0.35 + 0.65*aSeed.w);
+        }`});
+      const pts = new THREE.Points(pg, pmat); pts.frustumCulled = false; scene.add(pts);
+      reg('pipe', {scene, cam, update:(s, asp) => {
+        const W = 2*16*Math.tan(15*Math.PI/180)*asp, Hh = W/asp, cw = W/5, X = k => -W/2 + (k + 0.5)*cw, a = Math.min(5, (this.sp.pipe || 0)*5.2 + 0.25), rv = k => Math.max(0.001, ss(k - 0.1, k + 0.45, a));
+        const cs = Math.min(cw*0.26, Hh*0.2); core.group.position.set(X(1), 0, 0); core.group.scale.setScalar(cs*rv(1)); core.update(s, 1.6);
+        lanes.forEach((l, i) => { const y = (i/3 - 0.5)*Hh*0.42, x0 = X(2) - cw*0.5, x1 = X(4) - cw*0.3, len = Math.max(0.001, (x1 - x0)*rv(2)); l.scale.set(len, 1, 1); l.position.set(x0 + len/2, y, 0);
+          const g = gates[i], on = Math.sin(s*3 + i*1.7) > 0.3, gs = Math.min(cw*0.18, Hh*0.1)/0.32; g.position.set(X(3), y, 0); g.scale.setScalar(rv(3)*gs*(on ? 1.18 : 1)); g.rotation.set(0.3, s*0.9 + i, 0); });
+        const bs = Math.min(cw/6.5, Hh*0.12); blocks.forEach((b, i) => { b.position.set(X(4) - cw*0.3 + i*(cw*0.6/3), 0, 0); b.scale.setScalar(rv(4)*bs/0.42); b.rotation.set(Math.sin(s + i)*0.3, Math.cos(s*0.7 + i)*0.4, s*0.5 + i*0.5); });
+        chain.scale.set(Math.max(0.001, cw*0.6*rv(4)), 1, 1); chain.position.set(X(4), 0, 0);
+        const u = pmat.uniforms; u.uTime.value = s; u.uW.value = W; u.uH.value = Hh; u.uReveal.value = a; u.uPR.value = R.getPixelRatio();
+      }});
+    }
+    { // STACK
+      const {scene, cam} = mk(35); cam.position.set(0, 2.4, 10); cam.lookAt(0, 0, 0);
+      const grp = new THREE.Group(); scene.add(grp);
+      const slabGeo = new THREE.CylinderGeometry(1.7, 1.7, 0.14, 6), edgeGeo = new THREE.EdgesGeometry(slabGeo), slabs = [];
+      for (let i = 0; i < 6; i++) {
+        const mat = new THREE.MeshPhysicalMaterial({color:0x1b160d, metalness:0.35, roughness:0.14, clearcoat:1, transparent:true, opacity:0.8, emissive:GOLD, emissiveIntensity:0, flatShading:true});
+        const m = new THREE.Mesh(slabGeo, mat), lm = new THREE.LineBasicMaterial({color:GOLD, transparent:true, opacity:0.35, toneMapped:false}); m.add(new THREE.LineSegments(edgeGeo, lm)); grp.add(m); slabs.push({m, mat, lm, y:(2.5 - i)*0.62});
+      }
+      const fall = cpuPoints(260), fp = fall.geometry.attributes.position, fs = []; for (let i = 0; i < 260; i++) { const r = Math.sqrt(Math.random())*1.3, a = Math.random()*6.283; fs.push([Math.cos(a)*r, Math.sin(a)*r, Math.random(), 0.25 + Math.random()*0.5]); }
+      grp.add(fall); const halo = glow(7, 0.25); scene.add(halo);
+      reg('stack', {scene, cam, update:(s) => {
+        const act = this.state.stackStage, pr = this.sp.stack || 0, sp = 0.62*(1 + 0.3*ss(0, 0.15, pr));
+        slabs.forEach((o, i) => { const tgt = (2.5 - i)*sp + (i === act ? 0.35 : 0); o.y += (tgt - o.y)*0.08; o.m.position.y = o.y; o.mat.emissiveIntensity += ((i === act ? 0.5 : 0) - o.mat.emissiveIntensity)*0.08; o.lm.opacity = i === act ? 1 : i < act ? 0.6 : 0.22; o.m.rotation.y = Math.sin(s*0.5 + i)*0.04; });
+        for (let i = 0; i < fs.length; i++) { const f = fs[i], y = 2.2 - ((s*f[3] + f[2]) % 1)*4.4; fp.setXYZ(i, f[0], y, f[1]); } fp.needsUpdate = true;
+        halo.position.y = slabs[act] ? slabs[act].y : 0;
+        grp.rotation.y = s*0.12 + this.mx*0.6; grp.rotation.x = 0.1 - this.my*0.3;
+      }});
+    }
+    { // HUB
+      const {scene, cam} = mk(36); cam.position.set(0, 5.4, 12.5); cam.lookAt(0, -0.2, 0);
+      const grp = new THREE.Group(); scene.add(grp);
+      const core = this.make4D(THREE, {color:GOLD, additive:true, glow:true, th:0.02}); core.group.scale.setScalar(0.72); core.group.position.y = 0.4; scene.add(core.group); core.group.add(glow(6, 0.55));
+      const ring = new THREE.Mesh(new THREE.TorusGeometry(3, 0.012, 6, 180), new THREE.MeshBasicMaterial({color:GOLD, ...add, opacity:0.55})); ring.rotation.x = Math.PI/2; grp.add(ring);
+      const ring2 = new THREE.Mesh(new THREE.TorusGeometry(1.7, 0.008, 6, 120), new THREE.MeshBasicMaterial({color:GOLD, ...add, opacity:0.3})); ring2.rotation.x = Math.PI/2; grp.add(ring2);
+      const nGeo = new THREE.CylinderGeometry(0.42, 0.42, 0.5, 6), nEdge = new THREE.EdgesGeometry(nGeo), nodes = [];
+      for (let i = 0; i < 6; i++) { const mat = new THREE.MeshPhysicalMaterial({color:0x1d170d, metalness:0.9, roughness:0.28, emissive:GOLD, emissiveIntensity:0, flatShading:true}); const m = new THREE.Mesh(nGeo, mat), lm = new THREE.LineBasicMaterial({color:GOLD, transparent:true, opacity:0.6, toneMapped:false}); m.add(new THREE.LineSegments(nEdge, lm)); grp.add(m); nodes.push({m, mat, lm, lift:0}); }
+      const beam = cpuPoints(110), bp = beam.geometry.attributes.position; scene.add(beam); const tmp = new THREE.Vector3();
+      { const hel = this.q('[data-view="hub"]');
+        if (hel) { const ray = new THREE.Raycaster(), ndc = new THREE.Vector2(), metas = nodes.map(o => o.m);
+          const hit = (e) => { const b = hel.getBoundingClientRect(); ndc.set(((e.clientX - b.left)/b.width)*2 - 1, -((e.clientY - b.top)/b.height)*2 + 1); ray.setFromCamera(ndc, cam); const hs = ray.intersectObjects(metas, false); return hs.length ? metas.indexOf(hs[0].object) : -1; };
+          const pick = (i) => { this.hubHoldUntil = Date.now() + 12000; if (this.state.activeUse !== i) this.setState({activeUse:i}); };
+          let hq = null; hel.addEventListener('pointermove', (e) => { if (hq) { hq = e; return; } hq = e; requestAnimationFrame(() => { const ev = hq; hq = null; const i = hit(ev); this.hubHover = i; hel.style.cursor = i >= 0 ? 'pointer' : ''; if (i >= 0 && ev.pointerType === 'mouse') pick(i); }); }); if (0) hel.addEventListener('pointermove', (e) => { const i = hit(e); this.hubHover = i; hel.style.cursor = i >= 0 ? 'pointer' : ''; if (i >= 0 && e.pointerType === 'mouse') pick(i); });
+          hel.addEventListener('pointerleave', () => { this.hubHover = -1; hel.style.cursor = ''; });
+          hel.addEventListener('click', (e) => { const i = hit(e); if (i >= 0) pick(i); });
+        } }
+      reg('hub', {scene, cam, update:(s) => {
+        const act = this.state.activeUse, spin = s*0.06 + this.mx*0.5; core.update(s, 1.2);
+        nodes.forEach((o, i) => { const an = -Math.PI/2 + i*Math.PI/3 + spin, on = i === act; const hv = i === this.hubHover; o.lift += ((on ? 0.7 : hv ? 0.3 : 0) - o.lift)*0.08; o.m.position.set(Math.cos(an)*3, o.lift, Math.sin(an)*3); o.m.rotation.y = -an + s*(on ? 1 : 0.2); o.mat.emissiveIntensity += ((on ? 0.9 : 0) - o.mat.emissiveIntensity)*0.08; o.lm.opacity = on ? 1 : 0.45; const sc = 1 + o.lift*0.35; o.m.scale.setScalar(sc); });
+        const tg = nodes[act].m.position;
+        for (let k = 0; k < 110; k++) { const u = (s*0.45 + k/110) % 1, sw = Math.sin(u*Math.PI)*0.25; tmp.set(lerp(0, tg.x, u), lerp(0.4, tg.y + 0.25, u), lerp(0, tg.z, u)); bp.setXYZ(k, tmp.x + Math.cos(k*2.4 + s*3)*sw, tmp.y + Math.sin(k*1.7 + s*3)*sw, tmp.z + Math.sin(k*2.4 + s*3)*sw); }
+        bp.needsUpdate = true; grp.rotation.x = -this.my*0.2;
+      }});
+    }
+    { // TOKEN
+      const {scene, cam} = mk(35); cam.position.set(0, 0.4, 10.5); cam.lookAt(0, 0, 0);
+      const ring = new THREE.Group(); scene.add(ring);
+      const shades = [0xf5b82e, 0xe4a526, 0xcf911d, 0xb67a16, 0x9b6511, 0x7e500d], Ro = 2.5, Ri = 1.85, gap = 0.035, segs = []; let cum = 0;
+      this.ALLOC.forEach((al, i) => {
+        const a0 = Math.PI/2 + cum*6.283 + gap, a1 = Math.PI/2 + (cum + al.v/100)*6.283 - gap; cum += al.v/100;
+        const sh = new THREE.Shape(); sh.moveTo(Math.cos(a0)*Ro, Math.sin(a0)*Ro); sh.absarc(0, 0, Ro, a0, a1, false); sh.lineTo(Math.cos(a1)*Ri, Math.sin(a1)*Ri); sh.absarc(0, 0, Ri, a1, a0, true); sh.closePath();
+        const g = new THREE.ExtrudeGeometry(sh, {depth:0.32, bevelEnabled:true, bevelThickness:0.04, bevelSize:0.04, bevelSegments:2, curveSegments:28}); g.translate(0, 0, -0.16);
+        const mat = new THREE.MeshPhysicalMaterial({color:shades[i], metalness:1, roughness:0.3, emissive:GOLD, emissiveIntensity:0});
+        const m = new THREE.Mesh(g, mat); ring.add(m); segs.push({m, mat, mid:(a0 + a1)/2, off:0, z:0});
+      });
+      const piv = new THREE.Group(); scene.add(piv);
+      const faceMat = new THREE.MeshStandardMaterial({color:0xffffff, metalness:0.35, roughness:0.35});
+      const coin = new THREE.Mesh(new THREE.CylinderGeometry(1.05, 1.05, 0.14, 64), [goldMat, faceMat, faceMat]); coin.rotation.x = Math.PI/2; piv.add(coin); scene.add(glow(6, 0.35));
+      const img = new Image(); img.onload = () => { const c = document.createElement('canvas'); c.width = c.height = 512; c.getContext('2d').drawImage(img, 0, 0, 512, 512); const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4; faceMat.map = t; faceMat.needsUpdate = true; }; img.src = '/site/uploads/bzc-logo.svg';
+      reg('token', {scene, cam, update:(s) => {
+        const p = this.sp.token || 0, act = this.state.activeAlloc >= 0 ? this.state.activeAlloc : this.state.tokAuto, ex = 0.2*ss(0.35, 0.7, p);
+        segs.forEach((o, i) => { const on = i === act, sc = Math.max(0.001, ss(i*0.05, i*0.05 + 0.35, p*1.25)); o.off += ((ex + (on ? 0.32 : 0)) - o.off)*0.1; o.z += ((on ? 0.35 : 0) - o.z)*0.1; o.m.position.set(Math.cos(o.mid)*o.off, Math.sin(o.mid)*o.off, o.z); o.m.scale.setScalar(sc); o.mat.emissiveIntensity += ((on ? 0.7 : 0) - o.mat.emissiveIntensity)*0.1; });
+        ring.rotation.set(-1.0 + this.my*0.25, this.mx*0.3, s*0.05); piv.rotation.y = s*0.7; piv.position.y = Math.sin(s*1.2)*0.08;
+      }});
+    }
+    if (!narrow) { // ROAD
+      const {scene, cam} = mk(40); scene.fog = new THREE.Fog(INK, 12, 30);
+      const cols = 64, rows = 7, N = cols*rows, dark = new THREE.InstancedMesh(hexGeo, darkMat, N), hon = new THREE.InstancedMesh(hexGeo, new THREE.MeshStandardMaterial({color:GOLD, emissive:GOLD, emissiveIntensity:0.45, metalness:0.4, roughness:0.35, flatShading:true}), N); scene.add(dark, hon);
+      const cells = []; for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) { const ph = Math.min(3, Math.floor(c/16)), rnd = Math.random(); cells.push({x:(c - (cols - 1)/2)*0.866 + (r & 1 ? 0.433 : 0), z:(r - (rows - 1)/2)*0.75, c, ph, rnd, fill:ph < 2 ? rnd < 0.45 : ph === 2 ? rnd < 0.25 : false}); }
+      const d = new THREE.Object3D(), Wd = cols*0.866;
+      reg('road', {scene, cam, update:(s) => {
+        const p = this.sp.road || 0, front = p*1.1 + 0.08, cx = lerp(-Wd/2 + 9, Wd/2 - 9, p);
+        cam.position.set(cx + this.mx*1.5, 7 - this.my, 16); cam.lookAt(cx, 3.4, 0);
+        cells.forEach((o, i) => {
+          const g = ss(o.c/cols - 0.04, o.c/cols + 0.02, front); let hh = (o.ph === 3 ? 0.08 : 0.22 + o.rnd*0.45 + (o.fill ? 0.3 : 0))*g + 0.001;
+          if (o.ph === 2 && o.fill) hh += (0.5 + 0.5*Math.sin(s*2.4 + o.rnd*20))*0.25*g;
+          d.position.set(o.x, 0, o.z); d.scale.set(0.455, hh, 0.455); d.updateMatrix();
+          if (o.fill) { hon.setMatrixAt(i, d.matrix); d.scale.set(0, 0, 0); d.updateMatrix(); dark.setMatrixAt(i, d.matrix); } else { dark.setMatrixAt(i, d.matrix); d.scale.set(0, 0, 0); d.updateMatrix(); hon.setMatrixAt(i, d.matrix); }
+        });
+        dark.instanceMatrix.needsUpdate = hon.instanceMatrix.needsUpdate = true;
+      }});
+    }
+    { // CTA — dark hive horizon, honey wave from the 4D core
+      const {scene, cam} = mk(35); scene.fog = new THREE.Fog(INK, 14, 44); cam.position.set(0, 7.5, 16); cam.lookAt(2.5, 0.5, -8);
+      const cols = narrow ? 30 : 48, rows = narrow ? 22 : 30, N = cols*rows;
+      const hm2 = new THREE.MeshStandardMaterial({color:GOLD, emissive:GOLD, emissiveIntensity:1.1, metalness:0.35, roughness:0.35, flatShading:true});
+      const dark = new THREE.InstancedMesh(hexGeo, darkMat, N), hon = new THREE.InstancedMesh(hexGeo, hm2, N); dark.frustumCulled = hon.frustumCulled = false; scene.add(dark, hon);
+      const cells = []; for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) cells.push({x:(c - (cols - 1)/2)*0.866 + (r & 1 ? 0.433 : 0) + 3, z:(r - rows + 4)*0.75, n:Math.random()});
+      const CX = narrow ? 3 : 5.5, CZ = -9;
+      const core = this.make4D(THREE, {color:GOLD, additive:true, glow:true, th:0.024}); core.group.position.set(CX, 3.4, CZ); core.group.scale.setScalar(1.7); scene.add(core.group);
+      const cg = glow(12, 0.6); cg.position.copy(core.group.position); scene.add(cg);
+      const pool = glow(18, 0.35); pool.position.set(CX, 0.4, CZ); scene.add(pool);
+      const NR = narrow ? 120 : 260, rise = cpuPoints(NR), rp = rise.geometry.attributes.position, rs = []; for (let i = 0; i < NR; i++) { const a = Math.random()*6.283, rr = Math.sqrt(Math.random())*6; rs.push([CX + Math.cos(a)*rr, CZ + Math.sin(a)*rr, Math.random(), 0.15 + Math.random()*0.35]); } scene.add(rise);
+      const d = new THREE.Object3D(), Z = new THREE.Matrix4().makeScale(0, 0, 0);
+      reg('cta', {scene, cam, update:(s) => {
+        core.update(s, 1.1); core.group.rotation.y = this.mx*0.6; core.group.position.y = 3.4 + Math.sin(s*0.8)*0.2; cg.position.y = core.group.position.y;
+        cam.position.x = this.mx*2; cam.position.y = 7.5 - this.my*1.5; cam.lookAt(2.5, 0.5, -8);
+        const wf = (s*2.6) % 26;
+        cells.forEach((o, i) => { const dx = o.x - CX, dz = o.z - CZ, r = Math.sqrt(dx*dx + dz*dz);
+          const ring = Math.exp(-Math.pow(r - wf, 2)*0.35), near = Math.max(0, 1 - r/3.6);
+          const hh = 0.1 + o.n*0.18 + ring*1.1 + near*1.3 + (0.5 + 0.5*Math.sin(r*0.7 - s*1.4))*0.12;
+          d.position.set(o.x, 0, o.z); d.scale.set(0.455, hh, 0.455); d.updateMatrix();
+          const lit = ring > 0.5 || (near > 0.25 && o.n > 0.35) || o.n > 0.975;
+          if (lit) { hon.setMatrixAt(i, d.matrix); dark.setMatrixAt(i, Z); } else { dark.setMatrixAt(i, d.matrix); hon.setMatrixAt(i, Z); } });
+        dark.instanceMatrix.needsUpdate = hon.instanceMatrix.needsUpdate = true;
+        for (let i = 0; i < NR; i++) { const q = rs[i], y = ((s*q[3] + q[2]) % 1)*6; rp.setXYZ(i, q[0] + Math.sin(s + i)*0.1, 0.4 + y, q[1]); } rp.needsUpdate = true;
+      }});
+    }
+    this.qa('[data-honey]').forEach((el, idx) => {
+      const mode = el.dataset.honey === 'pour' ? 1 : 0;
+      el.style.height = mode ? 'clamp(220px,34vh,360px)' : 'clamp(170px,26vh,280px)'; el.style.background = 'transparent';
+      const scene = new THREE.Scene(), cam = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+      const mat = new THREE.ShaderMaterial({transparent:true, depthTest:false, depthWrite:false,
+        uniforms:{uRes:{value:new THREE.Vector2(1, 1)}, uTime:{value:0}, uP:{value:0}, uMode:{value:mode}, uGold:{value:new THREE.Vector3(C.ac[0]/255, C.ac[1]/255, C.ac[2]/255)}, uDeep:{value:new THREE.Vector3(0.52, 0.28, 0.02)}},
+        vertexShader:'varying vec2 vUv; void main(){ vUv = uv; gl_Position = vec4(position.xy, 0.0, 1.0); }',
+        fragmentShader:"uniform vec2 uRes; uniform float uTime; uniform float uP; uniform float uMode; uniform vec3 uGold; uniform vec3 uDeep;\nvarying vec2 vUv;\nfloat smin(float a, float b, float k){ float h = clamp(0.5 + 0.5*(b - a)/k, 0.0, 1.0); return mix(b, a, h) - k*h*(1.0 - h); }\nfloat hash(float n){ return fract(sin(n*127.1 + 3.7)*43758.5453); }\nfloat sdCap(vec2 p, vec2 a, vec2 b, float r){ vec2 pa = p - a, ba = b - a; float h = clamp(dot(pa, ba)/dot(ba, ba), 0.0, 1.0); return length(pa - ba*h) - r; }\nfloat field(vec2 p){\n  float d;\n  if (uMode < 0.5) {\n    float base = 20.0 + 6.0*sin(p.x*0.011 + uTime*0.7) + 3.0*sin(p.x*0.037 - uTime*0.5);\n    d = p.y - base;\n    float N = max(4.0, floor(uRes.x/64.0));\n    for (int i = 0; i < 32; i++) {\n      float fi = float(i); if (fi >= N) break;\n      float cx = (fi + 0.5 + (hash(fi) - 0.5)*0.6)/N*uRes.x;\n      float w = 4.0 + hash(fi + 3.1)*8.0;\n      float cyc = fract(uTime*(0.05 + hash(fi + 7.7)*0.09) + hash(fi + 1.3));\n      float reach = clamp(uP*1.7 - hash(fi + 9.1)*0.6, 0.0, 1.0);\n      float L = (0.2 + 0.8*hash(fi + 5.5))*(uRes.y - 50.0)*reach*smoothstep(0.0, 0.82, cyc)*(1.0 - smoothstep(0.84, 0.95, cyc)*0.7);\n      float bulb = w*(1.25 + 0.45*smoothstep(0.55, 0.82, cyc));\n      vec2 a = vec2(cx, 8.0), b = vec2(cx, 18.0 + L);\n      float t = clamp((p.y - 18.0)/max(L, 1.0), 0.0, 1.0);\n      float dd = sdCap(p, a, b, w*mix(1.0, 0.5, t));\n      dd = smin(dd, length(p - b) - bulb*0.85, 9.0);\n      float fall = smoothstep(0.82, 1.0, cyc);\n      if (fall > 0.001 && reach > 0.0) { vec2 dp = vec2(cx, 18.0 + L + bulb + fall*fall*uRes.y*1.2); dd = min(dd, length((p - dp)*vec2(1.0, 0.78)) - bulb*0.7); }\n      d = smin(d, dd, 14.0);\n    }\n  } else {\n    float pool = uRes.y - 30.0 - uP*uRes.y*0.5 + 5.0*sin(p.x*0.02 + uTime*1.1) + 3.0*sin(p.x*0.053 - uTime*0.8);\n    d = pool - p.y;\n    float N = max(3.0, floor(uRes.x/150.0));\n    for (int i = 0; i < 16; i++) {\n      float fi = float(i); if (fi >= N) break;\n      if (hash(fi + 8.0) > uP*1.5) continue;\n      float cx = (fi + 0.5 + (hash(fi + 2.0) - 0.5)*0.7)/N*uRes.x + sin(p.y*0.02 + uTime*1.5 + fi)*2.0;\n      float w = 2.0 + hash(fi + 4.0)*4.0;\n      float dd = sdCap(p, vec2(cx, -30.0), vec2(cx, pool + 12.0), w);\n      float by = fract(uTime*(0.35 + hash(fi + 6.0)*0.3) + hash(fi))*pool;\n      dd = smin(dd, length((p - vec2(cx, by))*vec2(1.0, 0.6)) - w*1.6, 6.0);\n      d = smin(d, dd, 18.0);\n    }\n  }\n  return d;\n}\nvoid main(){\n  vec2 p = vec2(vUv.x*uRes.x, (1.0 - vUv.y)*uRes.y);\n  float d = field(p);\n  if (d > 1.5) discard;\n  float e = 1.5; vec2 g = vec2(field(p + vec2(e, 0.0)) - d, field(p + vec2(0.0, e)) - d)/e;\n  float th = clamp(-d/22.0, 0.0, 1.0); float sh = 1.0 - th;\n  vec3 n = normalize(vec3(g.x*sh*1.6, -g.y*sh*1.6, 1.0));\n  vec3 L = normalize(vec3(-0.45, 0.55, 0.75)); vec3 V = vec3(0.0, 0.0, 1.0);\n  float spec = pow(max(dot(reflect(-L, n), V), 0.0), 48.0);\n  float spec2 = pow(max(dot(reflect(-normalize(vec3(0.6, -0.2, 0.8)), n), V), 0.0), 20.0);\n  float dif = 0.55 + 0.45*max(dot(n, L), 0.0);\n  vec3 col = mix(uGold*1.08, uDeep, smoothstep(0.0, 1.0, th)*0.75)*dif;\n  col += uGold*sh*0.25 + vec3(1.0, 0.97, 0.86)*spec*0.95 + uGold*spec2*0.25;\n  float a = smoothstep(1.5, -1.0, d);\n  if (uMode > 0.5) { float k = smoothstep(uRes.y - 70.0, uRes.y - 4.0, p.y); col = mix(col, uGold, k); a = max(a, k); a *= smoothstep(0.0, 70.0, p.y); }\n  gl_FragColor = vec4(col, a);\n}"});
+      const quad = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), mat); quad.frustumCulled = false; scene.add(quad);
+      list.push({el, name:'honey' + idx, scene, cam, update:(s) => { const r = el.getBoundingClientRect(); mat.uniforms.uRes.value.set(r.width, r.height); mat.uniforms.uTime.value = s; mat.uniforms.uP.value = this.U.clamp((innerHeight - r.top)/(innerHeight*0.85)); }});
+    });
+
+    if (!narrow) { const stage = this.q('[data-view="eco"]'); if (stage) {
+      const nodesEl = this.qa('[data-eco-node]'), coreEl = this.q('[data-eco-core]'), ec = this.q('canvas[data-canvas="eco"]');
+      stage.style.display = 'block'; stage.style.height = 'clamp(520px, 74vh, 740px)';
+      nodesEl.forEach(n => { n.dataset.orbit = '1'; n.style.position = 'absolute'; n.style.left = '0'; n.style.top = '0'; n.style.width = 'clamp(150px, 15vw, 210px)'; n.style.transition = 'border-color .3s'; n.style.willChange = 'transform, opacity';
+        n.addEventListener('pointerenter', () => { this.ecoHold = n; }); n.addEventListener('pointerleave', () => { if (this.ecoHold === n) this.ecoHold = null; }); });
+      if (coreEl) { Object.assign(coreEl.style, {position:'absolute', left:'50%', bottom:'8px', transform:'translateX(-50%)', background:'transparent', border:'0', boxShadow:'none', alignItems:'center', padding:'0', minWidth:'0', textAlign:'center'}); const im = coreEl.querySelector('img'); if (im) im.style.display = 'none'; }
+      if (ec) ec.style.opacity = '0';
+      this.ecoOrbit = true;
+      const {scene, cam} = mk(34); cam.position.set(0, 2.6, 11.5); cam.lookAt(0, 0.35, 0);
+      const gmat = new THREE.ShaderMaterial({uniforms:{uTime:{value:0}, uGold:{value:new THREE.Vector3(C.ac[0]/255, C.ac[1]/255, C.ac[2]/255)}},
+        vertexShader:'varying vec3 vObj; varying vec3 vN; varying vec3 vV; void main(){ vObj = position; vN = normalMatrix*normal; vec4 mv = modelViewMatrix*vec4(position, 1.0); vV = -mv.xyz; gl_Position = projectionMatrix*mv; }',
+        fragmentShader:`uniform float uTime; uniform vec3 uGold; varying vec3 vObj; varying vec3 vN; varying vec3 vV;
+          float hash(vec2 p){ return fract(sin(dot(p, vec2(127.1, 311.7)))*43758.5453); }
+          vec4 hexCell(vec2 p){ const vec2 s = vec2(1.0, 1.7320508); vec4 hC = floor(vec4(p, p - vec2(0.5, 1.0))/s.xyxy) + 0.5; vec4 h = vec4(p - hC.xy*s, p - (hC.zw + 0.5)*s); return dot(h.xy, h.xy) < dot(h.zw, h.zw) ? vec4(h.xy, hC.xy) : vec4(h.zw, hC.zw + 0.5); }
+          float hexEdge(vec2 q){ q = abs(q); return max(dot(q, vec2(0.5, 0.8660254)), q.x); }
+          void main(){ vec3 n = normalize(vObj); float lat = asin(clamp(n.y, -1.0, 1.0)), lon = atan(n.z, n.x);
+            vec4 hc = hexCell(vec2(lon, lat)*(38.0/6.2831853)); float e = hexEdge(hc.xy), id = hash(hc.zw);
+            vec3 N = normalize(vN), V = normalize(vV); float dl = 0.3 + 0.7*max(dot(N, normalize(vec3(-0.5, 0.6, 0.6))), 0.0);
+            float rim = smoothstep(0.4, 0.49, e); float lit = step(0.7, id)*(0.5 + 0.5*sin(uTime*1.6 + id*40.0));
+            vec3 c = vec3(0.02, 0.017, 0.012) + uGold*rim*0.32*dl + uGold*lit*(1.0 - rim)*0.85*dl;
+            c += uGold*pow(1.0 - max(dot(N, V), 0.0), 3.0)*0.8; gl_FragColor = vec4(c, 1.0); }`});
+      const gl0 = new THREE.Mesh(new THREE.SphereGeometry(1.35, 96, 64), gmat); scene.add(gl0); const hal = glow(7, 0.45); scene.add(hal);
+      const orbit = new THREE.Mesh(new THREE.TorusGeometry(1, 0.004, 6, 200), new THREE.MeshBasicMaterial({color:GOLD, ...add, opacity:0.5})); orbit.rotation.x = Math.PI/2; orbit.scale.set(4.3, 3.2, 1); orbit.position.y = 0.3; scene.add(orbit);
+      const lg = new THREE.BufferGeometry(); lg.setAttribute('position', new THREE.BufferAttribute(new Float32Array(nodesEl.length*6), 3));
+      const lines = new THREE.LineSegments(lg, new THREE.LineBasicMaterial({color:GOLD, ...add, opacity:0.35})); lines.frustumCulled = false; scene.add(lines);
+      const pul = cpuPoints(nodesEl.length*3), pp = pul.geometry.attributes.position; scene.add(pul);
+      const tmp = new THREE.Vector3(), Ps = nodesEl.map(() => new THREE.Vector3());
+      reg('eco', {scene, cam, update:(s) => {
+        const r = stage.getBoundingClientRect(), W = r.width, H = r.height;
+        this.ecoA = (this.ecoA || 0) + (this.ecoHold ? 0.0008 : 0.0038);
+        gmat.uniforms.uTime.value = s; gl0.rotation.y = s*0.12; gl0.rotation.x = this.my*0.2;
+        const lp = lg.attributes.position;
+        nodesEl.forEach((n, i) => {
+          const a = this.ecoA + i*Math.PI/3 + this.mx*0.4, P3 = Ps[i].set(Math.cos(a)*4.3, 0.3 - Math.sin(a)*0.55, Math.sin(a)*3.2);
+          tmp.copy(P3).project(cam); const sx = (tmp.x + 1)/2*W, sy = (1 - tmp.y)/2*H, d = (P3.z + 3.2)/6.4;
+          n.style.transform = 'translate(' + sx.toFixed(1) + 'px,' + sy.toFixed(1) + 'px) translate(-50%,-50%) scale(' + (0.7 + 0.42*d).toFixed(3) + ')';
+          n.style.opacity = (0.3 + 0.7*d).toFixed(2); n.style.zIndex = String(Math.round(d*10));
+          lp.setXYZ(i*2, 0, 0, 0); lp.setXYZ(i*2 + 1, P3.x, P3.y, P3.z);
+          for (let k = 0; k < 3; k++) { const u = (s*0.35 + k/3 + i*0.13) % 1; pp.setXYZ(i*3 + k, P3.x*u, P3.y*u, P3.z*u); }
+        });
+        lp.needsUpdate = true; pp.needsUpdate = true;
+      }});
+    } }
+    { // CTA
+      const {scene, cam} = mk(35); scene.fog = new THREE.Fog(GOLD, 16, 42); cam.position.set(0, 12, 17); cam.lookAt(-5.5, -1.5, -8);
+      const inkMat = new THREE.MeshPhysicalMaterial({color:INK, metalness:0.85, roughness:0.3, clearcoat:0.6, flatShading:true});
+      const cols = narrow ? 26 : 40, rows = narrow ? 18 : 24, N = cols*rows, field = new THREE.InstancedMesh(hexGeo, inkMat, N); scene.add(field);
+      const cells = []; for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) cells.push({x:(c - (cols - 1)/2)*0.866 + (r & 1 ? 0.433 : 0), z:(r - rows - 3)*0.75, n:Math.random()});
+      const core = this.make4D(THREE, {color:INK, th:0.03}); core.group.position.set(3.5, 3.2, -12); core.group.scale.setScalar(1.5); scene.add(core.group);
+      const d = new THREE.Object3D();
+      reg('foot', {scene, cam, bg:GOLD, update:(s) => {
+        core.update(s, 1); core.group.rotation.y = this.mx*0.5;
+        cells.forEach((o, i) => { const dx = o.x - 3.5, dz = o.z + 12, r = Math.sqrt(dx*dx + dz*dz); const hh = 0.12 + o.n*0.15 + (0.5 + 0.5*Math.sin(r*0.6 - s*1.5))*0.35 + Math.max(0, 1 - r/4.5)*0.9; d.position.set(o.x, 0, o.z); d.scale.set(0.455, hh, 0.455); d.updateMatrix(); field.setMatrixAt(i, d.matrix); });
+        field.instanceMatrix.needsUpdate = true;
+      }});
+      const sec = this.q('[data-view="foot"]'); if (sec) { sec.style.background = 'transparent'; }
+    }
+    let bd = null;
+    { const {scene, cam} = mk(55); scene.fog = new THREE.FogExp2(INK, narrow ? 0.022 : 0.016);
+      const g = new THREE.CylinderGeometry(1, 1, 0.3, 6);
+      const dm = darkMat.clone(); dm.envMapIntensity = 1.4; const gm = goldMat.clone(); gm.envMapIntensity = 1.6;
+      const hm = new THREE.MeshStandardMaterial({color:GOLD, emissive:GOLD, emissiveIntensity:1.0, metalness:0.3, roughness:0.4, flatShading:true});
+      const NB = narrow ? 160 : 380, L = 340, items = [];
+      const meshes = [new THREE.InstancedMesh(g, dm, NB), new THREE.InstancedMesh(g, gm, NB), new THREE.InstancedMesh(g, hm, NB)]; meshes.forEach(m => { m.frustumCulled = false; m.count = 0; scene.add(m); });
+      for (let i = 0; i < NB; i++) { let x, y; do { x = (Math.random()*2 - 1)*17; y = (Math.random()*2 - 1)*10; } while (Math.abs(x) < 5 && Math.abs(y) < 3.2); const r = Math.random(), type = r < 0.6 ? 0 : r < 0.9 ? 1 : 2;
+        items.push({x, y, z:12 - Math.random()*L, s:0.45 + Math.random()*1.6, rx:Math.random()*6.28, ry:Math.random()*6.28, vx:(Math.random() - 0.5)*0.45, vy:(Math.random() - 0.5)*0.45, type, idx:meshes[type].count++}); }
+      const dust = cpuPoints(narrow ? 300 : 800), dp = dust.geometry.attributes.position; for (let i = 0; i < dp.count; i++) dp.setXYZ(i, (Math.random()*2 - 1)*22, (Math.random()*2 - 1)*13, 12 - Math.random()*L); dp.needsUpdate = true; scene.add(dust);
+      const orbs = []; for (let i = 0; i < (narrow ? 26 : 60); i++) { const g0 = glow(4 + Math.random()*9, 0.2 + Math.random()*0.3); let x, y; do { x = (Math.random()*2 - 1)*18; y = (Math.random()*2 - 1)*11; } while (Math.abs(x) < 4 && Math.abs(y) < 2.5); g0.position.set(x, y, 12 - Math.random()*L); scene.add(g0); orbs.push(g0); }
+      const key = new THREE.PointLight(GOLD, 60, 40, 1.6); scene.add(key);
+      const d = new THREE.Object3D();
+      const scr = new THREE.Scene(), scam = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+      const smat = new THREE.ShaderMaterial({transparent:true, depthTest:false, depthWrite:false, uniforms:{uInk:{value:new THREE.Vector3(C.ink[0]/255, C.ink[1]/255, C.ink[2]/255)}},
+        vertexShader:'varying vec2 vUv; void main(){ vUv = uv; gl_Position = vec4(position.xy, 0.0, 1.0); }',
+        fragmentShader:'uniform vec3 uInk; varying vec2 vUv; void main(){ float c = 1.0 - smoothstep(0.15, 0.95, length((vUv - vec2(0.42, 0.5))*vec2(1.3, 1.0))); gl_FragColor = vec4(uInk, 0.38 + 0.34*c); }'});
+      const sq = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), smat); sq.frustumCulled = false; scr.add(sq);
+      bd = {scene, cam, scr, scam, update:(s) => {
+        const dh = Math.max(1, document.documentElement.scrollHeight - innerHeight), P = Math.min(1, scrollY/dh);
+        cam.aspect = innerWidth/Math.max(1, innerHeight); cam.updateProjectionMatrix();
+        const z = 10 - P*(L - 30) + Math.sin(s*0.3)*0.4; cam.position.set(this.mx*2.4, -this.my*1.5, z); cam.lookAt(this.mx*0.6, -this.my*0.4, z - 20); cam.rotateZ(Math.sin(P*9 + s*0.1)*0.05); key.position.set(this.mx*8, -this.my*5, z - 9);
+        items.forEach(o => { d.position.set(o.x, o.y, o.z); d.rotation.set(o.rx + s*o.vx, o.ry + s*o.vy, 0); d.scale.setScalar(o.s); d.updateMatrix(); meshes[o.type].setMatrixAt(o.idx, d.matrix); });
+        meshes.forEach(m => { m.instanceMatrix.needsUpdate = true; });
+      }};
+    }
+    this.views = {R, list, dirty:true, bd};
+    const hide = (sel) => { const el = this.q(sel); if (el) el.style.opacity = '0'; };
+    ['canvas[data-canvas="pipe"]', 'canvas[data-canvas="hub"]', 'canvas[data-canvas="token"]', 'canvas[data-canvas="cta"]', '[data-tokimg]'].forEach(hide);
+    const pl = this.q('[data-plates]'); if (pl) pl.style.display = 'none';
+  }
+
+  renderViews(t) {
+    const V = this.views, R = V.R, s = t/1000, H = innerHeight;
+    if (V.lt) V.avg = (V.avg || 16)*0.94 + Math.min(t - V.lt, 80)*0.06; V.lt = t;
+    if (V.pr == null) { V.pr = R.getPixelRatio(); V.max = V.pr; V.adj = t; }
+    if (t - V.adj > 1500) { V.adj = t; const np = V.avg > 21 ? Math.max(0.6, V.pr - 0.15) : V.avg < 14.5 ? Math.min(V.max, V.pr + 0.1) : V.pr; if (Math.abs(np - V.pr) > 0.01) { V.pr = np; R.setPixelRatio(np); R.setSize(innerWidth, innerHeight, true); } }
+    const vis = V.list.map(v => { const r = v.el.getBoundingClientRect(); return (r.bottom < 0 || r.top > H || r.width < 4 || r.height < 4) ? null : r; });
+    const he = this.q('[data-sticky="hero"]'), hr = he && he.getBoundingClientRect(), cover = hr && hr.top <= 0 && hr.bottom >= H;
+    const needBd = !!V.bd && !cover, any = vis.some(Boolean);
+    if (!V.dirty && !needBd && !any) return;
+    R.setScissorTest(false); R.setClearColor(0x000000, 0); R.clear();
+    if (needBd) { R.setViewport(0, 0, innerWidth, H); V.bd.update(s); R.render(V.bd.scene, V.bd.cam); R.render(V.bd.scr, V.bd.scam); }
+    for (let vi = 0; vi < V.list.length; vi++) {
+      const v = V.list[vi], r = vis[vi]; if (!r) continue;
+      R.setScissorTest(true); R.setViewport(r.left, H - r.bottom, r.width, r.height); R.setScissor(r.left, H - r.bottom, r.width, r.height);
+      if (v.bg) { R.setClearColor(v.bg, 1); R.clear(); } else R.clearDepth();
+      v.cam.aspect = r.width/r.height; v.cam.updateProjectionMatrix(); v.update(s, v.cam.aspect); R.render(v.scene, v.cam);
+    }
+    R.setScissorTest(false); V.dirty = needBd || any;
+  }
+  async initGL() {
+    const cv = this.q('canvas[data-gl]'); if (!cv || this.reduced) return;
+    let THREE; try { THREE = await import('https://esm.sh/three@0.160.0'); } catch (e) { return; }
+    if (!this.rootRef.current) return;
+    let R; try { R = new THREE.WebGLRenderer({canvas:cv, antialias:true, powerPreference:'high-performance'}); } catch (e) { return; }
+    try { this.buildGlobe(THREE, R, cv); } catch (e) { R.dispose(); this.gl = null; }
+  }
+
+  buildGlobe(THREE, R, cv) {
+    const C = this.C, narrow = this.state.narrow, gold = new THREE.Vector3(C.ac[0]/255, C.ac[1]/255, C.ac[2]/255);
+    R.autoClear = false; R.setClearColor(new THREE.Color('rgb(' + C.ink.join(',') + ')'), 1);
+    const add = {transparent:true, blending:THREE.AdditiveBlending, depthWrite:false};
+    const scene = new THREE.Scene(), cam = new THREE.PerspectiveCamera(38, 1, 0.02, 200);
+    const sun = new THREE.Vector3(-0.65, 0.35, 0.68).normalize();
+    const globeMat = new THREE.ShaderMaterial({uniforms:{uTime:{value:0}, uLit:{value:0.1}, uGlint:{value:1}, uGold:{value:gold}, uSun:{value:sun}}, vertexShader:"varying vec3 vObj; varying vec3 vWN; varying vec3 vWP;\nvoid main(){ vObj = position; vWN = normalize(mat3(modelMatrix)*normal); vec4 wp = modelMatrix*vec4(position, 1.0); vWP = wp.xyz; gl_Position = projectionMatrix*viewMatrix*wp; }", fragmentShader:"uniform float uTime; uniform float uLit; uniform float uGlint; uniform vec3 uGold; uniform vec3 uSun;\nvarying vec3 vObj; varying vec3 vWN; varying vec3 vWP;\nfloat hash(vec2 p){ return fract(sin(dot(p, vec2(127.1, 311.7)))*43758.5453); }\nvec4 hexCell(vec2 p){ const vec2 s = vec2(1.0, 1.7320508); vec4 hC = floor(vec4(p, p - vec2(0.5, 1.0))/s.xyxy) + 0.5; vec4 h = vec4(p - hC.xy*s, p - (hC.zw + 0.5)*s); return dot(h.xy, h.xy) < dot(h.zw, h.zw) ? vec4(h.xy, hC.xy) : vec4(h.zw, hC.zw + 0.5); }\nfloat hexEdge(vec2 q){ q = abs(q); return max(dot(q, vec2(0.5, 0.8660254)), q.x); }\n\nfloat h3(vec3 p){ return fract(sin(dot(p, vec3(127.1, 311.7, 74.7)))*43758.5453); }\nfloat noise(vec3 p){ vec3 i = floor(p), f = fract(p); f = f*f*(3.0 - 2.0*f);\n  return mix(mix(mix(h3(i), h3(i + vec3(1,0,0)), f.x), mix(h3(i + vec3(0,1,0)), h3(i + vec3(1,1,0)), f.x), f.y), mix(mix(h3(i + vec3(0,0,1)), h3(i + vec3(1,0,1)), f.x), mix(h3(i + vec3(0,1,1)), h3(i + vec3(1,1,1)), f.x), f.y), f.z); }\nfloat fbm(vec3 p){ float a = 0.5, s = 0.0; for (int i = 0; i < 4; i++){ s += a*noise(p); p *= 2.03; a *= 0.5; } return s; }\nvoid main(){\n  vec3 n = normalize(vObj);\n  float lat = asin(clamp(n.y, -1.0, 1.0)), lon = atan(n.z, n.x);\n  float k = 64.0/6.2831853; vec2 g = vec2(lon, lat)*k;\n  vec4 hc = hexCell(g); float e = hexEdge(hc.xy);\n  vec2 cc = hc.zw*vec2(1.0, 1.7320508)/k;\n  vec3 cd = vec3(cos(cc.y)*cos(cc.x), sin(cc.y), cos(cc.y)*sin(cc.x));\n  float land = step(0.5, fbm(cd*1.7 + vec3(3.1, 1.7, 0.4)));\n  float id = hash(hc.zw);\n  vec3 N = normalize(vWN), V = normalize(cameraPosition - vWP);\n  float dl = smoothstep(-0.2, 0.4, dot(N, uSun));\n  float rim = smoothstep(0.4, 0.49, e);\n  float pulse = 0.55 + 0.45*sin(uTime*1.7 + id*40.0);\n  float lit = land*step(id, uLit)*pulse;\n  float city = land*step(0.9, id)*(1.0 - dl);\n  vec3 col = vec3(0.016, 0.014, 0.011);\n  col += uGold*rim*mix(0.05, 0.2, land)*(0.3 + 0.7*dl);\n  col = mix(col, uGold*(0.18 + 0.52*dl)*(1.1 - e*1.2), land*(1.0 - rim)*0.6);\n  col += uGold*lit*(1.0 - rim)*0.75*(0.4 + 0.6*dl);\n  col += vec3(1.0, 0.82, 0.45)*city*(1.0 - rim)*(0.55 + 0.45*pulse)*1.4;\n  vec3 H = normalize(uSun + V); col += vec3(1.0, 0.92, 0.75)*pow(max(dot(N, H), 0.0), 140.0)*(1.0 - land)*0.75*uGlint;\n  float fre = pow(1.0 - max(dot(N, V), 0.0), 3.0);\n  col += uGold*fre*(0.25 + 0.6*dl);\n  gl_FragColor = vec4(col, 1.0);\n}"});
+    const tilt = new THREE.Group(); tilt.rotation.z = 0.38; scene.add(tilt);
+    const globe = new THREE.Mesh(new THREE.SphereGeometry(1.6, narrow ? 110 : 170, narrow ? 64 : 100), globeMat); tilt.add(globe);
+    const atmMat = new THREE.ShaderMaterial({...add, side:THREE.BackSide, uniforms:{uGold:{value:gold}, uA:{value:1}}, vertexShader:"varying vec3 vVN; void main(){ vVN = normalize(normalMatrix*normal); gl_Position = projectionMatrix*modelViewMatrix*vec4(position, 1.0); }", fragmentShader:"uniform vec3 uGold; uniform float uA; varying vec3 vVN; void main(){ float i = pow(smoothstep(0.0, 0.46, -vVN.z), 2.2); gl_FragColor = vec4(uGold*1.1, i*0.75*uA); }"});
+    scene.add(new THREE.Mesh(new THREE.SphereGeometry(1.6*1.13, 64, 40), atmMat));
+    const arcs = [], NA = narrow ? 9 : 16;
+    const rdir = () => { const u = Math.random()*2 - 1, a = Math.random()*6.283, s = Math.sqrt(1 - u*u); return new THREE.Vector3(Math.cos(a)*s, u*0.85, Math.sin(a)*s).normalize(); };
+    const makeArc = (m) => {
+      let a = rdir(), b = rdir(), ang = a.angleTo(b); let tries = 0; while ((ang < 0.45 || ang > 2.1) && tries++ < 20) { b = rdir(); ang = a.angleTo(b); }
+      const mid = a.clone().add(b).normalize().multiplyScalar(1.6*(1.12 + 0.3*ang));
+      const g = new THREE.TubeGeometry(new THREE.QuadraticBezierCurve3(a.multiplyScalar(1.605), mid, b.multiplyScalar(1.605)), 64, 0.0065, 5, false);
+      if (m.geometry) m.geometry.dispose(); m.geometry = g; m.material.uniforms.uOff.value = -m.material.uniforms.uTime.value*m.material.uniforms.uSpd.value;
+    };
+    for (let i = 0; i < NA; i++) {
+      const m = new THREE.Mesh(undefined, new THREE.ShaderMaterial({...add, uniforms:{uTime:{value:0}, uFade:{value:1}, uOff:{value:Math.random()}, uSpd:{value:0.22 + Math.random()*0.22}, uGold:{value:gold}}, vertexShader:"varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix*modelViewMatrix*vec4(position, 1.0); }", fragmentShader:"uniform float uTime; uniform float uFade; uniform float uOff; uniform float uSpd; uniform vec3 uGold; varying vec2 vUv;\nvoid main(){ float hd = fract(uTime*uSpd + uOff)*1.3 - 0.15; float d = vUv.x - hd; float pulse = exp(-d*d*300.0); float tail = smoothstep(-0.3, 0.0, d)*step(d, 0.0);\n  float a = (0.07 + pulse*1.8 + tail*0.55)*uFade*smoothstep(0.0, 0.04, vUv.x)*smoothstep(1.0, 0.96, vUv.x);\n  gl_FragColor = vec4(mix(uGold, vec3(1.0, 0.96, 0.85), pulse), a); }"}));
+      m.frustumCulled = false; makeArc(m); m.material.uniforms.uOff.value = Math.random(); globe.add(m); arcs.push(m);
+    }
+    const FIB = []; [[0.72, 7], [1.35, 10], [2.05, 7]].forEach(([th, n], li) => { for (let k = 0; k < n; k++) { const ph = k/n*6.283 + li*0.45; FIB.push([Math.sin(th)*Math.cos(ph), Math.sin(th)*Math.sin(ph), Math.cos(th)]); } });
+    const NP = narrow ? 84 : 132, NT = FIB.length*NP, fpos = new Float32Array(NT*3), fT = new Float32Array(NT), fF = new Float32Array(NT);
+    for (let f = 0; f < FIB.length; f++) for (let j = 0; j < NP; j++) { fT[f*NP + j] = j/NP*6.2831853; fF[f*NP + j] = f; }
+    const fg = new THREE.BufferGeometry(); fg.setAttribute('position', new THREE.BufferAttribute(fpos, 3)); fg.setAttribute('aT', new THREE.BufferAttribute(fT, 1)); fg.setAttribute('aF', new THREE.BufferAttribute(fF, 1));
+    const fibMat = new THREE.ShaderMaterial({...add, uniforms:{uTime:{value:0}, uPR:{value:1}, uFade:{value:1}, uGold:{value:gold}}, vertexShader:"attribute float aT; attribute float aF; uniform float uTime; uniform float uPR; uniform float uFade; uniform vec3 uGold; varying float vA; varying vec3 vC;\nvoid main(){ vec4 mv = modelViewMatrix*vec4(position, 1.0); gl_Position = projectionMatrix*mv;\n  float flow = pow(0.5 + 0.5*sin(aT*5.0 - uTime*1.8 + aF*1.3), 4.0);\n  gl_PointSize = (1.6 + flow*3.4)*uPR*(7.0/max(-mv.z, 0.3));\n  vA = (0.16 + 0.84*flow)*uFade; vC = mix(uGold, vec3(1.0, 0.93, 0.78), fract(aF*0.37)*0.6 + flow*0.3); }", fragmentShader:"varying float vA; varying vec3 vC; void main(){ vec2 q = abs(gl_PointCoord - 0.5)*2.0; float d = max(q.x, q.x*0.5 + q.y*0.866)/0.866; if (d > 1.0) discard; gl_FragColor = vec4(vC, vA*(1.0 - d*0.55)); }"});
+    const fibers = new THREE.Points(fg, fibMat); fibers.frustumCulled = false; const fgrp = new THREE.Group(); fgrp.rotation.x = 0.35; fgrp.add(fibers); scene.add(fgrp);
+    const NS = narrow ? 500 : 900, sp = new Float32Array(NS*3), sr = new Float32Array(NS);
+    for (let i = 0; i < NS; i++) { const v = rdir().multiplyScalar(30 + Math.random()*40); sp[i*3] = v.x; sp[i*3 + 1] = v.y; sp[i*3 + 2] = v.z; sr[i] = Math.random(); }
+    const sg = new THREE.BufferGeometry(); sg.setAttribute('position', new THREE.BufferAttribute(sp, 3)); sg.setAttribute('aR', new THREE.BufferAttribute(sr, 1));
+    const starMat = new THREE.ShaderMaterial({...add, uniforms:{uTime:{value:0}, uPR:{value:1}, uGold:{value:gold}}, vertexShader:"attribute float aR; uniform float uTime; uniform float uPR; varying float vA; void main(){ vec4 mv = modelViewMatrix*vec4(position, 1.0); gl_Position = projectionMatrix*mv; gl_PointSize = (0.8 + aR*1.8)*uPR; vA = (0.25 + 0.55*aR)*(0.6 + 0.4*sin(uTime*(0.6 + aR*2.0) + aR*50.0)); }", fragmentShader:"uniform vec3 uGold; varying float vA; void main(){ vec2 q = gl_PointCoord - 0.5; if (dot(q, q) > 0.25) discard; gl_FragColor = vec4(mix(vec3(1.0, 0.95, 0.85), uGold, 0.4), vA); }"});
+    scene.add(new THREE.Points(sg, starMat));
+    const ov = new THREE.Scene(), ocam = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+    const ovMat = new THREE.ShaderMaterial({transparent:true, depthTest:false, depthWrite:false, uniforms:{uRes:{value:new THREE.Vector2(1, 1)}, uTime:{value:0}, uMouse:{value:new THREE.Vector2()}, uGold:{value:gold}, uA:{value:0}},
+      vertexShader:'varying vec2 vUv; void main(){ vUv = uv; gl_Position = vec4(position.xy, 0.0, 1.0); }', fragmentShader:"uniform vec2 uRes; uniform float uTime; uniform vec2 uMouse; uniform vec3 uGold; uniform float uA; varying vec2 vUv;\nfloat hash(vec2 p){ return fract(sin(dot(p, vec2(127.1, 311.7)))*43758.5453); }\nvec4 hexCell(vec2 p){ const vec2 s = vec2(1.0, 1.7320508); vec4 hC = floor(vec4(p, p - vec2(0.5, 1.0))/s.xyxy) + 0.5; vec4 h = vec4(p - hC.xy*s, p - (hC.zw + 0.5)*s); return dot(h.xy, h.xy) < dot(h.zw, h.zw) ? vec4(h.xy, hC.xy) : vec4(h.zw, hC.zw + 0.5); }\nfloat hexEdge(vec2 q){ q = abs(q); return max(dot(q, vec2(0.5, 0.8660254)), q.x); }\n\nvoid main(){\n  float asp = uRes.x/uRes.y; vec2 uv = (vUv - 0.5)*vec2(asp, 1.0);\n  vec4 hc = hexCell(uv*16.0); float e = hexEdge(hc.xy), id = hash(hc.zw);\n  vec2 cc = hc.zw*vec2(1.0, 1.7320508)/16.0;\n  float bx = (cc.x/asp + 0.5)*5.0; float f = abs(fract(bx + 0.5) - 0.5);\n  float edge = step(f, 0.09)*step(0.5, bx)*step(bx, 4.5);\n  float sp = mod(uTime*0.35, asp + 1.0) - 0.5 - asp*0.5; float sw = exp(-pow((cc.x - sp)*8.0, 2.0));\n  float pulse = step(0.9, id)*(0.5 + 0.5*sin(uTime*2.0 + id*30.0));\n  vec2 mu = uMouse*vec2(asp*0.5, 0.5); float md = length(cc - mu); float gl = exp(-md*md*40.0);\n  float heat = clamp(edge*0.9 + sw*0.8 + pulse*0.6 + gl*0.7, 0.0, 1.0);\n  float rim = smoothstep(0.43, 0.49, e);\n  vec3 c = vec3(0.04, 0.035, 0.027) + uGold*0.03*(1.0 - e*2.0);\n  c = mix(c, uGold*(0.9 + 0.3*(1.0 - e*2.0)), heat*(1.0 - rim)*0.9);\n  c += uGold*rim*(0.12 + heat*0.8);\n  c *= 1.0 - 0.35*dot(uv, uv);\n  gl_FragColor = vec4(c, uA);\n}"});
+    const oq = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), ovMat); oq.frustumCulled = false; ov.add(oq);
+    const io = new IntersectionObserver((es) => { this.glVis = es[0].isIntersecting; }); io.observe(cv); this.glVis = true;
+    const dmax = Math.min(devicePixelRatio || 1, narrow ? 1.5 : 1.75);
+    const G = {R, scene, cam, globe, globeMat, atmMat, arcs, makeArc, FIB, NP, fpos, fg, fibMat, starMat, ov, ocam, ovMat, io, pr:Math.min(dmax, narrow ? 1 : 1.25), dmax, avg:16, lt:0, adj:0, hudT:0, arcT:0, arcI:0, w:1, h:1, sz:new THREE.Vector2()};
+    G.fit = () => { const r = cv.getBoundingClientRect(); G.w = Math.max(1, r.width); G.h = Math.max(1, r.height); R.setPixelRatio(G.pr); R.setSize(G.w, G.h, false); R.getDrawingBufferSize(G.sz); ovMat.uniforms.uRes.value.copy(G.sz); cam.aspect = G.w/G.h; cam.updateProjectionMatrix(); fibMat.uniforms.uPR.value = G.pr; starMat.uniforms.uPR.value = G.pr; };
+    this.gl = G; G.fit();
+    const c2 = this.q('canvas[data-canvas="hero"]'); cv.style.opacity = '1'; if (c2) c2.style.opacity = '0';
+    const hb = this.q('[data-hero-copy]'); if (hb) hb.style.textShadow = '0 2px 30px rgba(' + C.ink.join(',') + ',.7)';
+  }
+
+  renderGL(t) {
+    const G = this.gl, {ss, lerp} = this.U, p = this.sp.hero || 0, s = t/1000, narrow = this.state.narrow;
+    if (G.lt) { const dt = t - G.lt; G.avg = G.avg*0.94 + Math.min(dt, 80)*0.06; } G.lt = t;
+    if (t - G.adj > 1500) { G.adj = t; const np = G.avg > 24 ? Math.max(0.6, G.pr - 0.15) : G.avg < 15 ? Math.min(G.dmax, G.pr + 0.1) : G.pr; if (np !== G.pr) { G.pr = np; G.fit(); } }
+    const dive = ss(0.3, 0.78, p), dist = lerp(narrow ? 8.6 : 6.4, 2.32, dive);
+    const az = this.mx*0.55, el = 0.2 - this.my*0.3 + dive*0.25;
+    G.cam.position.set(Math.sin(az)*Math.cos(el)*dist, Math.sin(el)*dist, Math.cos(az)*Math.cos(el)*dist); G.cam.lookAt(0, 0, 0);
+    const k = 1 - ss(0.1, 0.45, p), offX = narrow ? 0 : G.w*0.2*k, offY = narrow ? G.h*0.16*k : G.h*0.02*k;
+    G.cam.setViewOffset(G.w, G.h, -offX, offY, G.w, G.h);
+    G.globe.rotation.y = s*0.06 + p*2.2;
+    const gu = G.globeMat.uniforms; gu.uTime.value = s; gu.uLit.value = 0.1 + 0.6*ss(0.08, 0.5, p); gu.uGlint.value = 1 - ss(0.35, 0.6, p);
+    G.atmMat.uniforms.uA.value = 1 - ss(0.55, 0.75, p);
+    const af = 1 - ss(0.5, 0.7, p); G.arcs.forEach(m => { m.material.uniforms.uTime.value = s; m.material.uniforms.uFade.value = af*(0.6 + 0.4*ss(0.0, 0.25, p)); });
+    if (t - G.arcT > 1300) { G.arcT = t; G.makeArc(G.arcs[G.arcI++ % G.arcs.length]); }
+    const ff = 1 - ss(0.42, 0.6, p);
+    G.fibMat.uniforms.uTime.value = s; G.fibMat.uniforms.uFade.value = ff; G.starMat.uniforms.uTime.value = s;
+    const A = s*0.21 + this.mx*0.8, B = s*0.13 + this.my*0.6, Cz = s*0.07;
+    if (ff > 0.01) {
+      const ca = Math.cos(A), sa = Math.sin(A), cb = Math.cos(B), sb = Math.sin(B), cc = Math.cos(Cz), sc = Math.sin(Cz), SC = 1.85 + 0.25*ss(0.05, 0.45, p), pos = G.fpos, NP = G.NP;
+      for (let f = 0; f < G.FIB.length; f++) {
+        const [a, b, c] = G.FIB[f], r = Math.sqrt(2*(1 + c));
+        for (let j = 0; j < NP; j++) {
+          const tt = j/NP*6.2831853, ct = Math.cos(tt), st = Math.sin(tt);
+          let x = (1 + c)*ct/r, y = (a*st - b*ct)/r, z = (a*ct + b*st)/r, w = (1 + c)*st/r, q;
+          q = x*ca - w*sa; w = x*sa + w*ca; x = q; q = y*cb - z*sb; z = y*sb + z*cb; y = q; q = z*cc - w*sc; w = z*sc + w*cc; z = q;
+          const den = 1 - w, o = (f*NP + j)*3;
+          if (den < 0.05) { pos[o] = 0; pos[o + 1] = 999; pos[o + 2] = 0; continue; }
+          const X = x/den*SC, Y = y/den*SC, Z = z/den*SC;
+          if (X*X + Y*Y + Z*Z > 150) { pos[o] = 0; pos[o + 1] = 999; pos[o + 2] = 0; continue; }
+          pos[o] = X; pos[o + 1] = Y; pos[o + 2] = Z;
+        }
+      }
+      G.fg.attributes.position.needsUpdate = true;
+    }
+    const tC = ss(0.8, 0.9, p); G.ovMat.uniforms.uA.value = tC; G.ovMat.uniforms.uTime.value = s; G.ovMat.uniforms.uMouse.value.set(this.tmx*2, -this.tmy*2);
+    G.R.clear();
+    if (tC < 0.999) G.R.render(G.scene, G.cam);
+    if (tC > 0.001) G.R.render(G.ov, G.ocam);
+    const bo = ss(0.84, 0.94, p), bands = this.q('[data-bands]'), bh = this.q('[data-bands-head]'), caps = this.q('[data-hero-caps]'), hud = this.q('[data-hud]');
+    if (bands) bands.style.opacity = String(bo); if (bh) bh.style.transform = 'translateY(' + ((1 - bo)*40) + 'px)'; if (caps) caps.style.opacity = String(1 - ss(0.74, 0.82, p));
+    if (hud) { hud.style.opacity = String(1 - ss(0.3, 0.45, p)); if (t - G.hudT > 120) { G.hudT = t; const dg = (x) => String(Math.round(((x*180/Math.PI) % 360 + 360) % 360)).padStart(3, '0'); const hv = this.q('[data-hud-v]'); if (hv) hv.textContent = 'XW ' + dg(A) + '° · YZ ' + dg(B) + '° · ' + G.FIB.length + ' fibres'; } }
+  }
+
+  buildHive(n) {
+    const cells = [], ga = Math.PI*(3 - Math.sqrt(5)), sd = [0.35, -0.45, -0.82], sl = Math.hypot(sd[0], sd[1], sd[2]);
+    for (let i = 0; i < n; i++) {
+      const y = 1 - (i/(n-1))*2, r = Math.sqrt(1 - y*y), th = ga*i, p = [Math.cos(th)*r, y, Math.sin(th)*r];
+      let ul = Math.hypot(p[2], p[0]) || 1; const u = [p[2]/ul, 0, -p[0]/ul];
+      const v = [p[1]*u[2] - p[2]*u[1], p[2]*u[0] - p[0]*u[2], p[0]*u[1] - p[1]*u[0]];
+      const dot = (p[0]*sd[0] + p[1]*sd[1] + p[2]*sd[2])/sl;
+      cells.push({p, u, v, a:(1 - dot)/2*0.88 + Math.random()*0.12, ph:Math.random()*6.283, hot:Math.random() < 0.2, sp:new Float32Array(12), z:0, f:0, ok:true});
+    }
+    const R0 = Math.sqrt(3.2*1.7/(n*Math.sqrt(3)*1.5)), cols = Math.max(2, Math.floor(3.2/(Math.sqrt(3)*R0))), rows = Math.ceil(n/cols);
+    const Rf = Math.min(3.2/(cols*Math.sqrt(3) + Math.sqrt(3)/2), 1.7/((rows - 1)*1.5 + 2)), dxf = Math.sqrt(3)*Rf, ww = (cols - 1)*dxf, hh = (rows - 1)*1.5*Rf;
+    const order = cells.slice().sort((A, B) => A.p[1] - B.p[1]);
+    for (let r = 0; r < rows; r++) {
+      const row = order.slice(r*cols, (r + 1)*cols).sort((A, B) => A.p[0] - B.p[0]);
+      row.forEach((c, k) => { c.g = [-ww/2 + k*dxf + (r % 2 ? dxf/2 : 0) - dxf/4, -hh/2 + r*1.5*Rf]; });
+    }
+    const drones = Array.from({length:16}, () => ({r:1.12 + Math.random()*0.5, s:(Math.random() < 0.5 ? -1 : 1)*(0.00022 + Math.random()*0.0003), ph:Math.random()*6.283, ti:Math.random()*1.2 - 0.6}));
+    return {n, cells, order:cells.slice(), rs:Math.sqrt(4*Math.PI/n)*0.56, Rf, drones};
+  }
+
+  drawCore(ctx, cx, cy, f, dist, rot, act, m, o, t) {
+    const rr = 0.22*(1 + act*0.3), ro = -t*0.00025, hy = 0.14, V = [];
+    for (let s2 = -1; s2 <= 1; s2 += 2) for (let k = 0; k < 6; k++) { const an = ro + k*Math.PI/3; const q = rot([Math.cos(an)*rr, s2*hy, Math.sin(an)*rr]); const s = f/Math.max(0.2, q[2] + dist); V.push([cx + q[0]*s, cy + q[1]*s]); }
+    const al = (0.45 + 0.55*act)*(1 - m);
+    ctx.strokeStyle = this.rgba(o.ac, al); ctx.lineWidth = 2;
+    ctx.beginPath(); for (let k = 0; k < 6; k++) ctx.lineTo(V[k][0], V[k][1]); ctx.closePath(); ctx.fillStyle = this.rgba(o.ac, 0.3*al); ctx.fill(); ctx.stroke();
+    ctx.beginPath(); for (let k = 6; k < 12; k++) ctx.lineTo(V[k][0], V[k][1]); ctx.closePath(); ctx.fillStyle = this.rgba(o.ac, 0.55*al); ctx.fill(); ctx.stroke();
+    ctx.beginPath(); for (let k = 0; k < 6; k++) { ctx.moveTo(V[k][0], V[k][1]); ctx.lineTo(V[k+6][0], V[k+6][1]); } ctx.lineWidth = 1; ctx.stroke();
+  }
+
+  drawHive(cv, t, p, o) {
+    const {clamp, ss, lerp} = this.U; const {ctx, w, h} = cv; ctx.clearRect(0, 0, w, h);
+    const H = this.hive; if (!H) return;
+    const act = o.act != null ? o.act : ss(0, 0.5, p), m = o.morph ? ss(0.62, 0.9, p) : 0;
+    const dist = 3.1 - 1.7*ss(0, 0.56, p) + 1.3*m, k0 = o.morph ? ss(0.05, 0.55, p) : 0;
+    const cx = w*lerp(o.cx, 0.5, k0), cy = h*lerp(o.cy, 0.5, k0), f = Math.min(w*0.95, h)*0.56*(o.scale || 1);
+    const a = t*0.00005 + this.mx*0.7 + 0.6, b = 0.3 + this.my*0.4, ca = Math.cos(a), sa = Math.sin(a), cb = Math.cos(b), sb = Math.sin(b);
+    const rot = (q) => { const x1 = q[0]*ca + q[2]*sa, z0 = -q[0]*sa + q[2]*ca; return [x1, q[1]*cb - z0*sb, q[1]*sb + z0*cb]; };
+    if (o.glow !== false) { const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, f*1.3); g.addColorStop(0, this.rgba(o.ac, 0.2*(0.35 + act)*(1 - m*0.6))); g.addColorStop(1, this.rgba(o.ac, 0)); ctx.fillStyle = g; ctx.fillRect(0, 0, w, h); }
+    const rr = lerp(H.rs*0.88, H.Rf*0.9, m);
+    for (const c of H.cells) {
+      const P = rot(c.p), U = rot(c.u), V = rot(c.v), g = c.g || [0, 0];
+      const X = lerp(P[0], g[0], m), Y = lerp(P[1], g[1], m), Z = lerp(P[2], 0, m);
+      const ux = lerp(U[0], 1, m), uy = lerp(U[1], 0, m), uz = lerp(U[2], 0, m), vx = lerp(V[0], 0, m), vy = lerp(V[1], 1, m), vz = lerp(V[2], 0, m);
+      c.z = Z; c.f = lerp(clamp(0.25 - P[2]*0.9), 1, m); c.ok = true;
+      for (let k = 0; k < 6; k++) {
+        const an = Math.PI/6 + k*Math.PI/3, co = Math.cos(an)*rr, si = Math.sin(an)*rr;
+        const x = X + co*ux + si*vx, y = Y + co*uy + si*vy, z = Z + co*uz + si*vz, d = z + dist;
+        if (d < 0.12) { c.ok = false; break; } const s = f/d; c.sp[k*2] = cx + x*s; c.sp[k*2+1] = cy + y*s;
+      }
+    }
+    H.order.sort((A, B) => B.z - A.z);
+    const drawCell = (c) => {
+      if (!c.ok) return; const sp = c.sp; ctx.beginPath(); ctx.moveTo(sp[0], sp[1]); for (let k = 1; k < 6; k++) ctx.lineTo(sp[k*2], sp[k*2+1]); ctx.closePath();
+      const lit = c.a < act, pulse = 0.5 + 0.5*Math.sin(t*0.0022 + c.ph);
+      if (lit) { ctx.fillStyle = this.rgba(o.ac, (c.hot ? 0.45 + 0.4*pulse : 0.05 + 0.1*pulse)*c.f*(1 - m*0.55)); ctx.fill(); }
+      const edge = Math.abs(c.a - act) < 0.035 && act < 0.99;
+      ctx.lineWidth = edge ? 1.6 : 1; ctx.strokeStyle = edge ? this.rgba(o.ac, 0.95) : lit ? this.rgba(o.ac, 0.25 + 0.55*c.f) : this.rgba(o.fg, 0.04 + 0.16*c.f); ctx.stroke();
+    };
+    let coreDone = m > 0.98;
+    for (const c of H.order) { if (!coreDone && c.z <= 0) { this.drawCore(ctx, cx, cy, f, dist, rot, act, m, o, t); coreDone = true; } drawCell(c); }
+    if (!coreDone) this.drawCore(ctx, cx, cy, f, dist, rot, act, m, o, t);
+    const nd = Math.floor(H.drones.length*(0.35 + 0.65*act)*(1 - m));
+    for (let i = 0; i < nd; i++) {
+      const dr = H.drones[i]; let px = 0, py = 0, first = true;
+      for (let j = 10; j >= 0; j--) {
+        const tt = t - j*45, an = dr.ph + tt*dr.s, q = rot([Math.cos(an)*dr.r, Math.sin(an*1.7 + dr.ph)*0.32 + dr.ti*Math.cos(an)*0.5, Math.sin(an)*dr.r]);
+        const d = q[2] + dist; if (d < 0.15) { first = true; continue; } const s = f/d, x = cx + q[0]*s, y = cy + q[1]*s;
+        if (!first) { ctx.strokeStyle = this.rgba(o.ac, (1 - j/10)*0.7); ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(px, py); ctx.lineTo(x, y); ctx.stroke(); }
+        px = x; py = y; first = false;
+      }
+      if (!first) { ctx.fillStyle = this.rgba(o.fg, 0.95); this.hexPath(ctx, px, py, 2.6); ctx.fill(); }
+    }
+    if (m > 0.02 && o.morph) {
+      const s = f/dist, x0 = cx - 1.62*s, y0 = cy - 0.9*s, cw = 3.24*s/5, ch = 1.8*s, L = ['Data', 'AI processing', 'Intelligence', 'Automation', 'Execution'];
+      ctx.lineWidth = 2; ctx.strokeStyle = this.rgba(o.fg, 0.4*m); ctx.font = '600 12px Archivo, sans-serif'; ctx.textAlign = 'left';
+      for (let k = 0; k < 5; k++) { const x = x0 + k*cw; ctx.strokeRect(x, y0, cw, ch); ctx.fillStyle = this.rgba(o.ac, 0.95*m); ctx.fillRect(x, y0, cw, 2); ctx.fillStyle = this.rgba(o.fg, 0.9*m); ctx.fillText('0' + (k + 1) + '  ' + L[k], x + 10, y0 + 22); }
+    }
+  }
+
+  drawPipe(cv, t, p) {
+    const {ss, lerp} = this.U; const {ctx, w, h} = cv; ctx.clearRect(0, 0, w, h);
+    const C = this.C, cw = w/5, a = Math.min(5, p*5.2 + 0.25), reveal = a*cw, yc = h*0.52, rows = [0.3, 0.43, 0.6, 0.73];
+    ctx.lineWidth = 1;
+    if (a > 1) {
+      const x = cw*1.5; ctx.strokeStyle = this.rgba(C.ac, 0.8); ctx.lineWidth = 2;
+      for (let r = 0; r < 3; r++) { const R = 22 + r*16, rot = t*0.0004*(r % 2 ? -1 : 1) + r; ctx.beginPath(); for (let k = 0; k < 6; k++) { const an = rot + k*Math.PI/3; ctx.lineTo(x + Math.cos(an)*R, yc + Math.sin(an)*R); } ctx.closePath(); ctx.globalAlpha = 1 - r*0.3; ctx.stroke(); }
+      ctx.globalAlpha = 1; ctx.fillStyle = this.rgba(C.ac, 0.9); ctx.fillRect(x-5, yc-5, 10, 10);
+    }
+    if (a > 2) { ctx.strokeStyle = this.rgba(C.fg, 0.12); ctx.lineWidth = 1; ctx.beginPath(); rows.forEach(r => { ctx.moveTo(cw*2, h*r); ctx.lineTo(Math.min(reveal, cw*4), h*r); }); ctx.stroke(); }
+    if (a > 3) { rows.forEach((r, i) => { const on = (Math.sin(t*0.003 + i*1.7) > 0.3); ctx.strokeStyle = this.rgba(on ? C.ac : C.fg, on ? 0.95 : 0.35); ctx.lineWidth = 2; ctx.strokeRect(cw*3.5 - 7, h*r - 7, 14, 14); if (on) { ctx.fillStyle = this.rgba(C.ac, 0.9); ctx.fillRect(cw*3.5 - 3, h*r - 3, 6, 6); } }); }
+    if (a > 4) {
+      const n = 4, bs = Math.min(cw*0.16, 26), gap = (cw*0.7 - n*bs)/(n-1), x0 = cw*4.15, cyc = (t*0.0006) % (n+1);
+      ctx.lineWidth = 2;
+      for (let k = 0; k < n; k++) { const x = x0 + k*(bs+gap); if (k) { ctx.strokeStyle = this.rgba(C.fg, 0.4); ctx.beginPath(); ctx.moveTo(x-gap, yc); ctx.lineTo(x, yc); ctx.stroke(); }
+        ctx.strokeStyle = this.rgba(C.fg, 0.7); ctx.strokeRect(x, yc - bs/2, bs, bs); if (k < cyc) { ctx.fillStyle = this.rgba(C.ac, k < Math.floor(cyc) ? 0.9 : 0.5); ctx.fillRect(x+3, yc - bs/2 + 3, bs-6, bs-6); } }
+    }
+    for (let i = 0; i < this.pp.length; i++) {
+      const q = this.pp[i]; const u = (t*q.s + q.o) % 1, x = u*w; if (x > reveal) continue; const col = x/cw;
+      const y0 = h*q.y + Math.sin(t*0.0015 + q.o*30)*h*0.035, yr = h*rows[q.r]; let y;
+      if (col < 1) y = y0; else if (col < 1.5) y = lerp(y0, yc, ss(1, 1.5, col)); else if (col < 2.1) y = lerp(yc, yr, ss(1.5, 2.1, col)); else if (col < 4) y = yr; else y = lerp(yr, yc, ss(4, 4.15, col));
+      if (col > 4.15) continue;
+      const hot = col > 1.5; ctx.fillStyle = hot ? this.rgba(i % 4 ? C.fg : C.ac, 0.9) : this.rgba(C.fg, 0.45); const s = hot ? 3 : 2.5; ctx.fillRect(x - s/2, y - s/2, s, s);
+    }
+  }
+
+  drawHub(cv, t) {
+    const {ctx, w, h} = cv; ctx.clearRect(0, 0, w, h); const C = this.C, cx = w/2, cy = h/2, R = Math.min(w, h)*0.3, act = this.state.activeUse;
+    const since = (performance.now() - this.hubT)/1000, bump = this.reduced ? 0 : Math.exp(-since*3)*0.18;
+    ctx.lineWidth = 1; ctx.strokeStyle = this.rgba(C.fg, 0.1); ctx.beginPath(); ctx.arc(cx, cy, R, 0, 6.283); ctx.stroke();
+    ctx.setLineDash([2, 8]); ctx.lineDashOffset = -t*0.01; ctx.beginPath(); ctx.arc(cx, cy, R*0.55, 0, 6.283); ctx.stroke(); ctx.setLineDash([]);
+    ctx.font = '600 11px Archivo, sans-serif'; ctx.textBaseline = 'middle';
+    for (let i = 0; i < 6; i++) {
+      const an = -Math.PI/2 + i*Math.PI/3, x = cx + Math.cos(an)*R, y = cy + Math.sin(an)*R, on = i === act;
+      ctx.strokeStyle = on ? this.rgba(C.ac, 0.95) : this.rgba(C.fg, 0.16); ctx.lineWidth = on ? 2 : 1;
+      ctx.beginPath(); ctx.moveTo(cx + Math.cos(an)*44, cy + Math.sin(an)*44); ctx.lineTo(x, y); ctx.stroke();
+      const np = on ? 3 : 1;
+      for (let k = 0; k < np; k++) { const u = ((t*(on ? 0.0005 : 0.00018) + k/np + i*0.17) % 1); const d = 44 + (R-44)*(on ? 1-u : u); ctx.fillStyle = on ? this.rgba(C.fg, 1) : this.rgba(C.fg, 0.35); ctx.fillRect(cx + Math.cos(an)*d - 1.5, cy + Math.sin(an)*d - 1.5, 3, 3); }
+      this.hexPath(ctx, x, y, on ? 11 : 6); ctx.fillStyle = on ? this.rgba(C.ac, 1) : this.rgba(C.fg, 0.55); ctx.fill();
+      if (on) { ctx.strokeStyle = this.rgba(C.ac, 0.5); ctx.lineWidth = 1; this.hexPath(ctx, x, y, 19); ctx.stroke(); }
+      const lx = x + Math.cos(an)*24, ly = y + Math.sin(an)*20; ctx.textAlign = Math.abs(Math.cos(an)) < 0.2 ? 'center' : Math.cos(an) > 0 ? 'left' : 'right';
+      const tw = ctx.measureText(this.USES[i].k).width; let fx = lx; const al = ctx.textAlign;
+      if (al === 'left') fx = Math.min(lx, w - 8 - tw); else if (al === 'right') fx = Math.max(lx, 8 + tw); else fx = Math.max(8 + tw/2, Math.min(w - 8 - tw/2, lx));
+      ctx.fillStyle = this.rgba(C.fg, on ? 1 : 0.5); ctx.fillText(this.USES[i].k, fx, ly);
+    }
+    const cr = 38*(1 + bump); ctx.lineWidth = 2; ctx.strokeStyle = this.rgba(C.fg, 0.85); ctx.beginPath();
+    for (let k = 0; k < 6; k++) { const an = t*-0.0002 + k*Math.PI/3; ctx.lineTo(cx + Math.cos(an)*cr, cy + Math.sin(an)*cr); } ctx.closePath(); ctx.stroke();
+    ctx.fillStyle = this.rgba(C.ac, 0.9); ctx.beginPath();
+    for (let k = 0; k < 6; k++) { const an = t*0.0003 + k*Math.PI/3; ctx.lineTo(cx + Math.cos(an)*cr*0.55, cy + Math.sin(an)*cr*0.55); } ctx.closePath(); ctx.fill();
+    ctx.fillStyle = this.rgba(C.fg, 1); ctx.textAlign = 'center'; ctx.font = '800 11px Archivo, sans-serif'; ctx.fillText('BZC', cx, cy + 1);
+  }
+
+  drawToken(cv, t, p) {
+    const {ss} = this.U; const {ctx, w, h} = cv; ctx.clearRect(0, 0, w, h); const C = this.C, cx = w/2, cy = h/2;
+    const R = Math.min(w, h)*0.44, r0 = R*0.76, sweep = this.reduced ? 1 : ss(0.05, 0.55, p), sep = 0.012 + ss(0.35, 0.7, p)*0.02;
+    const active = this.state.activeAlloc >= 0 ? this.state.activeAlloc : this.state.tokAuto, rot = this.reduced ? 0 : t*0.00002;
+    ctx.strokeStyle = this.rgba(C.fg, 0.14); ctx.lineWidth = 1; ctx.beginPath();
+    for (let k = 0; k < 120; k++) { const an = k/120*6.283 + rot; const l = k % 10 ? 5 : 11; ctx.moveTo(cx + Math.cos(an)*(R+10), cy + Math.sin(an)*(R+10)); ctx.lineTo(cx + Math.cos(an)*(R+10+l), cy + Math.sin(an)*(R+10+l)); } ctx.stroke();
+    const shades = [0.92, 0.72, 0.54, 0.4, 0.28, 0.18]; let cum = 0; const start = -Math.PI/2 + rot;
+    this.ALLOC.forEach((al, i) => {
+      const a0 = start + cum*6.283*sweep, a1 = start + (cum + al.v/100)*6.283*sweep; cum += al.v/100; if (a1 - a0 < sep*2) return;
+      const on = i === active, mid = (a0 + a1)/2, off = on ? 14 : 0, ox = Math.cos(mid)*off, oy = Math.sin(mid)*off;
+      ctx.beginPath(); ctx.arc(cx+ox, cy+oy, on ? R+4 : R, a0+sep, a1-sep); ctx.arc(cx+ox, cy+oy, r0, a1-sep, a0+sep, true); ctx.closePath();
+      ctx.fillStyle = on ? this.rgba(C.fg, 1) : this.rgba(C.ac, active >= 0 ? shades[i]*0.4 : shades[i]); ctx.fill();
+    });
+    ctx.strokeStyle = this.rgba(C.fg, 0.12); ctx.beginPath(); ctx.arc(cx, cy, r0 - 14, 0, 6.283); ctx.stroke();
+  }
+
+  drawEco(cv, t) {
+    const {ctx, w, h, el} = cv; ctx.clearRect(0, 0, w, h); const C = this.C; const base = el.getBoundingClientRect();
+    const core = this.q('[data-eco-core]'); if (!core) return; const cr = core.getBoundingClientRect(); const cx = cr.left - base.left + cr.width/2, cy = cr.top - base.top + cr.height/2;
+    this.qa('[data-eco-node]').forEach((n, i) => {
+      const r = n.getBoundingClientRect(); const nx = r.left - base.left + r.width/2, ny = r.top - base.top + r.height/2; const mx = (cx + nx)/2;
+      ctx.strokeStyle = this.rgba(C.fg, 0.16); ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(cx, cy); ctx.bezierCurveTo(mx, cy, mx, ny, nx, ny); ctx.stroke();
+      for (let k = 0; k < 2; k++) {
+        let u = (t*0.00022 + i*0.19 + k*0.5) % 1; if (k) u = 1 - u; const iu = 1 - u;
+        const x = iu*iu*iu*cx + 3*iu*iu*u*mx + 3*iu*u*u*mx + u*u*u*nx, y = iu*iu*iu*cy + 3*iu*iu*u*cy + 3*iu*u*u*ny + u*u*u*ny;
+        ctx.fillStyle = k ? this.rgba(C.fg, 0.8) : this.rgba(C.ac, 1); ctx.fillRect(x-1.5, y-1.5, 3, 3);
+      }
+    });
+  }
+
+  copy = () => {
+    const ca = '8xzLg1tyhw1A9tsvVo9nFC9XbvBeHrtvWddtLiu2yp8E';
+    const done = () => { this.setState({copied:true}); clearTimeout(this.copyT); this.copyT = setTimeout(() => this.setState({copied:false}), 2200); };
+    const fb = () => { const ta = document.createElement('textarea'); ta.value = ca; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); } catch (e) {} ta.remove(); done(); };
+    if (navigator.clipboard) navigator.clipboard.writeText(ca).then(done, fb); else fb();
+  };
+
+  goStack(i) { const el = this.q('[data-sticky="stack"]'); if (!el) return; const top = el.getBoundingClientRect().top + scrollY; scrollTo({top: top + (i + 0.5)/6*(el.offsetHeight - innerHeight), behavior: this.reduced ? 'auto' : 'smooth'}); }
+
+  renderVals() {
+    const s = this.state, n = s.narrow, AC = 'var(--color-accent)', FG = 'var(--color-bg)', RULE = 'color-mix(in srgb, var(--color-bg) 22%, transparent)';
+    const hl = this.props.heroHeadline ?? 'Intelligence, built like a hive.';
+    const allocActive = s.activeAlloc >= 0 ? s.activeAlloc : s.tokAuto;
+    const ecoItems = this.PARTNERS.map(([name, src]) => ({name, src}));
+    const phaseFill = (i) => i < s.rmStage ? 1 : i === s.rmStage ? 0.5 : 0;
+    const tag = (st) => st === 'Completed' ? {tb:'color-mix(in srgb, var(--color-accent) 18%, transparent)', tcol:'var(--color-accent-300)', tbd:'transparent', mc:AC, mb:AC}
+      : st === 'In progress' ? {tb:AC, tcol:'var(--color-text)', tbd:AC, mc:AC, mb:'var(--color-text)'} : {tb:'transparent', tcol:'var(--color-neutral-300)', tbd:RULE, mc:'var(--color-neutral-500)', mb:'var(--color-text)'};
+    return {
+      rootRef: this.rootRef, narrow: n,
+      acts: [['Network','#top'],['Intelligence','#technology'],['Infrastructure','#infrastructure'],['Applications','#use-cases'],['Asset','#tokenomics'],['Evolution','#roadmap'],['Ecosystem','#ecosystem'],['Verification','#contract'],['Future','#future']].map(([t, href], i) => { const on = i === (s.actIdx || 0); return {t, href, n:'0' + (i+1), lo: on ? 1 : 0, lx: on ? 0 : 8, s: on ? 12 : 7, sh: on ? 14 : 8, bg: on ? AC : 'color-mix(in srgb, var(--color-bg) 35%, transparent)'}; }), bands: this.PIPE.map((p, i) => ({n:'0' + (i+1), t:p.t, d:p.d})), wide: !n, showActs: this.props.showActs ?? true,
+      h1a: hl === 'Intelligence, built like a hive.', h1b: hl === 'The intelligent layer for the decentralized economy.', h1c: hl === 'Decentralized intelligence.',
+      navPad: s.scrolled ? '9px' : '18px', navTop: s.scrolled && !s.menuOpen ? '10px' : '0px', navInset: s.scrolled && !s.menuOpen ? 'clamp(10px,2vw,24px)' : '0px', navSpot: s.scrolled ? 1 : 0.5, navBg: s.scrolled || s.menuOpen ? 'color-mix(in srgb, var(--color-text) 82%, transparent)' : 'transparent',
+      navBlur: s.scrolled ? 'blur(10px)' : 'none', navRule: s.scrolled ? 'color-mix(in srgb, var(--color-accent) 42%, transparent)' : 'transparent',
+      navLinks: [{label:'Technology', href:'#technology'}, {label:'Use cases', href:'#use-cases'}, {label:'Tokenomics', href:'#tokenomics'}, {label:'Roadmap', href:'#roadmap'}, {label:'Ecosystem', href:'#ecosystem'}, {label:'FAQ', href:'#faq'}].map((l, i, arr) => { const map = {'#technology':1, '#use-cases':3, '#tokenomics':4, '#roadmap':5, '#ecosystem':6}; const on = map[l.href] === (s.actIdx || 0); return {...l, n:'0' + (i + 1), c: on ? 'var(--color-accent)' : 'var(--color-neutral-300)', nc: on ? 'var(--color-accent)' : 'var(--color-neutral-500)', bl: i ? 'color-mix(in srgb, var(--color-bg) 16%, transparent)' : 'transparent'}; }),
+      navWide: !s.navCompact, navCompact: !!s.navCompact,
+      menuOpen: s.menuOpen, menuClosed: !s.menuOpen, menuVisible: !!s.navCompact && s.menuOpen,
+      toggleMenu: () => this.setState(x => ({menuOpen: !x.menuOpen})), closeMenu: () => this.setState({menuOpen:false}),
+      heroH: n ? '280vh' : '400vh', pipeH: n ? '260vh' : '320vh', stackH: n ? '420vh' : '480vh',
+      stackCols: n ? 'minmax(0,1fr)' : 'minmax(0,1fr) minmax(0,1fr)', plateScale: n ? 0.62 : 1,
+      heroCaps: this.CAPS.map((c, i) => ({...c, n:'0' + (i+1), op: i === s.heroStage ? 1 : 0, y: i === s.heroStage ? 0 : (i < s.heroStage ? -16 : 16), lc: i <= s.heroStage ? FG : 'var(--color-neutral-600)'})),
+      pillars: [{n:'01', t:'AI-Powered', d:'Intelligent automation driven by a GPT-style model built into the chain.'}, {n:'02', t:'Decentralized Ledger', d:'A distributed, tamper-proof ledger for managing digital assets at scale.'}, {n:'03', t:'Secure by Design', d:'Cryptographically secured data with trustless, verifiable transactions.'}],
+      pipe: this.PIPE.map((p, i) => ({...p, n:'0' + (i+1), op: i <= s.pipeStage ? 1 : 0.35, nc: i <= s.pipeStage ? 'var(--color-accent-400)' : 'var(--color-neutral-500)'})),
+      pipeActive: {...this.PIPE[s.pipeStage], n:'0' + (s.pipeStage+1)},
+      layers: this.LAYERS.map((l, i) => { const on = i === s.stackStage, past = i < s.stackStage; return {...l, n:'0' + (i+1), z:(5-i)*44 + (on ? 34 : 0),
+        bc: on ? AC : past ? 'color-mix(in srgb, var(--color-bg) 45%, transparent)' : RULE,
+        bg: on ? 'color-mix(in srgb, var(--color-accent) 22%, var(--color-text))' : 'color-mix(in srgb, var(--color-text) 88%, transparent)',
+        tc: on ? FG : 'var(--color-neutral-500)', nc: on ? 'var(--color-accent-400)' : 'var(--color-neutral-500)', to: on ? 1 : 0.45, rows: on ? '1fr' : '0fr', go: () => this.goStack(i)}; }),
+      uses: this.USES.map((u, i) => ({...u, n:'0' + (i+1), rows: i === s.activeUse ? '1fr' : '0fr', nc: i === s.activeUse ? 'var(--color-accent-400)' : 'var(--color-neutral-500)',
+        bg: i === s.activeUse ? 'color-mix(in srgb, var(--color-bg) 5%, transparent)' : 'transparent', pick: () => { this.hubHoldUntil = Date.now() + 12000; if (s.activeUse !== i) this.setState({activeUse:i}); }})),
+      holdHub: () => { this.hubHoldUntil = Date.now() + 12000; },
+      allocs: this.ALLOC.map((a, i) => ({...a, sw: i === allocActive ? FG : `color-mix(in srgb, var(--color-accent) ${[92,72,54,40,28,18][i]}%, transparent)`, tc: allocActive < 0 || i === allocActive ? FG : 'var(--color-neutral-500)', pc: i === allocActive ? 'var(--color-accent-400)' : FG, enter: () => this.setState({activeAlloc:i})})),
+      clearAlloc: () => this.setState({activeAlloc:-1}),
+      tokCenter: allocActive >= 0 ? {v: this.ALLOC[allocActive].v + '%', l: this.ALLOC[allocActive].t} : {v:'10.8B', l:'Total supply'},
+      facts: [{l:'Token', v:'BeezChain'}, {l:'Symbol', v:'BZC'}, {l:'Network', v:'Solana'}, {l:'Supply', v:'10.8B'}, {l:'Decimals', v:'9'}],
+      termSpan: n ? 1 : 2,
+      term: [{l:'Liquidity', v:'—', s:'Awaiting liquidity', sc:'var(--color-neutral-500)'}, {l:'24h volume', v:'—', s:'Awaiting liquidity', sc:'var(--color-neutral-500)'}, {l:'Market cap', v:'—', s:'Awaiting liquidity', sc:'var(--color-neutral-500)'}, {l:'Network', v:'Solana', s:'SPL token', sc:'var(--color-neutral-400)'}, {l:'Total supply', v:'10.8B', s:'Mint authority revoked', sc:'var(--color-neutral-400)'}],
+      rmH: n ? 'auto' : '320vh', rmPos: n ? 'relative' : 'sticky', rmInnerH: n ? 'auto' : '100vh', rmDir: n ? 'column' : 'row', rmCardW: n ? '100%' : 'min(440px, 38vw)', rmMaxW: n ? '100%' : 'none',
+      road: this.ROAD.map((r, i) => ({...r, n:'0' + (i+1), fill: phaseFill(i), op: n || i <= s.rmStage ? 1 : 0.4, ...tag(r.status)})),
+      ecoCols: n ? 'minmax(0,1fr)' : 'minmax(0,1fr) auto minmax(0,1fr)', ecoSide: n ? 'repeat(3, minmax(0,1fr))' : 'minmax(0, 260px)',
+      ecoL: ecoItems.slice(0, 3).map(e => ({...e, img:e.src})), ecoR: ecoItems.slice(3).map(e => ({...e, img:e.src})),
+      console: [{l:'Token', v:'BeezChain'}, {l:'Symbol', v:'BZC'}, {l:'Network', v:'Solana'}, {l:'Standard', v:'SPL'}, {l:'Mint authority', v:'Revoked'}],
+      wallets: this.WALLETS.map((w) => ({...w, url:'https://solscan.io/account/' + w.addr, note: w.note || 'Public distribution wallet', lockTxt: w.locked ? 'Locked' : 'Unlocked', lockBg: w.locked ? AC : 'transparent', lockCol: w.locked ? 'var(--color-text)' : 'var(--color-neutral-300)', lockBd: w.locked ? AC : RULE})),
+      copy: this.copy, copied: s.copied, notCopied: !s.copied, copyBg: s.copied ? 'var(--color-accent-700)' : AC,
+      faqNum: s.openFaq >= 0 ? '0' + (s.openFaq + 1) : '—', faqNumColor: s.openFaq >= 0 ? AC : 'var(--color-neutral-700)',
+      faqs: this.FAQ.map((f, i) => { const on = i === s.openFaq; return {...f, n: i+1, rows: on ? '1fr' : '0fr', rot: on ? 45 : 0, bar: on ? '100%' : '0%', bg: on ? 'color-mix(in srgb, var(--color-bg) 4%, transparent)' : 'transparent', toggle: () => this.setState({openFaq: on ? -1 : i})}; }),
+      footCols: [{t:'Resources', links:[{label:'Home', href:'#top'}, {label:'Technology', href:'#technology'}]}, {t:'Important', links:[{label:'Whitepaper', href:'https://beezchain.gitbook.io/beezchain-docs/'}, {label:'Buy BZC', href:'#market'}]}, {t:'Legal', links:[{label:'How to buy', href:'#faq'}, {label:'Future plan', href:'#roadmap'}]}]
+    };
+  }
+}
+</script>
+</body>
+</html>
